@@ -1,0 +1,37 @@
+mixin Review({imgSrc, comment, name})
+  .col-12 
+    .mx-auto
+      .review-card.d-flex.gap-2 
+        div 
+          img(src=`${CWD}assets/img/feedback/${imgSrc}`, alt="")
+        div 
+          h6.fs-8.text-black.mb-2= comment 
+          p.fs-9= name 
+
+
+mixin Testimonials
+  -
+    var reviews = [
+      {
+        imgSrc: 'reviewer_1.png',
+        comment: '“OMG! I cannot believe that I have got a brand new landing page after getting Omega. It was super easy to edit and publish.”',
+        name: 'Isaac Olson'
+      },
+      {
+        imgSrc: 'reviewer_2.png',
+        comment: '“Simply the best. Better than all the rest. I’d recommend this product to beginners and advanced users who want success.”',
+        name: 'Barry Young'
+      },
+      {
+        imgSrc: 'reviewer_3.png',
+        comment: '“Must have book for all, who want to be Product Designer or Interaction Designer.”',
+        name: 'Esther Allison'
+      }
+    ]
+  .testimonal.mb-8.mb-lg-9.mb-xl-10
+    .mx-auto.text-center 
+      hr.horizontal-rule.m-0.d-inline-block
+    .container
+      .row 
+        each item in reviews 
+          +Review(item)

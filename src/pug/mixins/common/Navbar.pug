@@ -1,0 +1,36 @@
+mixin Navbar
+  - 
+    var menu = [
+      { 
+        label: 'Demos', 
+        link: '#home' 
+      },
+      { 
+        label: 'Pages', 
+        link: '#about' 
+      },
+      { 
+        label: 'Support', 
+        link: '#products' 
+      },
+      { 
+        label: 'Contact', 
+        link: '#review' 
+      }
+    ]
+
+  nav.navbar.navbar-expand-lg.fixed-top(data-navbar-soft-on-scroll)
+    .container-fluid
+      a(href=`${CWD}`).navbar-brand.me-lg-auto.cursor-pointer.text-white.fs-8.fw-bold Brainwave.io
+      button(type="button" data-bs-target="#navbarContent" aria-controls="navbarContent" data-bs-toggle="offcanvas").navbar-toggler.border-0.pe-0
+        span.navbar-toggler-icon
+      #navbarContent.offcanvas.offcanvas-end.bg-primary(tabindex="-1" aria-labelledby="offcanvasNavbarLabel")
+        .offcanvas-header 
+          h5#offcanvasNavbarLabel.offcanvas-title.text-white.fs-8.fw-bold Brainwave.io
+          button.btn-close(type="button" data-bs-dismiss="offcanvas" aria-label="Close") 
+        .offcanvas-body(data-navbar-collapse)
+          ul.navbar-nav.ms-auto.gap-lg-x1.justify-content-end.flex-grow-1(data-navbar-nav) 
+            each navMenu in menu 
+                li.nav-item 
+                    a(href=`${navMenu.link}` title=`${navMenu.label}`).nav-link.nav-bar-item.px-0 #{navMenu.label}
+          button.btn.bg-danger.ms-lg-5.ms-xl-6.mt-1.mt-lg-0(type="button") Get Started Now

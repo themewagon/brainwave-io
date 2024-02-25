@@ -1,0 +1,61 @@
+mixin Service({icon, title, description})
+  .col-12.col-sm-6.col-lg-4.d-flex.gap-1 
+    div 
+      img(src=`${CWD}assets/img/icons/${icon}`, alt="")
+    div 
+      h5.fs-8.text-white.mb-2= title
+      p.fs-9= description 
+
+mixin Experiences 
+  -
+    var serviceItems = [
+      {
+        icon: 'roadmap.svg',
+        title: 'Unlimited Projects',
+        description: 'With lots of unique blocks, you can easily build a page without coding. Build your next landing page.'
+      },
+      {
+        icon: 'users-wm.svg',
+        title: 'Team Management',
+        description: 'With lots of unique blocks, you can easily build a page without coding. Build your next landing page.'
+      },
+      {
+        icon: 'share-91.svg',
+        title: 'File Sharing',
+        description: 'With lots of unique blocks, you can easily build a page without coding. Build your next landing page.'
+      },
+      {
+        icon: 'video_meeting.svg',
+        title: 'Video Meeting',
+        description: 'With lots of unique blocks, you can easily build a page without coding. Build your next landing page.'
+      },
+      {
+        icon: 'opening-times.svg',
+        title: 'Time Tracking',
+        description: 'With lots of unique blocks, you can easily build a page without coding. Build your next landing page.'
+      },
+      {
+        icon: 'card-favorite.svg',
+        title: 'Payment System',
+        description: 'With lots of unique blocks, you can easily build a page without coding. Build your next landing page.'
+      }
+    ]
+  .experience.position-relative 
+    .container
+      .row.justify-content-center 
+        .col-12.mb-7.mb-lg-8.mb-xl-9
+          .position-relative.image-container
+            img(src=`${CWD}assets/img/Hero/experiences.png`, alt="").img-fluid.w-100
+            button.btn.play-button.position-absolute 
+              img(src=`${CWD}assets/img/illustrations/button-play.svg`, alt="")
+            .position-absolute.dots
+              img(src=`${CWD}assets/img/illustrations/Dots.png`, alt="").img-fluid.w-100
+      h2.fs-4.fs-lg-3.fw-bold.text-center.text-white.mb-6.mb-lg-7.mb-xl-8 
+        | We made this app 
+        br
+        |to solve 
+        br.d-sm-none
+        |your problems.
+      .row.g-4.g-lg-6.pb-7.pb-lg-8.pb-xl-9
+        each item in serviceItems 
+          +Service(item)

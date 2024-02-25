@@ -1,0 +1,25 @@
+extends layouts/LayoutTheme
+
+include ./mixins/home/HeroSection
+include ./mixins/home/Team
+include ./mixins/home/Collaborate
+include ./mixins/home/WorkProcess
+include ./mixins/home/Experiences
+include ./mixins/home/Testimonials
+
+prepend styles
+    link(rel="stylesheet", href=`${CWD}vendors/swiper/swiper-bundle.min.css`)
+
+prepend scripts 
+    script(src=`${CWD}vendors/countup/countUp.umd.js`)
+    script(src=`${CWD}vendors/swiper/swiper-bundle.min.js`)
+
+
+append content 
+    div(data-bs-target="#navbar-top" data-bs-spy="scroll" tabindex="0")
+        +HeroSection
+        +Team
+        +Collaborate
+        +WorkProcess
+        +Experiences
+        +Testimonials

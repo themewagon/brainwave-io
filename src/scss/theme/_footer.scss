@@ -1,0 +1,57 @@
+.Footer {
+    .links{
+        color: $black;
+        font-size: 17px;
+        line-height: 40px;
+        
+        @include hover-focus {
+            color: map-get($theme-colors, 'success' );
+            font-weight: $font-weight-semi-bold;
+        }
+    }
+
+    @include media-breakpoint-up(md){
+        background-position: center;
+    }
+}
+
+.terms-condition{
+    .overley-background{
+        position: absolute;
+        background: rgba(0, 0, 0, 0.33);
+        left: 0%;
+        top: 0%;
+        width: 100%;
+        z-index: 1;
+        height: 100%;
+    }
+    
+    .text-div{
+        z-index: 10;
+        font-size: 0;
+    }
+
+    .links{
+        display: inline-block;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.70);
+        font-size: 12px !important;
+        font-weight: $font-weight-medium;
+        cursor: pointer;
+        @include media-breakpoint-up(md) {
+            font-size: map-get($font-sizes, 8) !important;
+        }
+        @include hover-focus {
+            color: $white;
+            font-weight: $font-weight-semi-bold;
+        }
+        &::before{
+            display: block;
+            content: attr(title);
+            font-weight: bold;
+            height: 0;
+            overflow: hidden;
+            visibility: hidden;
+          }
+    }
+}
