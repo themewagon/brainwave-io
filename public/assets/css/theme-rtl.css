@@ -20792,7 +20792,7 @@ h5, .h5 {
   border-radius: 6px;
   background-color: transparent;
   position: static;
-  z-index: 99999;
+  z-index: 100;
 }
 
 .scroll-to-top {
@@ -21771,15 +21771,16 @@ h5, .h5 {
 }
 @media (min-width: 992px) {
   .main-container .wave {
+    min-height: 25vh;
     background-position: center;
-    margin-top: -190px;
+    margin-top: -180px;
   }
 }
 @media (min-width: 1540px) {
   .main-container .wave {
     background-position: center;
     min-height: 30vh;
-    margin-top: -240px;
+    margin-top: -230px;
   }
 }
 
@@ -21895,9 +21896,52 @@ h5, .h5 {
   background-color: #473BF0;
 }
 .experience .image-container .dots {
-  right: -4%;
+  right: -5%;
   bottom: -5%;
   z-index: -1;
+}
+@media (min-width: 1540px) {
+  .experience .image-container .dots {
+    right: 5%;
+    bottom: -5%;
+    z-index: -1;
+  }
+}
+.experience .wave-container {
+  min-height: 30vh;
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .experience .wave-container {
+    min-height: 50vh;
+  }
+}
+.experience .wave-container .bg {
+  min-height: 5vh;
+  background: #fff;
+}
+@media (min-width: 768px) {
+  .experience .wave-container .bg {
+    min-height: 15vh;
+  }
+}
+@media (min-width: 992px) {
+  .experience .wave-container .bg {
+    min-height: 30vh;
+  }
+}
+.experience .wave-container .wave {
+  min-height: 15vh;
+  background-image: url("/assets/img/illustrations/Wave_2.svg");
+  background-position: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .experience .wave-container .wave {
+    background-position: center;
+    min-height: 10vh;
+  }
 }
 
 .testimonal {
@@ -21907,6 +21951,63 @@ h5, .h5 {
   width: 161px;
   height: 3px;
   background-color: rgba(255, 255, 255, 0.15);
+}
+.testimonal .review-card-1, .testimonal .review-card-2, .testimonal .review-card-3 {
+  max-width: 730px;
+  border-radius: 12px;
+  border: 1px solid #57595E;
+  color: rgba(22, 28, 45, 0.7);
+}
+.testimonal .review-card-1 img, .testimonal .review-card-2 img, .testimonal .review-card-3 img {
+  max-height: 111px;
+}
+.testimonal .review-card-1 {
+  background-color: #fff;
+}
+.testimonal .review-card-2 {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.testimonal .review-card-3 {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.testimonal .read-more {
+  color: #68D585;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+.testimonal .read-more:hover, .testimonal .read-more:active {
+  color: #473BF0;
+  text-decoration: none;
+}
+.testimonal .read-more .icon {
+  margin-top: 3px;
+}
+
+.pricing {
+  background-color: #F4F7FA;
+}
+.pricing .description {
+  color: rgba(22, 28, 45, 0.7);
+}
+.pricing .price-card-1, .pricing .price-card-2 {
+  border: 1px solid #E7E9ED;
+  border-radius: 10px;
+}
+.pricing .price-card-1 .list, .pricing .price-card-2 .list {
+  padding: 21px 10px;
+  border-top: 1px solid #E7E9ED;
+}
+.pricing .price-card-1 button, .pricing .price-card-2 button {
+  margin-top: 7px;
+}
+.pricing .price-card-1 {
+  background-color: transparent;
+}
+.pricing .price-card-2 {
+  background-color: #fff;
+  -webkit-box-shadow: 0px 32px 64px 0px rgba(22, 28, 45, 0.07);
+  box-shadow: 0px 32px 64px 0px rgba(22, 28, 45, 0.07);
 }
 
 .Footer .links {

@@ -1,12 +1,12 @@
-mixin Review({imgSrc, comment, name})
+mixin Review({imgSrc, comment, name}, index)
   .col-12 
-    .mx-auto
-      .review-card.d-flex.gap-2 
+    .d-flex.justify-content-center.gap-2
+      .d-flex.gap-2.px-4.py-x1(class=`review-card-${index + 1}`) 
         div 
           img(src=`${CWD}assets/img/feedback/${imgSrc}`, alt="")
         div 
-          h6.fs-8.text-black.mb-2= comment 
-          p.fs-9= name 
+          h6.fs-8.text-black.mb-2.fw-normal= comment 
+          p.fs-9= name
 
 
 mixin Testimonials
@@ -28,10 +28,13 @@ mixin Testimonials
         name: 'Esther Allison'
       }
     ]
-  .testimonal.mb-8.mb-lg-9.mb-xl-10
+  .testimonal
     .mx-auto.text-center 
       hr.horizontal-rule.m-0.d-inline-block
-    .container
-      .row 
-        each item in reviews 
-          +Review(item)
+    .container.py-7.py-lg-8.py-xl-9
+      .row.gap-2.mb-4.mb-lg-5.mb-xl-6 
+        each item, index in reviews 
+          +Review(item, index)
+      a.fs-9.d-flex.justify-content-center.align-items-center.gap-1.read-more(href="#!")
+        span Read more reviews 
+        span.uil.uil-arrow-right.icon

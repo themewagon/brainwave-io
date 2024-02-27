@@ -44,8 +44,8 @@ mixin Experiences
     .container
       .row.justify-content-center 
         .col-12.mb-7.mb-lg-8.mb-xl-9
-          .position-relative.image-container
-            img(src=`${CWD}assets/img/Hero/experiences.png`, alt="").img-fluid.w-100
+          .position-relative.image-container.z-2.text-center
+            img(src=`${CWD}assets/img/Hero/experiences.png`, alt="").img-fluid
             button.btn.play-button.position-absolute 
               img(src=`${CWD}assets/img/illustrations/button-play.svg`, alt="")
             .position-absolute.dots
@@ -56,6 +56,9 @@ mixin Experiences
         |to solve 
         br.d-sm-none
         |your problems.
-      .row.g-4.g-lg-6.pb-7.pb-lg-8.pb-xl-9
+      .row.g-2.g-lg-6.pb-7.pb-lg-8.pb-xl-9
         each item in serviceItems 
           +Service(item)
+    .wave-container.position-absolute.top-0.start-0.z-1
+      .bg 
+      .wave

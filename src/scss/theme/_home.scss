@@ -60,18 +60,19 @@
     background-size: cover;
     background-repeat: no-repeat;
     @include media-breakpoint-up(md){
-      background-position: right;
+    background-position: right;
      min-height: 20vh;
      margin-top: -160px;
      }
     @include media-breakpoint-up(lg){
+      min-height: 25vh;
      background-position: center;
-      margin-top: -190px;
+      margin-top: -180px;
     }
     @include media-breakpoint-up(xxl){
       background-position: center;
       min-height: 30vh;
-       margin-top: -240px;
+       margin-top: -230px;
      }
   }
 }
@@ -165,9 +166,44 @@
       }
     }
     .dots{
-      left: -4%;
-      bottom: -5%;
-      z-index: -1;
+        left: -5%;
+        bottom: -5%;
+        z-index: -1;
+        @include media-breakpoint-up(xxl){
+        left: 5%;
+        bottom: -5%;
+        z-index: -1;
+      }
+    }
+  }
+  .wave-container{
+    min-height: 30vh;
+    width: 100%;
+    
+    
+    @include media-breakpoint-up(lg){
+      min-height: 50vh;
+    }
+    .bg{
+      min-height: 5vh;
+      background: $white;
+      @include media-breakpoint-up(md){
+        min-height: 15vh;
+      }
+      @include media-breakpoint-up(lg){
+        min-height: 30vh;
+      }
+    }
+    .wave{
+      min-height: 15vh;
+      background-image: url('/assets/img/illustrations/Wave_2.svg');
+      background-position: right;
+      background-size: cover;
+      background-repeat: no-repeat;
+      @include media-breakpoint-up(md){
+        background-position: center;
+        min-height: 10vh;
+      }
     }
   }
 }
@@ -178,5 +214,60 @@
     width: 161px;
     height: 3px;
     background-color: rgba($white, 0.15);
+  }
+  .review-card-1, .review-card-2, .review-card-3{
+    max-width: 730px;
+    border-radius: 12px;
+    border: 1px solid #57595E;
+    color: rgba($black, 0.7);
+
+    img{
+      max-height: 111px;
+    }
+  }
+  .review-card-1 {
+   background-color: $white; 
+  }
+  .review-card-2{
+    background-color: rgba($white, 0.70);
+  }
+  .review-card-3{
+    background-color: rgba($white, 0.50);
+  }
+  .read-more{
+    color: map-get($theme-colors, 'success' );
+    transition: color 0.3s ease-in-out;
+    &:hover, &:active {
+      color: map-get($theme-colors , 'primary' );
+      text-decoration: none;
+    }
+    .icon{
+      margin-top: 3px;
+    }
+  }
+}
+
+.pricing{
+  background-color: #F4F7FA;
+  .description{
+    color: rgba($black, 0.7);
+  }
+  .price-card-1, .price-card-2{
+    border: 1px solid #E7E9ED;
+    border-radius: 10px;
+    .list{
+      padding: 21px 10px;
+      border-top: 1px solid #E7E9ED;
+    }
+    button {
+      margin-top: 7px;
+    }
+  }
+  .price-card-1{
+    background-color: transparent;
+  }
+  .price-card-2{
+    background-color: $white;
+    box-shadow: 0px 32px 64px 0px rgba(22, 28, 45, 0.07);
   }
 }
