@@ -43,9 +43,10 @@
   cursor: pointer;
   justify-content: center;
   align-items: center;
-  background-color: rgba(255, 218, 145, 0.7);
+  background-color: map-get($theme-colors, 'danger' ) !important;
+  opacity: 0.7;
   border-radius: map-get($border-radiuses, 'circle');
-  transition: background-color 0.2s ease-in;
+  transition: opacity 0.2s ease-in;
   z-index: 1120;
   
   span{
@@ -53,7 +54,8 @@
   }
 
   &:hover{
-    background-color: rgba(255, 218, 145, 1);
+    opacity: 1;
+    background-color: map-get($theme-colors, 'danger' ) !important;
   }
 
 }

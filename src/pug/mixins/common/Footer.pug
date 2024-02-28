@@ -2,52 +2,64 @@ mixin Footer
 
   footer.Footer.bg-white.pt-8.pt-lg-9 
     .container
-      .pb-x1.px-3.px-lg-0 
-        .container 
-          .row.g-4.g-sm-6
-            .col-6.col-lg-2
-              h5.fs-9.text-black.mb-3 Company
-              .mb-1 
-                a(href="#").links About us
-              .mb-1 
-                a(href="#about").links  Contact us
-              .mb-1 
-                a(href="#products").links Careers
-              .mb-1 
-                a(href="#review").links Press
+      .row.g-2.g-md-6.footer-top
+        .col-6.col-lg-2
+          h5.fs-9.mb-3.heading Company
+          .mb-1 
+            a(href="#").links About us
+          .mb-1 
+            a(href="#about").links  Contact us
+          .mb-1 
+            a(href="#products").links Careers
+          .mb-1 
+            a(href="#review").links Press
+          
+        .col-6.col-lg-2
+          .mb-3 
+            h5.fs-9.heading Product 
+          div
+            .mb-1 
+              a(href="#!").links Features
+            .mb-1 
+              a(href="#!").links  Pricing
+            .mb-1 
+              a(href="#!").links  News
+            .mb-1 
+              a(href="#!").links  Help desk
               
-            .col-6.col-lg-2
-              .mb-3 
-                h5.fs-9.text-black Product 
-              div
-                .mb-1 
-                  a(href="#!").links Features
-                .mb-1 
-                  a(href="#!").links  Pricing
-                .mb-1 
-                  a(href="#!").links  News
-                .mb-1 
-                  a(href="#!").links  Help desk
-                  
-                a(href="#!").links  Support
+            a(href="#!").links  Support
 
-            .col-6.col-lg-4
-              .mb-3 
-                h5.fs-9.text-black  Legal
-              div
-                .mb-1 
-                  a(href="#!").links Privacy
-                .mb-1 
-                  a(href="#!").links  Terms & Conditions
-                .mb-1 
-                  a(href="#!").links  Return Policy
+        .col-6.col-lg-4
+          .mb-3 
+            h5.fs-9.heading  Legal
+          div
+            .mb-1 
+              a(href="#!").links Privacy
+            .mb-1 
+              a(href="#!").links  Terms & Conditions
+            .mb-1 
+              a(href="#!").links  Return Policy
 
-            .col-6.col-lg-4
-                .mb-3 
-                  h5.fs-9.text-black  Download Our App
-                  .mb-1
-                    +Button('App_store.png')
-                  +Button('Play_store.png')
+        .col-6.col-lg-4
+            .mb-3 
+              h5.fs-9.heading  Download Our App
+            div.mb-sm-1 
+              +Button('App_store.png')
+            +Button('Play_store.png')
+      .row 
+        .d-md-flex.justify-content-between.align-items-center.py-3 
+          div 
+            span.text-black.copyright  © 2024 Copyright, All Right Reserved, Made by Seju_ui_ux with
+            img(src=`${CWD}assets/img/icons/Heart.svg`, alt="")
+          div
+            a(href='#!').icons
+              span.uil.uil-twitter 
+            a(href='#!').icons
+              span.uil.uil-instagram
+            a(href='#!').icons
+              span.uil.uil-linkedin
+
+
 
                         
                       
