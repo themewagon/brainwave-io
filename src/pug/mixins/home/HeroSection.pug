@@ -1,15 +1,16 @@
 include Button
 
 mixin HeroSection 
-  .main-container.mb-7.mb-lg-8.mb-xl-9.position-relative.z-0
+  .main-container.mb-6.mb-lg-7.mb-xl-8.position-relative.z-0
     .hero(style=`background-image:url('${CWD}assets/img/illustrations/BG.png')`)
       .container 
         .row.g-1.pt-9.pt-lg-0
           .col-12.col-lg-6
-            h1.fs-2.fs-lg-1.text-white.fw-bold.mb-2.mb-lg-x1  Manage your remote team work
-            p.fs-9.fs-lg-8.text-white.mb-3.mb-lg-4 With lots of unique blocks, you can easily build a page without coding. Build your next consultancy website within few minutes
+            h1.fs-2.fs-lg-1.text-white.fw-bold.mb-2.mb-lg-x1.heading  Manage your remote team work
+            p.fs-9.fs-lg-8.text-white.mb-3.mb-lg-4.sub-heading With lots of unique blocks, you can easily build a page without coding. Build your next consultancy website within few minutes
             button.btn.bg-danger.mb-6.mb-lg-7 Explore more
-            .d-sm-flex.align-items-sm-center.gap-1.z-3
+            p.mb-2.mb-lg-x1.fs-10.button-text.text-uppercase.fw-bold Download our app
+            .d-sm-flex.align-items-sm-center.gap-1.action-button
               div 
                 +Button('assets/img/logos/App_Store.png')
               div 
@@ -18,9 +19,9 @@ mixin HeroSection
             .position-lg-absolute.hero-image.text-center.top-0.end-0
               .position-relative.z-1 
                 img(src=`${CWD}assets/img/Hero/Frame.png`, alt="").img-fluid.chat-image
-                .position-absolute.dots 
+                .position-absolute.dots.d-none.d-md-block 
                   img(src=`${CWD}assets/img/illustrations/Dots.png`, alt="").img-fluid.w-50.w-lg-75
 
-    .wave-container.position-absolute.bottom-0.start-0.z-1
-      img(src=`${CWD}assets/img/illustrations/Wave.svg`, alt="").img-fluid.w-100
+    .wave-container.position-absolute.bottom-0.start-0.z-1.end-0
+      img(src=`${CWD}assets/img/illustrations/Wave.svg`, alt="").img-fluid.w-100.mb-n2
       .bg

@@ -1,8 +1,8 @@
 mixin Review({imgSrc, comment, name}, index)
   .col-12 
     .d-flex.justify-content-center.gap-2
-      .d-flex.gap-2.px-4.py-x1(class=`review-card-${index + 1}`) 
-        div 
+      .d-flex.flex-column.flex-md-row.gap-2.px-4.py-x1(class=`review-card-${index + 1}`) 
+        div.text-center.text-md-start 
           img(src=`${CWD}assets/img/feedback/${imgSrc}`, alt="")
         div 
           h6.fs-8.text-black.mb-2.fw-normal= comment 
@@ -32,6 +32,17 @@ mixin Testimonials
     .mx-auto.text-center 
       hr.horizontal-rule.m-0.d-inline-block
     .container.py-7.py-lg-8.py-xl-9
+      h2.fs-6.fs-lg-5.fw-bold.text-center.text-white.mb-6.mb-lg-7.mb-xl-8.heading 
+        span.underline  1,749 remote teams
+        br.d-sm-none
+        |  have shared 
+        br.d-sm-none
+        | their 
+        br.d-none.d-md-block
+        | experience 
+        br.d-sm-none
+        | with our app!
+        
       .row.gap-2.mb-4.mb-lg-5.mb-xl-6 
         each item, index in reviews 
           +Review(item, index)

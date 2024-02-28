@@ -21715,14 +21715,32 @@ h5, .h5 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin-bottom: 10px;
+}
+.main-container .hero .heading {
+  line-height: 65px;
+  letter-spacing: -2px;
+}
+.main-container .hero .sub-heading {
+  line-height: 32px;
+  letter-spacing: -0.2px;
+}
+.main-container .hero .button-text {
+  color: #F4F7FA;
+  line-height: 15.72px;
+  letter-spacing: 1.63px;
+}
+.main-container .hero .action-button {
+  position: relative;
+  z-index: 1120;
 }
 .main-container .hero-image .chat-image {
-  width: 50%;
+  width: 80%;
 }
 .main-container .hero-image .dots {
   top: -5%;
   left: 15%;
-  z-index: -1;
+  z-index: -10;
 }
 @media (min-width: 992px) {
   .main-container .hero-image {
@@ -21745,11 +21763,11 @@ h5, .h5 {
 }
 @media (min-width: 1540px) {
   .main-container .hero-image .chat-image {
-    width: 70%;
+    width: 60%;
   }
   .main-container .hero-image .dots {
     top: -5%;
-    left: 8%;
+    left: 10%;
     z-index: -1;
   }
 }
@@ -21758,13 +21776,46 @@ h5, .h5 {
   background-color: #fff;
   min-height: 10vh;
 }
-
-.team .team-description {
-  color: rgba(22, 28, 45, 0.7);
+@media (min-width: 1540px) {
+  .main-container .wave-container .bg {
+    min-height: 8vh;
+  }
 }
 
+.team .heading {
+  line-height: 58px;
+  letter-spacing: -1.8px;
+}
+.team .sub-heading {
+  line-height: 32px;
+  letter-spacing: -0.5px;
+}
+.team .team-sub-title {
+  color: rgba(22, 28, 45, 0.7);
+  line-height: 32px;
+}
+.team .team-description {
+  color: rgba(22, 28, 45, 0.7);
+  line-height: 29px;
+  letter-spacing: -0.2px;
+}
+
+.work-process .heading {
+  line-height: 58px;
+  letter-spacing: -1.8px;
+}
+.work-process .sub-heading {
+  line-height: 32px;
+  letter-spacing: -0.2px;
+}
+.work-process .progress-heading {
+  line-height: 32px;
+  letter-spacing: -0.2px;
+}
 .work-process p {
   color: rgba(22, 28, 45, 0.7);
+  line-height: 29px;
+  letter-spacing: -0.2px;
 }
 .work-process .progress-item .progress-bar, .work-process .progress-item .progress-bar-2 {
   position: relative;
@@ -21776,9 +21827,9 @@ h5, .h5 {
   display: -ms-inline-flexbox;
   display: inline-flex;
   height: 100%;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .work-process .progress-item .progress-bar .indicator-parent .indicator, .work-process .progress-item .progress-bar-2 .indicator-parent .indicator {
   width: 73px;
@@ -21794,15 +21845,34 @@ h5, .h5 {
   -ms-flex-align: center;
   align-items: center;
 }
+.work-process .progress-item .progress-bar .indicator-parent::before, .work-process .progress-item .progress-bar-2 .indicator-parent::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  border-right: 3px dashed #D5D7DD;
+  right: 50%;
+  bottom: -90%;
+  z-index: -1;
+}
 @media (min-width: 992px) {
+  .work-process .progress-item .progress-bar .indicator-parent, .work-process .progress-item .progress-bar-2 .indicator-parent {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
   .work-process .progress-item .progress-bar .indicator-parent::before, .work-process .progress-item .progress-bar-2 .indicator-parent::before {
     content: "";
     position: absolute;
     width: 100%;
+    border-right: none;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     border-bottom: 3px dashed #D5D7DD;
     -o-border-image: url("/assets/img/illustrations/border.png") 20 round;
     border-image: url("/assets/img/illustrations/border.png") 20 round;
     right: 50%;
+    bottom: 50%;
     z-index: -1;
   }
 }
@@ -21841,6 +21911,8 @@ h5, .h5 {
 }
 .experience p {
   color: rgba(255, 255, 255, 0.65);
+  line-height: 29px;
+  letter-spacing: -0.2px;
 }
 .experience .image-container {
   z-index: 0;
@@ -21881,6 +21953,14 @@ h5, .h5 {
     bottom: -5%;
     z-index: -1;
   }
+}
+.experience .image-container .heading {
+  line-height: 58px;
+  letter-spacing: -1.8px;
+}
+.experience .image-container .title {
+  line-height: 32px;
+  letter-spacing: -0.5px;
 }
 .experience .wave-container {
   min-height: 30vh;
@@ -21926,6 +22006,20 @@ h5, .h5 {
   width: 161px;
   height: 3px;
   background-color: rgba(255, 255, 255, 0.15);
+}
+.testimonal .underline {
+  position: relative;
+  z-index: 0;
+}
+.testimonal .underline::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  right: 0;
+  bottom: 20%;
+  background-color: #68D585;
+  z-index: -1;
 }
 .testimonal .review-card-1, .testimonal .review-card-2, .testimonal .review-card-3 {
   max-width: 730px;
