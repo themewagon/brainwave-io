@@ -21704,11 +21704,10 @@ h5, .h5 {
   position: relative;
 }
 .main-container .hero {
-  background-image: url("/assets/img/illustrations/BG.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 100vh;
+  min-height: 90vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -21754,36 +21753,10 @@ h5, .h5 {
     z-index: -1;
   }
 }
-.main-container .wave {
-  position: relative;
-  z-index: 100;
-  margin-top: -87px;
+.main-container .wave-container .bg {
+  margin-top: -2px;
+  background-color: #fff;
   min-height: 10vh;
-  background-image: url("/assets/img/illustrations/Wave.svg");
-  background-position: left;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-@media (min-width: 768px) {
-  .main-container .wave {
-    background-position: left;
-    min-height: 20vh;
-    margin-top: -160px;
-  }
-}
-@media (min-width: 992px) {
-  .main-container .wave {
-    min-height: 25vh;
-    background-position: center;
-    margin-top: -180px;
-  }
-}
-@media (min-width: 1540px) {
-  .main-container .wave {
-    background-position: center;
-    min-height: 30vh;
-    margin-top: -230px;
-  }
 }
 
 .team .team-description {

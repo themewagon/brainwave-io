@@ -3,11 +3,10 @@
   overflow: hidden;
   position: relative;
   .hero{
-    background-image: url('/assets/img/illustrations/BG.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: 100vh;
+    min-height: 90vh;
     display: flex;
     z-index: 0;
     align-items: center;
@@ -49,31 +48,12 @@
       }
     }
   }
-
-  .wave{
-    position: relative;
-    z-index: 100;
-    margin-top: -87px;
-    min-height: 10vh;
-    background-image: url('/assets/img/illustrations/Wave.svg');
-    background-position: right;
-    background-size: cover;
-    background-repeat: no-repeat;
-    @include media-breakpoint-up(md){
-    background-position: right;
-     min-height: 20vh;
-     margin-top: -160px;
-     }
-    @include media-breakpoint-up(lg){
-      min-height: 25vh;
-     background-position: center;
-      margin-top: -180px;
+  .wave-container{
+    .bg{
+      margin-top: -2px;
+      background-color: $white;
+      min-height: 10vh;
     }
-    @include media-breakpoint-up(xxl){
-      background-position: center;
-      min-height: 30vh;
-       margin-top: -230px;
-     }
   }
 }
 
