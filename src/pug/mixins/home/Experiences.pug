@@ -3,8 +3,8 @@ mixin Service({icon, title, description})
     div 
       img(src=`${CWD}assets/img/icons/${icon}`, alt="")
     div 
-      h5.fs-8.text-white.mb-2.title= title
-      p.fs-9= description 
+      h5.fs-8.text-white.mb-2.lh-lg= title
+      p.fs-9.lh-xl= description 
 
 mixin Experiences 
   -
@@ -48,17 +48,16 @@ mixin Experiences
             img(src=`${CWD}assets/img/Hero/experiences.png`, alt="").img-fluid
             button.btn.play-button.position-absolute 
               img(src=`${CWD}assets/img/illustrations/button-play.svg`, alt="")
-            .position-absolute.dots
+            .position-absolute.dots.d-none.d-sm-block
               img(src=`${CWD}assets/img/illustrations/Dots.png`, alt="").img-fluid.w-100
-      h2.fs-4.fs-lg-3.fw-bold.text-center.text-white.mb-6.mb-lg-7.mb-xl-8.heading 
-        | We made this app 
-        br
-        |to solve 
-        br.d-sm-none
-        |your problems.
+      h2.fs-4.fs-lg-3.fw-bold.text-center.text-white.mb-6.mb-lg-7.mb-xl-8.lh-sm We made this app
+        br 
+        span.text-nowrap to solve
+        br.d-sm-none 
+        span.text-nowrap  your problems.
       .row.g-2.g-lg-7.pb-7.pb-lg-8.pb-xl-9
         each item in serviceItems 
           +Service(item)
     .wave-container.position-absolute.top-0.start-0.z-1
       .bg.mt-n1 
-      .wave.mt-n1(style=`background-image: url('${CWD}assets/img/illustrations/Wave_2.svg')`)
+      .wave(style=`background-image: url('${CWD}assets/img/illustrations/Wave_2.svg')`)

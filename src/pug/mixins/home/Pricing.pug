@@ -1,37 +1,34 @@
 mixin Pricing 
   .pricing.position-relative.z-0
     .container.pt-8.pt-lg-9 
-      h3.fs-6.fs-lg-5.fs-lg-4.text-black.fw-bold.text-center.mb-2  Pricing made easy
-      p.fs-9.fs-lg-9.description.mb-6.mb-lg-7.mb-xl-8.text-center
+      h3.text-black.fs-4.fs-lg-3.fw-bold.text-center.mb-1.mb-lg-2.lh-sm Pricing made easy
+      p.fs-9.fs-lg-8.description.mb-6.mb-lg-7.mb-xl-8.text-center.lh-lg
         | With lots of unique blocks, you can easily build a page 
         br.d-none.d-sm-block
         |easily without any coding. 
       .d-md-flex.justify-content-md-center.gap-3.pb-8.pb-lg-9 
         .p-x1.text-center.price-card-1.mb-3.mb-md-0
-          p.fs-10.text-uppercase.mb-3.fw-bold.text-danger  Starter
-          p.text-black.mb-x1.price.fw-bold
-          | $
-          span  19 
-          | / mo
-          p.list.fs-9.fs-lg-8.mb-0  Upto 100 Team Members
-          p.list.fs-9.fs-lg-8.mb-0  100 GB Cloud Storage
-          p.list.fs-9.fs-lg-8.mb-0  Unlimited Meetings
-          p.list.fs-9.fs-lg-8.mb-0  Premium Support
-          button.btn.bg-black.d-inline-flex(type="button") Get Started Now
+          p.fs-10.text-uppercase.mb-3.fw-bold.text-primary  Starter
+          p.text-black.mb-x1.price
+            span.dollar $
+            span.number  19 
+            span.duration / mo
+          p.fs-9.fs-lg-8.mb-0.lh-xl.list  Upto 100 Team Members
+          p.fs-9.fs-lg-8.mb-0.lh-xl.list  100 GB Cloud Storage
+          p.fs-9.fs-lg-8.mb-0.lh-xl.list  Unlimited Meetings
+          p.fs-9.fs-lg-8.mb-0.lh-xl.list  Premium Support
+          button.btn.bg-black.btn-lg.brainwave-btn.d-inline-flex(type="button") Get Started Now
         .p-x1.text-center.price-card-2 
-          p.fs-10.text-uppercase.mb-3.fw-bold.text-danger  Unlimited
-          p.text-black.mb-x1.price.fw-bold
-          | $
-          span  99 
-          | / mo
-          p.list.fs-9.fs-lg-8.mb-0  Unlimited Team Members
-          p.list.fs-9.fs-lg-8.mb-0  Unlimited Cloud Storage
-          p.list.fs-9.fs-lg-8.mb-0  Unlimited Meetings
-          p.list.fs-9.fs-lg-8.mb-0  Premium Support
-          button.btn.bg-danger.d-inline-flex(type="button") Get Started Now
-    .position-absolute.bottom-0.end-0.z-n1
-      img(src=`${CWD}assets/img/illustrations/Green_dots.svg`, alt="")
-    .wave-container.position-relative.bottom-0.start-0.z-1
-      img(src=`${CWD}assets/img/illustrations/Wave_3.svg`, alt="").img-fluid.w-100
+          p.fs-10.text-uppercase.mb-3.fw-bold.text-primary  Unlimited
+          p.text-black.mb-x1.price
+            span.dollar $
+            span.number  99 
+            span.duration / mo
+          p.fs-9.fs-lg-8.mb-0.lh-xl.list  Unlimited Team Members
+          p.fs-9.fs-lg-8.mb-0.lh-xl.list  Unlimited Cloud Storage
+          p.fs-9.fs-lg-8.mb-0.lh-xl.list  Unlimited Meetings
+          p.fs-9.fs-lg-8.mb-0.lh-xl.list  Premium Support
+          button.btn.bg-primary.btn-lg.brainwave-btn.d-inline-flex(type="button") Get Started Now
+    
 
 

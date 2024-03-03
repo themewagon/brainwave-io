@@ -11,18 +11,9 @@
     z-index: 0;
     align-items: center;
     margin-bottom: 10px;
-    .heading{
-      line-height: 65px;
-      letter-spacing: -2px;
-    }
-    .sub-heading{
-      line-height: 32px;
-      letter-spacing: -0.2px;
-    }
+    
     .button-text{
       color: #F4F7FA;
-      line-height: 15.72px;
-      letter-spacing: 1.63px;
     }
     .action-button{
       position: relative;
@@ -80,41 +71,21 @@
 }
 
 .team {
-  .heading{
-    line-height: 58px;
-    letter-spacing: -1.8px
-  }
-  .sub-heading{
-    line-height: 32px;
-    letter-spacing: -0.5px;
-  }
+  
   .team-sub-title{
     color: rgba($black, 0.7);
-    line-height: 32px;
   }
   .team-description{
     color: rgba($black, 0.7);
-    line-height: 29px;
-    letter-spacing: -0.2px;
   }
 }
+.counter{
+  border-bottom: 1px solid #E7E9ED;
+}
 .work-process{
-  .heading{
-    line-height: 58px;
-    letter-spacing: -1.8px;
-  }
-  .sub-heading{
-    line-height: 32px;
-    letter-spacing: -0.2px;
-  }
-  .progress-heading{
-    line-height: 32px;
-    letter-spacing: -0.2px;
-  }
+  
   p {
     color: rgba($black, 0.7);
-    line-height: 29px;
-    letter-spacing: -0.2px;
   }
   .progress-item {
     .progress-bar, .progress-bar-2 {
@@ -186,8 +157,6 @@
   
   p {
     color: rgba($white, 0.65);
-    line-height: 29px;
-    letter-spacing: -0.2px;
   }
   .image-container{
     z-index: 0;
@@ -196,21 +165,25 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 80px;
-      height: 80px;
+      width: 50px;
+      height: 50px;
       padding: 0;
       border-radius: map-get($border-radiuses, 'circle');
       background-color: $white;
       display: flex;
       align-items: center;
-
+      justify-content: center;
+      
       span{
         font-size: 15px;
         color: map-get($theme-colors, 'danger');
       }
-
+      @include media-breakpoint-up(md){
+        width: 80px;
+        height: 80px;
+      }
       &:hover, &:active {
-        background-color: map-get($theme-colors, 'primary');
+        background-color: map-get($theme-colors, 'success');
       }
     }
     .dots{
@@ -222,14 +195,6 @@
         bottom: -5%;
         z-index: -1;
       }
-    }
-    .heading{
-      line-height: 58px;
-      letter-spacing: -1.8px;
-    }
-    .title{
-      line-height: 32px;
-      letter-spacing: -0.5px;
     }
   }
   .wave-container{
@@ -247,17 +212,23 @@
         min-height: 15vh;
       }
       @include media-breakpoint-up(lg){
-        min-height: 30vh;
+        min-height: 20vh;
       }
+      @include media-breakpoint-up(xl){
+        min-height: 25vh;
+      }
+
     }
     .wave{
-      min-height: 15vh;
-      background-image: url('/assets/img/illustrations/Wave_2.svg');
+      min-height: 10vh;
       background-position: right;
       background-size: cover;
       background-repeat: no-repeat;
       @include media-breakpoint-up(md){
         background-position: center;
+        min-height: 5vh;
+      }
+      @include media-breakpoint-up(lg){
         min-height: 10vh;
       }
     }
@@ -270,6 +241,10 @@
     width: 161px;
     height: 3px;
     background-color: rgba($white, 0.15);
+  }
+  .heading{
+    line-height: 1.4;
+    letter-spacing: -1.2px;
   }
   .underline{
     position: relative;
@@ -301,13 +276,27 @@
   }
   .review-card-2{
     background-color: rgba($white, 0.70);
+    transition: background-color 0.2s ease-in-out;
+    @include hover-focus{
+      background-color: $white;
+    }
   }
   .review-card-3{
     background-color: rgba($white, 0.50);
+    transition: background-color 0.2s ease-in-out;
+
+    @include hover-focus{
+      background-color: $white;
+    }
   }
+
+ 
+
   .read-more{
     color: map-get($theme-colors, 'success' );
     transition: color 0.3s ease-in-out;
+    gap: 10px;
+    line-height: 2;
     &:hover, &:active {
       color: map-get($theme-colors , 'primary' );
       text-decoration: none;
@@ -341,4 +330,43 @@
     background-color: $white;
     box-shadow: 0px 32px 64px 0px rgba(22, 28, 45, 0.07);
   }
+  .price{ 
+
+    .dollar {
+      font-size: map-get($font-sizes, 6);
+      font-weight: $font-weight-bold;
+      line-height: $line-height-base;
+      @include media-breakpoint-up(md){
+        font-size: map-get($font-sizes, 7);
+      }
+    }
+    .number {
+      font-size: map-get($font-sizes, 2);
+      font-weight: $font-weight-bold;
+      line-height: $line-height-base;
+      @include media-breakpoint-up(md){
+        font-size: map-get($font-sizes, 1);
+      }
+    }
+    .duration{
+      font-size: map-get($font-sizes, 9 );
+      line-height: $line-height-xl;
+      font-family: "Rubik", sans-serif !important;
+    }
+  }
+}
+
+.faq{
+  .check-parent{
+    background-color: map-get($theme-colors, 'success' );
+    height: 30px;
+    width: 30px;
+    border-radius: map-get($border-radiuses, 'circle' );
+  }
+  .sub-title, .description{
+    color: rgba($white, 0.65)
+  }
+}
+.subscription{
+  background-color: #F4F7FA;
 }

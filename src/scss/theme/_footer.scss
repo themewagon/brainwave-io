@@ -12,7 +12,7 @@
         line-height: 40px;
         
         @include hover-focus {
-            color: map-get($theme-colors, 'danger' );
+            color: map-get($theme-colors, 'primary' );
             text-decoration: none;
         }
     }
@@ -30,7 +30,8 @@
         margin-left: 31px;
         transition: color 0.2s ease-in-out;
         &:hover, &:active {
-            color: map-get($theme-colors, 'danger' );
+            text-decoration: none;
+            color: map-get($theme-colors, 'primary' );
         }
     }
 }

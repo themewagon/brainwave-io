@@ -11,7 +11,7 @@ const navbarInit = () => {
       const scrollTop = window.scrollY;
       let alpha = (scrollTop / windowHeight) * 2;
       alpha >= 1 && (alpha = 1);
-      navbar.style.backgroundColor = `rgba(123, 17, 249, ${alpha})`;
+      navbar.style.backgroundColor = `rgba(49, 60, 89, ${alpha})`;
     };
     handleAlpha();
     document.addEventListener('scroll', () => handleAlpha());

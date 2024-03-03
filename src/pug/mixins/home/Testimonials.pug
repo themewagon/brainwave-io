@@ -4,9 +4,9 @@ mixin Review({imgSrc, comment, name}, index)
       .d-flex.flex-column.flex-md-row.gap-2.px-4.py-x1(class=`review-card-${index + 1}`) 
         div.text-center.text-md-start 
           img(src=`${CWD}assets/img/feedback/${imgSrc}`, alt="")
-        div 
-          h6.fs-8.text-black.mb-2.fw-normal= comment 
-          p.fs-9= name
+        .text-center.text-md-start 
+          h5.fs-8.text-black.mb-2.fw-normal.lh-lg= comment 
+          span.fs-9.lh-xl= name
 
 
 mixin Testimonials
@@ -37,15 +37,15 @@ mixin Testimonials
         br.d-sm-none
         |  have shared 
         br.d-sm-none
-        | their 
+        span.text-nowrap their 
         br.d-none.d-md-block
-        | experience 
+        span experience 
         br.d-sm-none
-        | with our app!
+        span.text-nowrap with our app!
         
       .row.gap-2.mb-4.mb-lg-5.mb-xl-6 
         each item, index in reviews 
           +Review(item, index)
-      a.fs-9.d-flex.justify-content-center.align-items-center.gap-1.read-more(href="#!")
+      a.fs-9.d-flex.justify-content-center.align-items-center.read-more(href="#!")
         span Read more reviews 
         span.uil.uil-arrow-right.icon

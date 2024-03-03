@@ -1,0 +1,32 @@
+mixin AccordionItem({heading, body}, index) 
+
+  .accordion-item 
+    h2.accordion-header(id=`heading${index+1}`)
+      button.accordion-button(type='button' class=`${index!== 0 ? 'collapsed': ''}` data-bs-toggle="collapse" data-bs-target=`#collapse${index+1}` aria-expand="true" aria-controls=`collapse${index+1}`)=  heading 
+
+    .accordion-collapse.collapse(id=`collapse${index+1}` class=`${index === 0 ? 'show': ''}` aria-labelledby=`heading${index+1}` data-bs-parent="#accordion")
+      .accordion-body=  body 
+mixin Accordion 
+  -
+    var items = [
+      {
+        heading: 'How to setup Shade Pro?',
+        body: 'With lots of unique blocks, you can easily build a page with coding. Build your next landing page. Integer ut obe ryn. Sed feugiat vitae turpis a porta.'
+      },
+      {
+        heading: 'Can I use Shade Pro for my clients?',
+        body: 'With lots of unique blocks, you can easily build a page with coding. Build your next landing page. Integer ut obe ryn. Sed feugiat vitae turpis a porta.'
+      },
+      {
+        heading: 'How often do you release update?',
+        body: 'With lots of unique blocks, you can easily build a page with coding. Build your next landing page. Integer ut obe ryn. Sed feugiat vitae turpis a porta.'
+      },
+      {
+        heading: 'How can I access to old version?',
+        body: 'With lots of unique blocks, you can easily build a page with coding. Build your next landing page. Integer ut obe ryn. Sed feugiat vitae turpis a porta.'
+      }
+    ]
+  
+  #accoridion.accordion
+    each item, index in items 
+      +AccordionItem(item, index)

@@ -20,7 +20,7 @@ const countupInit = () => {
         const interval = setInterval(() => {
           endValue += 1;
           countUp.update(endValue);
-        }, 1500);
+        }, 10000);
         window.addEventListener('close', () => {
           clearInterval(interval);
         });

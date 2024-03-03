@@ -5,7 +5,12 @@
 
 
 
-
+.navbar-nav{
+  width: 100%;
+  @include media-breakpoint-up(md){
+    width: fit-content;
+  }
+}
 .nav-item{
   display: flex;
   align-items: center;

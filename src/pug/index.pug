@@ -2,11 +2,13 @@ extends layouts/LayoutTheme
 
 include ./mixins/home/HeroSection
 include ./mixins/home/Team
+include ./mixins/home/Counter
 include ./mixins/home/Collaborate
 include ./mixins/home/WorkProcess
 include ./mixins/home/Experiences
 include ./mixins/home/Testimonials
 include ./mixins/home/Pricing
+include ./mixins/home/FAQ
 
 prepend styles
     link(rel="stylesheet", href=`${CWD}vendors/swiper/swiper-bundle.min.css`)
@@ -20,8 +22,10 @@ append content
     div(data-bs-target="#navbar-top" data-bs-spy="scroll" tabindex="0")
         +HeroSection
         +Team
+        +Counter
         +Collaborate
         +WorkProcess
         +Experiences
         +Testimonials
         +Pricing
+        +FAQ

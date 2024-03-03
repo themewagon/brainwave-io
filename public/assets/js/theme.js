@@ -399,7 +399,7 @@ var countupInit = function countupInit() {
         var interval = setInterval(function () {
           endValue += 1;
           countUp.update(endValue);
-        }, 1500);
+        }, 10000);
         window.addEventListener('close', function () {
           clearInterval(interval);
         });
@@ -446,7 +446,7 @@ var navbarInit = function navbarInit() {
       var scrollTop = window.scrollY;
       var alpha = scrollTop / windowHeight * 2;
       alpha >= 1 && (alpha = 1);
-      navbar.style.backgroundColor = "rgba(123, 17, 249, ".concat(alpha, ")");
+      navbar.style.backgroundColor = "rgba(49, 60, 89, ".concat(alpha, ")");
     };
     handleAlpha();
     document.addEventListener('scroll', function () {
