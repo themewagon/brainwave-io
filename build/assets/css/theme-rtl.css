@@ -18505,6 +18505,7 @@ h5, .h5 {
 .primary-btn:hover, .primary-btn:focus, .primary-btn:active {
   background-color: #161C2D !important;
   color: #fff !important;
+  border-color: transparent;
 }
 
 .secondary-btn:hover, .secondary-btn:focus, .secondary-btn:active {
@@ -19406,6 +19407,11 @@ h5, .h5 {
   opacity: 60%;
 }
 
+.form {
+  max-width: 350px;
+  width: 100%;
+}
+
 .email-input {
   padding: 15px 22px !important;
   border-radius: 8px !important;
@@ -19415,7 +19421,7 @@ h5, .h5 {
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  width: 250px;
+  width: 100%;
 }
 .email-input:focus {
   border: 1px solid #68D585 !important;
@@ -19444,11 +19450,6 @@ h5, .h5 {
 .email-input::placeholder {
   color: rgba(22, 28, 45, 0.7);
   font-size: 1.25rem;
-}
-@media (min-width: 576px) {
-  .email-input {
-    width: 370px;
-  }
 }
 
 .accordion {
@@ -19577,8 +19578,13 @@ h5, .h5 {
   height: 100%;
   border-right: 3px dashed #D5D7DD;
   right: 50%;
-  bottom: -80%;
+  bottom: -50%;
   z-index: -1;
+}
+@media (min-width: 576px) {
+  .work-process .progress-item .progress-bar .indicator-parent::before, .work-process .progress-item .progress-bar-2 .indicator-parent::before {
+    bottom: -70%;
+  }
 }
 @media (min-width: 992px) {
   .work-process .progress-item .progress-bar .indicator-parent, .work-process .progress-item .progress-bar-2 .indicator-parent {
@@ -19640,6 +19646,24 @@ h5, .h5 {
 }
 .experience .image-container {
   z-index: 0;
+  max-height: 650px;
+}
+.experience .image-container .video {
+  border-radius: 20px;
+}
+.experience .image-container .overlay {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #161C2D;
+  opacity: 0.1;
+  z-index: 100;
+  border-radius: 20px;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
 .experience .image-container .play-button {
   top: 50%;
@@ -19649,6 +19673,7 @@ h5, .h5 {
   transform: translate(50%, -50%);
   width: 50px;
   height: 50px;
+  z-index: 999;
   padding: 0;
   border-radius: 50%;
   background-color: #fff;
@@ -19671,9 +19696,6 @@ h5, .h5 {
     width: 80px;
     height: 80px;
   }
-}
-.experience .image-container .play-button:hover, .experience .image-container .play-button:active {
-  background-color: rgba(22, 28, 45, 0.7);
 }
 .experience .image-container .dots {
   right: -5%;
@@ -19809,6 +19831,7 @@ h5, .h5 {
   border-radius: 10px;
 }
 .pricing .price-card-1 .list, .pricing .price-card-2 .list {
+  letter-spacing: 0.3px;
   padding: 21px 10px;
   border-top: 1px solid #E7E9ED;
 }
@@ -19847,6 +19870,11 @@ h5, .h5 {
   font-size: 1rem;
   line-height: 1.8;
   font-family: "Rubik", sans-serif !important;
+}
+@media (min-width: 768px) {
+  .pricing {
+    min-width: 350px;
+  }
 }
 
 .faq .check-parent {

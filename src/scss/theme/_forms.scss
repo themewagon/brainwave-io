@@ -33,6 +33,11 @@
   }
 }
 
+.form{
+  max-width: 350px;
+  width: 100%;
+}
+
 .email-input {
   padding: 15px 22px !important;
   border-radius: 8px !important;
@@ -40,7 +45,7 @@
   color: rgba($black, 0.70);
   font-size: map-get($font-sizes, 9 );
   transition: all 0.2s ease-in-out;
-  width: 250px;
+  width: 100%;
   
   &:focus {
     border: 1px solid map-get($theme-colors,'success') !important;
@@ -52,9 +57,5 @@
   &::placeholder{
     color: rgba($black, 0.70);
     font-size: map-get($font-sizes, 8 );;
-  }
-
-  @include media-breakpoint-up(sm){
-    width: 370px;
   }
 }

@@ -2,7 +2,7 @@ mixin AccordionItem({heading, body}, index)
 
   .accordion-item 
     h2.accordion-header(id=`heading${index+1}`)
-      button.accordion-button.fs-8.lh-lg.fw-bold.text-black(type='button' class=`${index!== 0 ? 'collapsed': ''}` data-bs-toggle="collapse" data-bs-target=`#collapse${index+1}` aria-expand="true" aria-controls=`collapse${index+1}`)=  heading 
+      button.accordion-button.fs-8.lh-lg.fw-bold.text-black(type='button' class=`${index!== 0 ? 'collapsed': ''}` data-bs-toggle="collapse" data-bs-target=`#collapse${index+1}` aria-expand="true" aria-controls=`collapse${index+1}` data-accordion-button)=  heading 
 
     .accordion-collapse.collapse(id=`collapse${index+1}` class=`${index === 0 ? 'show': ''}` aria-labelledby=`heading${index+1}` data-bs-parent="#accordion")
       .accordion-body.fs-9.lh-xl.accoridion-text=  body 

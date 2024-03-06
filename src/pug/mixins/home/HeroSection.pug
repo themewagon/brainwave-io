@@ -1,17 +1,17 @@
 include Button
 
 mixin HeroSection 
-  .main-container.mb-6.mb-lg-7.mb-xl-8.position-relative.z-0
+  .main-container.position-relative.z-0
     .hero(style=`background-image:url('${CWD}assets/img/illustrations/BG.png')`)
       .container 
-        .row.g-1.pt-9.pt-lg-0
+        .row.gy-4.gy-md-8.pt-9.pt-lg-0
           .col-12.col-lg-6
-            h1.fs-2.fs-lg-1.text-white.fw-bold.mb-2.mb-lg-x1.heading.lh-base.mt-4.mt-lg-0.text-center.text-md-start  Manage your remote team work
-            p.fs-8.text-white.mb-3.mb-lg-4.lh-lg.text-center.text-md-start With lots of unique blocks, you can easily build a page without coding. Build your next consultancy website within few minutes
-            .d-flex.justify-content-center.justify-content-md-start
+            h1.fs-2.fs-lg-1.text-white.fw-bold.mb-2.mb-lg-x1.heading.lh-base.mt-4.mt-lg-0.text-center.text-lg-start  Manage your remote team work
+            p.fs-8.text-white.mb-3.mb-lg-4.lh-lg.text-center.text-lg-start With lots of unique blocks, you can easily build a page without coding. Build your next consultancy website within few minutes
+            .d-flex.justify-content-center.justify-content-lg-start
               button.btn.bg-primary.btn-lg.lh-xl.brainwave-btn.mb-6.mb-lg-7 Explore more
-            p.mb-2.mb-lg-x1.fs-10.button-text.text-uppercase.fw-bold.lh-base.text-center.text-md-start Download our app
-            .d-flex.flex-column.flex-md-row.justify-content-center.justify-content-md-start.align-items-center.gap-1.action-button
+            p.mb-2.mb-lg-x1.fs-10.button-text.text-uppercase.fw-bold.lh-base.text-center.text-lg-start Download our app
+            .d-flex.flex-column.flex-sm-row.justify-content-center.justify-content-lg-start.align-items-center.gap-1.action-button
               +Button('assets/img/logos/App_Store.png')
               +Button('assets/img/logos/Play_Store.png')
           .col-12.col-lg-6.position-lg-relative

@@ -2,15 +2,15 @@ mixin Counter
 
   .counter.mb-8.mb-lg-9.mb-xl-10
     .container 
-      .row.pb-6.pb-lg-7.pb-xl-8.g-2.g-lg-4
-        .col-12.col-lg-4.d-flex.gap-x1.gap-lg-3.justify-content-center.align-items-center.align-items-lg-start
-          h2.fs-3.text-black.fw-bold.lh-sm(data-countup!={endValue: 1, suffix: 'M+'}) 0
-          h6.text-black.fs-9.fw-normal.lh-xl Customers visit Albino every months
+      .row.pb-6.pb-lg-7.pb-xl-8.g-3.g-lg-8.px-3
+        .col-12.col-sm-6.col-lg-4
+          h2.fs-3.text-black.fw-bold.lh-sm.mb-2.text-center(data-countup!={endValue: 6, prefix: '0'}) 0
+          h6.text-black.fs-9.fw-normal.lh-xl.mb-0.text-center Offices are available on different countries
         
-        .col-12.col-lg-4.d-flex.gap-x1.gap-lg-3.justify-content-center.align-items-center.align-items-lg-start
-          h2.fs-3.text-black.fw-bold.lh-sm(data-countup!={endValue: 93, suffix: '%'}) 0
-          h6.text-black.fs-9.fw-normal.lh-xl Satisfaction rate from our customers.
+        .col-12.col-sm-6.col-lg-4
+          h2.fs-3.text-black.fw-bold.lh-sm.mb-2.text-center(data-countup!={endValue: 238}) 0
+          h6.text-black.fs-9.fw-normal.lh-xl.mb-0.text-center Seats are available right now with dedicated support
         
-        .col-12.col-lg-4.d-flex.gap-x1.gap-lg-3.justify-content-center.align-items-center.align-items-lg-start
-          h2.fs-3.text-black.fw-bold.lh-sm(data-countup!={endValue: 4.9, decimalPlaces: 1}) 0
-          h5.text-black.fs-9.fw-normal.lh-xl Average customer ratings out of 5.00!
+        .col-12.col-sm-12.col-lg-4
+          h2.fs-3.text-black.fw-bold.lh-sm.mb-2.text-center(data-countup!={endValue: 1395, autoIncreasing: true}) 0
+          h5.text-black.fs-9.fw-normal.lh-xl.mb-0.text-center People are using our co-work spaces right now

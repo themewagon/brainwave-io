@@ -45,8 +45,8 @@ mixin Experiences
       .row.justify-content-center 
         .col-12.mb-7.mb-lg-8.mb-xl-9
           .position-relative.image-container.z-2.text-center.h-100
-            //- img(src=`${CWD}assets/img/Hero/experiences.png`, alt="").img-fluid
-            video.w-100.h-100(src=`${CWD}assets/video/Tech_video.mp4` poster=`${CWD}assets/img/Hero/experiences.png` type="video/mp4" data-video-player) 
+            video.w-100.h-100.video(src=`${CWD}assets/video/Tech_video.mp4` poster=`${CWD}assets/img/Hero/experiences.png` type="video/mp4" data-video-player)
+            .overlay(data-overlay) 
             button.btn.play-button.position-absolute(data-play-button) 
               img.object-fit-contain.w-25(src=`${CWD}assets/img/illustrations/play-solid.svg`, alt="" data-play-icon)
               img.object-fit-contain.w-25(src=`${CWD}assets/img/illustrations/pause-solid.svg`, alt="" data-pause-icon)
@@ -57,7 +57,7 @@ mixin Experiences
         span.text-nowrap to solve
         br.d-sm-none 
         span.text-nowrap  your problems.
-      .row.g-2.g-lg-7.pb-7.pb-lg-8.pb-xl-9
+      .row.g-2.g-lg-7.pb-7.pb-lg-8.pb-xl-9.px-1
         each item in serviceItems 
           +Service(item)
     .wave-container.position-absolute.top-0.start-0.z-1
