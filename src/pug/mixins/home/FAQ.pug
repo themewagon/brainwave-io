@@ -4,8 +4,9 @@ include ./Accordion
 mixin List({label, description}) 
 
   .d-flex.gap-1.gap-xl-x1.mb-4.mb-lg-5 
-    .check-parent.fs-9.d-flex.align-items-center.justify-content-center 
-      span.uil.uil-check.text-white
+    div
+      .check-parent.fs-9.d-flex.align-items-center.justify-content-center 
+        span.uil.uil-check.text-white
     div 
       h5.fs-8.fw-bold.lh-lg.list-heading.text-white= label 
       p.fs-9.lh-xl.description.mb-0= description
@@ -21,12 +22,12 @@ mixin FAQ
         description: 'With lots of unique blocks, you can easily build a page without coding.',
       }
     ]
-  .bg-black.mb-6.mb-lg-7.mb-xl-8.faq 
+  .bg-black.faq 
     .container
-      .row.align-items-center.g-2.g-lg-4.py-9.py-10
+      .row.g-2.g-lg-4.py-9.py-10
         .col-12.col-lg-6
-          h2.text-white.fs-4.fs-lg-3.lh-sm.mb-1 We are always here for your backup.
-          h6.fs-8.sub-title.mb-4.mb-lg-5.mb-xl-6.lh-lg.mb-7.mb-lg-6  We share common trends and strategies for creating & improving your rental income.
+          h2.text-white.fs-4.fs-lg-3.lh-sm.mb-1.text-center.text-lg-start We are always here for your backup.
+          h6.fs-8.sub-title.mb-4.mb-lg-5.mb-xl-6.lh-lg.mb-7.mb-lg-6.text-center.text-lg-start  We share common trends and strategies for creating & improving your rental income.
 
           each item in items 
             +List(item)

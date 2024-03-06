@@ -9,6 +9,7 @@ include ./mixins/home/Experiences
 include ./mixins/home/Testimonials
 include ./mixins/home/Pricing
 include ./mixins/home/FAQ
+include ./mixins/home/Subscription
 
 prepend styles
     link(rel="stylesheet", href=`${CWD}vendors/swiper/swiper-bundle.min.css`)
@@ -21,11 +22,12 @@ prepend scripts
 append content 
     div(data-bs-target="#navbar-top" data-bs-spy="scroll" tabindex="0")
         +HeroSection
-        +Team
         +Counter
+        +Team
         +Collaborate
         +WorkProcess
         +Experiences
         +Testimonials
         +Pricing
         +FAQ
+        +Subscription

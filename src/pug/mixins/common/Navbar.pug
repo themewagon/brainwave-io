@@ -20,12 +20,12 @@ mixin Navbar
     ]
 
   nav.navbar.fixed-top(data-navbar-soft-on-scroll)
-    .container-fluid
+    .d-flex.justify-content-bewteen.align-items-center.w-100
       .d-flex.gap-1.align-items-end
-        img(src=`${CWD}assets/img/logos/logo.svg`, alt="logo").img-fluid.w-100.d-lg-none 
+        img(src=`${CWD}assets/img/logos/logo.svg`, alt="logo").img-fluid.d-lg-none 
         a(href=`${CWD}`).navbar-brand.me-lg-auto.cursor-pointer.text-white.fs-8.fw-bold.d-none.d-lg-block Brainwave.io
-      button.btn.bg-primary.brainwave-btn.ms-5.ms-xl-6.mt-lg-0.order-md-1(type="button") Get Started Now
-      ul.navbar-nav.ms-lg-auto.gap-x1.justify-content-center.justify-content-md-end.flex-grow-1.flex-row.mt-1.mt-md-0 
+      button.btn.bg-primary.primary-btn.lh-sm.ms-3.ms-xl-6.mt-lg-0.order-sm-1(type="button") Get Started Now
+      ul.navbar-nav.ms-lg-auto.gap-x1.justify-content-center.justify-content-md-end.flex-grow-1.flex-row.mt-1.mt-sm-0 
         each navMenu in menu 
             li.nav-item 
                 a(href=`${navMenu.link}` title=`${navMenu.label}`).nav-link.nav-bar-item.px-0 #{navMenu.label}

@@ -6,15 +6,14 @@ mixin HeroSection
       .container 
         .row.g-1.pt-9.pt-lg-0
           .col-12.col-lg-6
-            h1.fs-2.fs-lg-1.text-white.fw-bold.mb-2.mb-lg-x1.heading.lh-base  Manage your remote team work
-            p.fs-9.fs-lg-8.text-white.mb-3.mb-lg-4.lh-lg With lots of unique blocks, you can easily build a page without coding. Build your next consultancy website within few minutes
-            button.btn.bg-primary.btn-lg.brainwave-btn.mb-6.mb-lg-7 Explore more
-            p.mb-2.mb-lg-x1.fs-10.button-text.text-uppercase.fw-bold.lh-base Download our app
-            .d-sm-flex.align-items-sm-center.gap-1.action-button
-              div 
-                +Button('assets/img/logos/App_Store.png')
-              div 
-                +Button('assets/img/logos/Play_Store.png')
+            h1.fs-2.fs-lg-1.text-white.fw-bold.mb-2.mb-lg-x1.heading.lh-base.mt-4.mt-lg-0.text-center.text-md-start  Manage your remote team work
+            p.fs-8.text-white.mb-3.mb-lg-4.lh-lg.text-center.text-md-start With lots of unique blocks, you can easily build a page without coding. Build your next consultancy website within few minutes
+            .d-flex.justify-content-center.justify-content-md-start
+              button.btn.bg-primary.btn-lg.lh-xl.brainwave-btn.mb-6.mb-lg-7 Explore more
+            p.mb-2.mb-lg-x1.fs-10.button-text.text-uppercase.fw-bold.lh-base.text-center.text-md-start Download our app
+            .d-flex.flex-column.flex-md-row.justify-content-center.justify-content-md-start.align-items-center.gap-1.action-button
+              +Button('assets/img/logos/App_Store.png')
+              +Button('assets/img/logos/Play_Store.png')
           .col-12.col-lg-6.position-lg-relative
             .position-lg-absolute.hero-image.text-center.top-0.end-0
               .position-relative.z-1 
@@ -23,5 +22,5 @@ mixin HeroSection
                   img(src=`${CWD}assets/img/illustrations/Dots.png`, alt="").img-fluid.w-50.w-lg-75
 
     .wave-container.position-absolute.bottom-0.start-0.z-1.end-0
-      img(src=`${CWD}assets/img/illustrations/Wave.svg`, alt="").img-fluid.w-100.mb-n2
+      img(src=`${CWD}assets/img/illustrations/Wave.svg`, alt="").img-fluid.w-100.mb-md-n2
       .bg

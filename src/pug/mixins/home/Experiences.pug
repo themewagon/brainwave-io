@@ -44,10 +44,12 @@ mixin Experiences
     .container
       .row.justify-content-center 
         .col-12.mb-7.mb-lg-8.mb-xl-9
-          .position-relative.image-container.z-2.text-center
-            img(src=`${CWD}assets/img/Hero/experiences.png`, alt="").img-fluid
-            button.btn.play-button.position-absolute 
-              img(src=`${CWD}assets/img/illustrations/button-play.svg`, alt="")
+          .position-relative.image-container.z-2.text-center.h-100
+            //- img(src=`${CWD}assets/img/Hero/experiences.png`, alt="").img-fluid
+            video.w-100.h-100(src=`${CWD}assets/video/Tech_video.mp4` poster=`${CWD}assets/img/Hero/experiences.png` type="video/mp4" data-video-player) 
+            button.btn.play-button.position-absolute(data-play-button) 
+              img.object-fit-contain.w-25(src=`${CWD}assets/img/illustrations/play-solid.svg`, alt="" data-play-icon)
+              img.object-fit-contain.w-25(src=`${CWD}assets/img/illustrations/pause-solid.svg`, alt="" data-pause-icon)
             .position-absolute.dots.d-none.d-sm-block
               img(src=`${CWD}assets/img/illustrations/Dots.png`, alt="").img-fluid.w-100
       h2.fs-4.fs-lg-3.fw-bold.text-center.text-white.mb-6.mb-lg-7.mb-xl-8.lh-sm We made this app

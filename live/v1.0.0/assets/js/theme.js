@@ -399,7 +399,7 @@ var countupInit = function countupInit() {
         var interval = setInterval(function () {
           endValue += 1;
           countUp.update(endValue);
-        }, 1500);
+        }, 10000);
         window.addEventListener('close', function () {
           clearInterval(interval);
         });
@@ -446,7 +446,7 @@ var navbarInit = function navbarInit() {
       var scrollTop = window.scrollY;
       var alpha = scrollTop / windowHeight * 2;
       alpha >= 1 && (alpha = 1);
-      navbar.style.backgroundColor = "rgba(123, 17, 249, ".concat(alpha, ")");
+      navbar.style.backgroundColor = "rgba(49, 60, 89, ".concat(alpha, ")");
     };
     handleAlpha();
     document.addEventListener('scroll', function () {
@@ -511,6 +511,44 @@ var swiperInit = function swiperInit() {
     }
   });
 };
+var videoControllerInit = function videoControllerInit() {
+  var videoPlayer = document.querySelector('[data-video-player');
+  var playButton = document.querySelector('[data-play-button');
+  var playIcon = document.querySelector('[data-play-icon');
+  var pauseIcon = document.querySelector('[data-pause-icon');
+  pauseIcon.style.display = 'none';
+  var buttonVisible = function buttonVisible() {
+    playButton.style.display = 'inline';
+  };
+  var buttonHidden = function buttonHidden() {
+    setTimeout(function () {
+      if (!videoPlayer.paused) {
+        playButton.style.display = 'none';
+      }
+    }, 2000);
+  };
+  playButton.addEventListener('click', function () {
+    if (videoPlayer.paused) {
+      videoPlayer.play();
+      playIcon.style.display = 'none';
+      pauseIcon.style.display = 'inline';
+    } else {
+      videoPlayer.pause();
+      playIcon.style.display = 'inline';
+      pauseIcon.style.display = 'none';
+    }
+  });
+  videoPlayer.addEventListener('mouseenter', buttonVisible);
+  videoPlayer.addEventListener('mouseleave', buttonHidden);
+  // videoPlayer.addEventListener('touchstart', buttonVisible);
+  // videoPlayer.addEventListener('touchend', buttonHidden);
+
+  videoPlayer.addEventListener('ended', function () {
+    playIcon.style.display = 'inline';
+    pauseIcon.style.display = 'none';
+    playButton.style.display = 'block';
+  });
+};
 
 /* -------------------------------------------------------------------------- */
 /*                            Theme Initialization                            */
@@ -521,3 +559,4 @@ docReady(formValidationInit);
 docReady(swiperInit);
 docReady(countupInit);
 docReady(scrollToTopInit);
+docReady(videoControllerInit);

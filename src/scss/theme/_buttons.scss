@@ -1,20 +1,19 @@
 
-.brainwave-btn {
+
+.primary-btn {
   @extend .btn-lg;
-  // display: flex;
-  // justify-content: center;
-  // padding: 6px 10px;
-  // color: $white;
-  // border-radius: 8px;
-  // transition: background-color 0.2s ease-in-out;
   &:hover,&:focus, &:active{
-    background-color: map-get($theme-colors, 'success') !important;
+    background-color: $black !important;
     color: $white !important;
   }
-  // @include media-breakpoint-up(md){
-  //   // padding: 13px 24px;
-  //   @extend .btn-lg;
-  // }
+}
+
+.secondary-btn{
+  @extend .btn-lg;
+  &:hover,&:focus, &:active{
+    background-color: map-get($theme-colors, 'primary') !important;
+    color: $white !important;
+  } 
 }
 
 .btn {
