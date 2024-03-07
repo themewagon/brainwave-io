@@ -6,11 +6,9 @@
 .accordion-item{
   border-color: #E7E9ED !important;
 }
-// .accordion-button::after{
-//   background: url('/assets/img/icons/Path.svg') !important;
-//   background-position: center !important;
-//   background-repeat: no-repeat !important;
-// }
+.accordion-button::after{
+  background-size: auto !important;
+}
 .accordion-button:focus{
   box-shadow: 0 0 0 0.25rem rgba(104, 213, 133, 0.25) !important;
 }
@@ -84,6 +82,15 @@
   }
   .team-description{
     color: rgba($black, 0.7);
+  }
+  .details{
+    @include media-breakpoint-up(lg){
+      max-width: 480px;
+
+      .details-term {
+        max-width: 340px;
+      }
+    }
   }
 }
 .counter{
@@ -251,6 +258,9 @@
       }
     }
   }
+  .img-holder{
+    margin-top: 7px;
+  }
 }
 
 .testimonal{
@@ -285,8 +295,9 @@
     border: 1px solid #57595E;
     color: rgba($black, 0.7);
 
-    img{
+    .card-image{
       max-height: 111px;
+      border-radius: 2px solid #979797;
     }
   }
   .review-card-1 {
@@ -333,12 +344,17 @@
   .price-card-1, .price-card-2{
     border: 1px solid #E7E9ED;
     border-radius: 10px;
+    min-width: 350px;
+    .heading{
+      letter-spacing: 1.63px;
+    }
     .list{
       letter-spacing: 0.3px;
       padding: 21px 10px;
       border-top: 1px solid #E7E9ED;
     }
     button {
+      min-width: 285px;
       margin-top: 7px;
     }
   }
@@ -354,7 +370,7 @@
     .dollar {
       font-size: map-get($font-sizes, 6);
       font-weight: $font-weight-bold;
-      line-height: $line-height-base;
+      line-height: 65px;
       @include media-breakpoint-up(md){
         font-size: map-get($font-sizes, 7);
       }
@@ -385,9 +401,16 @@
     height: 30px;
     width: 30px;
     border-radius: map-get($border-radiuses, 'circle' );
+    margin-top: 8px;
   }
   .sub-title, .description{
     color: rgba($white, 0.65)
+  }
+  .list-heading{
+    margin-bottom: 11px !important;
+  }
+  .text-container{
+    max-width: 395px;
   }
   .accoridion-text{
     color: rgba($black, 0.7) !important;

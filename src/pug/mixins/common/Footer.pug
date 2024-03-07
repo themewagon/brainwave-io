@@ -1,48 +1,43 @@
 mixin Footer 
 
-  footer.Footer.bg-white.pt-8.pt-lg-9 
+  footer.Footer.bg-white.pt-7.pt-lg-8 
     .container
       .row.g-2.g-md-6.footer-top
         .col-6.col-lg-2.mb-4.mb-lg-0
-          h5.fs-9.mb-3.heading Company
-          .mb-1 
+          h5.fs-9.mb-1.heading Company
+          .divider  
             a(href="#").links About us
-          .mb-1 
+          .divider  
             a(href="#about").links  Contact us
-          .mb-1 
+          .divider  
             a(href="#products").links Careers
-          .mb-1 
+          .divider  
             a(href="#review").links Press
           
         .col-6.col-lg-2.mb-4.mb-lg-0
-          .mb-3 
-            h5.fs-9.heading Product 
-          div
-            .mb-1 
-              a(href="#!").links Features
-            .mb-1 
-              a(href="#!").links  Pricing
-            .mb-1 
-              a(href="#!").links  News
-            .mb-1 
-              a(href="#!").links  Help desk
-              
+          h5.fs-9.mb-1.heading Product
+          .divider  
+            a(href="#!").links Features
+          .divider  
+            a(href="#!").links  Pricing
+          .divider  
+            a(href="#!").links  News
+          .divider  
+            a(href="#!").links  Help desk
+          .divider
             a(href="#!").links  Support
 
         .col-6.col-lg-4
-          .mb-3 
-            h5.fs-9.heading  Legal
-          div
-            .mb-1 
-              a(href="#!").links Privacy
-            .mb-1 
-              a(href="#!").links  Terms & Conditions
-            .mb-1 
-              a(href="#!").links  Return Policy
+          h5.fs-9.mb-1.heading  Legal
+          .divider  
+            a(href="#!").links Privacy
+          .divider  
+            a(href="#!").links  Terms & Conditions
+          .divider  
+            a(href="#!").links  Return Policy
 
         .col-6.col-lg-4
-            .mb-3 
-              h5.fs-9.heading  Download Our App
+            h5.fs-9.mb-1.heading  Download Our App
             div.mb-sm-1 
               +Button('assets/img/logos/App_Store.png')
             +Button('assets/img/logos/Play_Store.png')

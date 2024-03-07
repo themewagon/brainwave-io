@@ -3,15 +3,15 @@ mixin Subscription
     .container
       .row.py-8.py-lg-9.justify-content-center
         .col-12.d-flex.flex-column.align-items-center.px-2.px-md-7 
-          h2.text-black.fs-4.fs-lg-3.fw-bold.text-center.mb-lg-2.lh-sm Get latest updates
-          h6.fs-8.description.mb-5.mb-lg-6.text-center.lh-lg  With lots of unique blocks, you can easily build a page 
+          h2.text-black.fs-4.fs-lg-3.fw-bold.text-center.mb-1.lh-sm Get latest updates
+          h6.fs-8.description.mb-5.mb-lg-6.text-center.lh-lg.fw-normal  With lots of unique blocks, you can easily build a page 
             br.d-none.d-sm-block
             | without coding. Build your next landing page.
           form.form.mb-x1(method="POST" onsubmit="return false;")
             .mb-1.w-100
               input#email.form-control.email-input(type="email" placeholder="Enter your email" required)
-            button.btn.btn-lg.w-100.primary-btn.btn-primary  Subscribe
-          p.text-center.description 
+            button.btn.btn-lg.w-100.primary-btn.btn-primary(type='submit')  Subscribe
+          p.text-center.description.mb-0 
             span We’ll never share your details with third parties.
             br
             span View our Privacy Policy for more info.

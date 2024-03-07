@@ -5399,11 +5399,11 @@ textarea.form-control-lg {
   --brainwaveio-accordion-btn-padding-y: 1rem;
   --brainwaveio-accordion-btn-color: var(--brainwaveio-accordion-btn-color-global);
   --brainwaveio-accordion-btn-bg: var(--brainwaveio-accordion-bg);
-  --brainwaveio-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' height='3' width='3' viewBox='0 0 320 512'%3e%3c!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3e%3cpath fill='%23161c2d' d='M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z'/%3e%3c/svg%3e");
+  --brainwaveio-accordion-btn-icon: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNS4xIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjQgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTMxMC42IDIzMy40YzEyLjUgMTIuNSAxMi41IDMyLjggMCA0NS4zbC0xOTIgMTkyYy0xMi41IDEyLjUtMzIuOCAxMi41LTQ1LjMgMHMtMTIuNS0zMi44IDAtNDUuM0wyNDIuNyAyNTYgNzMuNCA4Ni42Yy0xMi41LTEyLjUtMTIuNS0zMi44IDAtNDUuM3MzMi44LTEyLjUgNDUuMyAwbDE5MiAxOTJ6Ii8+PC9zdmc+");
   --brainwaveio-accordion-btn-icon-width: 1.25rem;
-  --brainwaveio-accordion-btn-icon-transform: rotate(0deg);
-  --brainwaveio-accordion-btn-icon-transition: transform 0.2s ease-in-out;
-  --brainwaveio-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' height='3' width='3' viewBox='0 0 512 512'%3e%3c!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3e%3cpath fill='%23161c2d' d='M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z'/%3e%3c/svg%3e");
+  --brainwaveio-accordion-btn-icon-transform: rotate(-90deg);
+  --brainwaveio-accordion-btn-icon-transition: transform 0.3s ease-in-out;
+  --brainwaveio-accordion-btn-active-icon: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNS4xIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjQgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTMxMC42IDIzMy40YzEyLjUgMTIuNSAxMi41IDMyLjggMCA0NS4zbC0xOTIgMTkyYy0xMi41IDEyLjUtMzIuOCAxMi41LTQ1LjMgMHMtMTIuNS0zMi44IDAtNDUuM0wyNDIuNyAyNTYgNzMuNCA4Ni42Yy0xMi41LTEyLjUtMTIuNS0zMi44IDAtNDUuM3MzMi44LTEyLjUgNDUuMyAwbDE5MiAxOTJ6Ii8+PC9zdmc+");
   --brainwaveio-accordion-btn-focus-border-color: var(--brainwaveio-input-focus-border-color-global);
   --brainwaveio-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(247, 77, 77, 0.25);
   --brainwaveio-accordion-body-padding-x: 2.1rem;
@@ -18429,7 +18429,7 @@ html:not([data-bs-theme=dark]) .d-light-none {
 /*-----------------------------------------------
 |   Headers
 -----------------------------------------------*/
-h5, .h5 {
+h5, .h5, h6, .h6 {
   margin-bottom: 1rem;
 }
 
@@ -19375,7 +19375,7 @@ h5, .h5 {
   text-align: center;
   color: #fff !important;
   font-size: 16px !important;
-  font-weight: 500;
+  font-weight: 700 !important;
 }
 .nav-item .nav-bar-item:hover {
   color: #68D585 !important;
@@ -19496,6 +19496,10 @@ h5, .h5 {
   border-color: #E7E9ED !important;
 }
 
+.accordion-button::after {
+  background-size: auto !important;
+}
+
 .accordion-button:focus {
   -webkit-box-shadow: 0 0 0 0.25rem rgba(104, 213, 133, 0.25) !important;
   box-shadow: 0 0 0 0.25rem rgba(104, 213, 133, 0.25) !important;
@@ -19570,6 +19574,14 @@ h5, .h5 {
 }
 .team .team-description {
   color: rgba(22, 28, 45, 0.7);
+}
+@media (min-width: 992px) {
+  .team .details {
+    max-width: 480px;
+  }
+  .team .details .details-term {
+    max-width: 340px;
+  }
 }
 
 .counter {
@@ -19782,6 +19794,9 @@ h5, .h5 {
     min-height: 10vh;
   }
 }
+.experience .img-holder {
+  margin-top: 7px;
+}
 
 .testimonal {
   background: #161C2D;
@@ -19815,8 +19830,9 @@ h5, .h5 {
   border: 1px solid #57595E;
   color: rgba(22, 28, 45, 0.7);
 }
-.testimonal .review-card-1 img, .testimonal .review-card-2 img, .testimonal .review-card-3 img {
+.testimonal .review-card-1 .card-image, .testimonal .review-card-2 .card-image, .testimonal .review-card-3 .card-image {
   max-height: 111px;
+  border-radius: 2px solid #979797;
 }
 .testimonal .review-card-1 {
   background-color: #fff;
@@ -19864,6 +19880,10 @@ h5, .h5 {
 .pricing .price-card-1, .pricing .price-card-2 {
   border: 1px solid #E7E9ED;
   border-radius: 10px;
+  min-width: 350px;
+}
+.pricing .price-card-1 .heading, .pricing .price-card-2 .heading {
+  letter-spacing: 1.63px;
 }
 .pricing .price-card-1 .list, .pricing .price-card-2 .list {
   letter-spacing: 0.3px;
@@ -19871,6 +19891,7 @@ h5, .h5 {
   border-top: 1px solid #E7E9ED;
 }
 .pricing .price-card-1 button, .pricing .price-card-2 button {
+  min-width: 285px;
   margin-top: 7px;
 }
 .pricing .price-card-1 {
@@ -19884,7 +19905,7 @@ h5, .h5 {
 .pricing .price .dollar {
   font-size: 1.875rem;
   font-weight: 700;
-  line-height: 1.1;
+  line-height: 65px;
 }
 @media (min-width: 768px) {
   .pricing .price .dollar {
@@ -19917,9 +19938,16 @@ h5, .h5 {
   height: 30px;
   width: 30px;
   border-radius: 50%;
+  margin-top: 8px;
 }
 .faq .sub-title, .faq .description {
   color: rgba(255, 255, 255, 0.65);
+}
+.faq .list-heading {
+  margin-bottom: 11px !important;
+}
+.faq .text-container {
+  max-width: 395px;
 }
 .faq .accoridion-text {
   color: rgba(22, 28, 45, 0.7) !important;
@@ -19941,6 +19969,11 @@ h5, .h5 {
 .Footer .heading {
   color: rgba(22, 28, 45, 0.7);
   margin-bottom: 0;
+  line-height: 26px;
+  letter-spacing: 0.3px;
+}
+.Footer .divider {
+  margin-bottom: 8px;
 }
 .Footer .links {
   color: #161C2D;

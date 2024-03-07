@@ -1,14 +1,14 @@
 mixin Pricing 
   .pricing.position-relative.z-0
-    .container.pt-8.pt-lg-9 
+    .container.py-8.py-lg-9 
       h3.text-black.fs-4.fs-lg-3.fw-bold.text-center.mb-1.mb-lg-2.lh-sm Pricing made easy
-      p.fs-8.description.mb-6.mb-lg-7.mb-xl-8.text-center.lh-lg
+      h6.fs-8.description.mb-7.mb-lg-8.text-center.lh-lg.fw-normal
         | With lots of unique blocks, you can easily build a page 
         br.d-none.d-sm-block
         |easily without any coding. 
-      .d-md-flex.justify-content-md-center.gap-3.pb-8.pb-lg-9 
+      .d-md-flex.justify-content-md-center.gap-3 
         .p-x1.text-center.price-card-1.mb-3.mb-md-0
-          p.fs-10.text-uppercase.mb-3.fw-bold.text-primary  Starter
+          p.fs-10.text-uppercase.mb-3.fw-bold.text-primary.heading  Starter
           p.text-black.mb-x1.price
             span.dollar $
             span.number 19
@@ -17,9 +17,9 @@ mixin Pricing
           p.fs-8.mb-0.lh-xl.fw-light.list  100 GB Cloud Storage
           p.fs-8.mb-0.lh-xl.fw-light.list  Unlimited Meetings
           p.fs-8.mb-0.lh-xl.fw-light.list  Premium Support
-          button.btn.bg-black.secondary-btn.d-inline-flex.lh-xl(type="button") Get Started Now
+          button.btn.bg-black.secondary-btn.d-inline-flex.justify-content-center.lh-xl.price-button(type="button") Get Started Now
         .p-x1.text-center.price-card-2 
-          p.fs-10.text-uppercase.mb-3.fw-bold.text-primary  Unlimited
+          p.fs-10.text-uppercase.mb-3.fw-bold.text-primary.heading  Unlimited
           p.text-black.mb-x1.price
             span.dollar $
             span.number 99
@@ -28,7 +28,7 @@ mixin Pricing
           p.fs-8.mb-0.lh-xl.fw-light.list  Unlimited Cloud Storage
           p.fs-8.mb-0.lh-xl.fw-light.list  Unlimited Meetings
           p.fs-8.mb-0.lh-xl.fw-light.list  Premium Support
-          button.btn.bg-primary.primary-btn.d-inline-flex.lh-xl(type="button") Get Started Now
+          button.btn.bg-primary.primary-btn.d-inline-flex.justify-content-center.lh-xl.price-button(type="button") Get Started Now
     
 
 
