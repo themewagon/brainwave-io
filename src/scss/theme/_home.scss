@@ -80,24 +80,50 @@
   .team-sub-title{
     color: rgba($black, 0.7);
   }
+  .mb-xs{
+    margin-bottom: 11px;
+  }
   .team-description{
     color: rgba($black, 0.7);
   }
   .details{
     @include media-breakpoint-up(lg){
       max-width: 480px;
-
       .details-term {
         max-width: 340px;
       }
     }
   }
+
+  // .fade-in{
+  //   opacity: 1;
+  //   scale: 1;
+  //   animation: fadeIn 2s ease-in-out 1s;
+  // }
+
+  // @keyframes fadeIn {
+  //   0% {
+  //     opacity: 0;
+  //     scale: 0.5;
+  //   }
+  //   100%{
+  //     opacity: 1;
+  //     scale: 1;
+  //   }
+  // }
 }
 .counter{
   border-bottom: 1px solid #E7E9ED;
 }
 .work-process{
-  
+  margin-bottom: 80px;
+
+  @include media-breakpoint-up(lg){
+    margin-bottom: 123px;
+  }
+  .mb-14{
+    margin-bottom: 14px;
+  }
   p {
     color: rgba($black, 0.7);
   }
@@ -177,7 +203,7 @@
   }
   .image-container{
     z-index: 0;
-    max-height: 650px;
+    max-height: 652px;
     .video{
       border-radius: 20px;
     }
@@ -192,6 +218,7 @@
       z-index: 100;
       border-radius: 20px;
       transition: opacity 0.5s ease-in-out;
+      filter: drop-shadow(0 22px 64px #161C2D3B);
     }
     .play-button {
       top: 50%;
@@ -258,8 +285,16 @@
       }
     }
   }
+  .heading {
+    margin-bottom: 50px;
+
+    @include media-breakpoint-up(lg){
+      margin-bottom: 98px;
+    }
+  }
   .img-holder{
     margin-top: 7px;
+    margin-right: 18px;
   }
 }
 
@@ -271,8 +306,14 @@
     background-color: rgba($white, 0.15);
   }
   .heading{
+    padding-top: 60px;
+    padding-bottom: 40px;
     line-height: 1.4;
     letter-spacing: -1.2px;
+    @include media-breakpoint-up(lg){
+      padding-top: 92px;
+      padding-bottom: 56px;
+    }
   }
   .underline{
     position: relative;
@@ -327,7 +368,7 @@
     gap: 10px;
     line-height: 2;
     &:hover, &:active {
-      color: map-get($theme-colors , 'primary' );
+      color: shade-color(map-get($theme-colors , 'success' ), 20%);
       text-decoration: none;
     }
     .icon{
@@ -350,7 +391,7 @@
     }
     .list{
       letter-spacing: 0.3px;
-      padding: 21px 10px;
+      padding: 22px 9px 19px 10px;
       border-top: 1px solid #E7E9ED;
     }
     button {
@@ -423,5 +464,13 @@
     font-size: 15px;
     line-height: 1.7;
     color: rgba($black, 0.7);
+  }
+}
+
+.swiper-theme-container{
+  height: 600px !important;
+  overflow: hidden;
+  .swiper{
+    height: 100%;
   }
 }

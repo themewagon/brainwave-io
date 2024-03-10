@@ -44,7 +44,7 @@ $spacers: (
   8: $spacer * 4.5, //72
   9: $spacer * 6.875, // 110
   10: $spacer * 8.875, //142
-  x1: $spacer-x1 //24
+  x1: $spacer-x1, //24
 ) !default;
 // scss-docs-end spacer-variables-maps
 
@@ -258,7 +258,7 @@ $lead-font-weight: $font-weight-normal !default;
 
 $small-font-size: 75% !default;
 
-$line-height-base:  1.1;
+$line-height-base:  1.084;
 $line-height-sm:  1.2;
 $line-height-lg:  1.6;
 $line-height-xl:  1.8;
@@ -290,6 +290,7 @@ $card-title-color: $headings-color !default;
 // 
 // scss-docs-start accordion-variables
 // $accordion-icon-width: 'auto' !default;
+$accordion-padding-y: 1.25rem !default;
 $accordion-padding-x: 2.1rem!default;
 $accordion-icon-active-color: $body-color !default;
 $accordion-bg: var(--#{$prefix}emphasis-bg) !default;
@@ -432,7 +433,7 @@ $zindex-sticky: 1015 !default;
 
 // scss-docs-start navbar-variables
 $navbar-padding-y: map_get($spacers, 2) !default;
-$navbar-padding-x: $spacer !default;
+$navbar-padding-x: map_get($spacers, 2) !default;
 
 $top-nav-height: var(--#{$prefix}top-nav-height) !default;
 $standard-nav-height: 3.5625rem !default;

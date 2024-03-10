@@ -1,5 +1,5 @@
 mixin Review({imgSrc, comment, name}, index)
-  .col-12 
+  .col-12.swiper-slide 
     .d-flex.justify-content-center.gap-2
       .d-flex.flex-column.flex-md-row.gap-2.px-4.py-x1(class=`review-card-${index + 1}`) 
         div.text-center.text-md-start 
@@ -26,21 +26,42 @@ mixin Testimonials
         imgSrc: 'reviewer_3.png',
         comment: '“Must have book for all, who want to be Product Designer or Interaction Designer.”',
         name: 'Esther Allison'
-      }
+      },
+      {
+        imgSrc: 'reviewer_2.png',
+        comment: '“Simply the best. Better than all the rest. I’d recommend this product to beginners and advanced users who want success.”',
+        name: 'Barry Young'
+      },
+      {
+        imgSrc: 'reviewer_3.png',
+        comment: '“Must have book for all, who want to be Product Designer or Interaction Designer.”',
+        name: 'Esther Allison'
+      },
     ]
   .testimonal
     .mx-auto.text-center 
       hr.horizontal-rule.m-0.d-inline-block
-    .container.py-8.py-lg-9
-      h2.fs-6.fs-lg-5.fw-bold.text-center.text-white.mb-6.mb-lg-7.heading 
+    .container.pb-8.pb-lg-9
+      h2.fs-6.fs-lg-5.fw-bold.text-center.text-white.heading 
         span.underline  1,749 remote teams
         span.tex-nowrap  have shared their  
         br.d-none.d-md-block
         span.text-nowrap experience with our app!
-        
-      .row.gap-2.mb-4.mb-lg-5.mb-xl-6 
-        each item, index in reviews 
-          +Review(item, index)
+
+      .row.gap-2.mb-4.mb-lg-6
+        .swiper-theme-container.position-relative 
+          .swiper(data-swiper!={
+              direction: "vertical",
+              spaceBetween: 32,
+              autoHeight: true,
+              autoplay: true,
+              loop: true ,
+              autoplay: false,
+              slidesPerView: 3
+            })
+            .swiper-wrapper 
+              each item, index in reviews 
+                +Review(item, index)
       a.fs-9.d-flex.justify-content-center.align-items-center.read-more(href="#!")
         span Read more reviews 
         span.uil.uil-arrow-right.icon

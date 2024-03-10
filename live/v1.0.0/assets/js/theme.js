@@ -492,25 +492,30 @@ var scrollToTopInit = function scrollToTopInit() {
 -----------------------------------------------*/
 
 var swiperInit = function swiperInit() {
-  var themeContainers = document.querySelectorAll('.swiper-theme-container');
   var navbarVerticalToggle = document.querySelector('.navbar-vertical-toggle');
-  themeContainers.forEach(function (themeContainer) {
-    var swiper = themeContainer.querySelector('[data-swiper]');
-    var options = utils.getData(swiper, 'swiper');
-    var swiperNav = themeContainer.querySelector('.slider-nav');
-    var newSwiper = new window.Swiper(swiper, _objectSpread(_objectSpread({}, options), {}, {
-      navigation: {
-        nextEl: swiperNav === null || swiperNav === void 0 ? void 0 : swiperNav.querySelector('.next-button'),
-        prevEl: swiperNav === null || swiperNav === void 0 ? void 0 : swiperNav.querySelector('.prev-button')
-      }
-    }));
-    if (navbarVerticalToggle) {
-      navbarVerticalToggle.addEventListener('navbar.vertical.toggle', function () {
-        newSwiper.update();
-      });
+  var swiper = document.querySelector('[data-swiper]');
+  var options = utils.getData(swiper, 'swiper');
+  var swiperNav = document.querySelector('.slider-nav');
+  var newSwiper = new window.Swiper(swiper, _objectSpread(_objectSpread({}, options), {}, {
+    navigation: {
+      nextEl: swiperNav === null || swiperNav === void 0 ? void 0 : swiperNav.querySelector('.next-button'),
+      prevEl: swiperNav === null || swiperNav === void 0 ? void 0 : swiperNav.querySelector('.prev-button')
     }
-  });
+  }));
+  if (navbarVerticalToggle) {
+    navbarVerticalToggle.addEventListener('navbar.vertical.toggle', function () {
+      newSwiper.update();
+    });
+  }
+  // const themeContainers = document.querySelectorAll('.swiper-container');
+  // const navbarVerticalToggle = document.querySelector(
+  //   '.navbar-vertical-toggle'
+  // );
+  // themeContainers.forEach((themeContainer) => {
+
+  // });
 };
+
 var videoControllerInit = function videoControllerInit() {
   var videoPlayer = document.querySelector('[data-video-player');
   var playButton = document.querySelector('[data-play-button');

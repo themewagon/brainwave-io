@@ -5,28 +5,31 @@ import utils from './utils';
 -----------------------------------------------*/
 
 const swiperInit = () => {
-  const themeContainers = document.querySelectorAll('.swiper-theme-container');
   const navbarVerticalToggle = document.querySelector(
     '.navbar-vertical-toggle'
   );
-  themeContainers.forEach((themeContainer) => {
-
-    const swiper = themeContainer.querySelector('[data-swiper]');
-    const options = utils.getData(swiper, 'swiper');
-    const swiperNav = themeContainer.querySelector('.slider-nav');
-    const newSwiper = new window.Swiper(swiper, {
-      ...options,
-      navigation: {
-        nextEl: swiperNav?.querySelector('.next-button'),
-        prevEl: swiperNav?.querySelector('.prev-button'),
-      },
-    });
-    if (navbarVerticalToggle) {
-      navbarVerticalToggle.addEventListener('navbar.vertical.toggle', () => {
-        newSwiper.update();
-      });
-    }
+  const swiper = document.querySelector('[data-swiper]');
+  const options = utils.getData(swiper, 'swiper');
+  const swiperNav = document.querySelector('.slider-nav');
+  const newSwiper = new window.Swiper(swiper, {
+    ...options,
+    navigation: {
+      nextEl: swiperNav?.querySelector('.next-button'),
+      prevEl: swiperNav?.querySelector('.prev-button'),
+    },
   });
+  if (navbarVerticalToggle) {
+    navbarVerticalToggle.addEventListener('navbar.vertical.toggle', () => {
+      newSwiper.update();
+    });
+  }
+  // const themeContainers = document.querySelectorAll('.swiper-container');
+  // const navbarVerticalToggle = document.querySelector(
+  //   '.navbar-vertical-toggle'
+  // );
+  // themeContainers.forEach((themeContainer) => {
+
+  // });
 };
 
 export default swiperInit;

@@ -1,10 +1,10 @@
 mixin Service({icon, title, description})
-  .col-12.col-sm-6.col-lg-4.d-flex.gap-1 
+  .col-12.col-sm-6.col-lg-4.d-flex
     .img-holder 
       img(src=`${CWD}assets/img/icons/${icon}`, alt="")
     div 
       h5.fs-8.text-white.mb-1.lh-lg.fw-bold= title
-      p.fs-9.lh-xl.mb-0= description 
+      p.fs-9.lh-xl.mb-0.line-clamp-3= description 
 
 mixin Experiences 
   -
@@ -44,7 +44,7 @@ mixin Experiences
     .container
       .row.justify-content-center.mb-8.mb-lg-9 
         .col-12
-          .position-relative.image-container.z-2.text-center.h-100
+          .position-relative.image-container.z-2.text-center
             video.w-100.h-100.video(src=`${CWD}assets/video/Tech_video.mp4` poster=`${CWD}assets/img/Hero/experiences.png` type="video/mp4" data-video-player)
             .overlay(data-overlay) 
             button.btn.play-button.position-absolute(data-play-button) 
@@ -52,7 +52,7 @@ mixin Experiences
               img.object-fit-contain.w-25(src=`${CWD}assets/img/illustrations/pause-solid.svg`, alt="" data-pause-icon)
             .position-absolute.dots.d-none.d-sm-block
               img(src=`${CWD}assets/img/illustrations/Dots.png`, alt="").img-fluid.w-100
-      h2.fs-4.fs-lg-3.fw-bold.text-center.text-white.mb-8.mb-lg-9.lh-sm We made this app
+      h2.fs-4.fs-lg-3.fw-bold.text-center.text-white.heading.lh-sm We made this app
         br 
         span.text-nowrap to solve
         br.d-sm-none 
@@ -61,5 +61,5 @@ mixin Experiences
         each item in serviceItems 
           +Service(item)
     .wave-container.position-absolute.top-0.start-0.z-1
-      .bg.mt-n1 
+      .bg.mt-n1.mt-lg-0 
       .wave(style=`background-image: url('${CWD}assets/img/illustrations/Wave_2.svg')`)

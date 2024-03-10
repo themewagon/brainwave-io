@@ -36,6 +36,10 @@
 .form{
   max-width: 350px;
   width: 100%;
+
+  @include media-breakpoint-up(lg){
+    max-width: 369px;
+  }
 }
 
 .email-input {
@@ -44,7 +48,7 @@
   border: 1px solid #E7E9ED !important;
   color: rgba($black, 0.70);
   font-size: map-get($font-sizes, 9 );
-  transition: all 0.2s ease-in-out;
+  transition: all 0.1s ease-in;
   width: 100%;
   
   &:focus {
