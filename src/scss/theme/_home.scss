@@ -40,7 +40,7 @@
   }
   .hero-image {
     .chat-image{
-      width: 80%;
+      width: 60%;
     }
     .dots{
       top: -5%;
@@ -94,23 +94,15 @@
       }
     }
   }
+  .team-image{
+    max-width: 475px;
+    max-height: 495px;
+  }
+  .collaborate-image{
+    max-width: 441px;
+    max-height: 530px;
+  }
 
-  // .fade-in{
-  //   opacity: 1;
-  //   scale: 1;
-  //   animation: fadeIn 2s ease-in-out 1s;
-  // }
-
-  // @keyframes fadeIn {
-  //   0% {
-  //     opacity: 0;
-  //     scale: 0.5;
-  //   }
-  //   100%{
-  //     opacity: 1;
-  //     scale: 1;
-  //   }
-  // }
 }
 .counter{
   border-bottom: 1px solid #E7E9ED;
@@ -330,38 +322,6 @@
     z-index: -1;
   }
 
-  .review-card-1, .review-card-2, .review-card-3{
-    max-width: 730px;
-    border-radius: 12px;
-    border: 1px solid #57595E;
-    color: rgba($black, 0.7);
-
-    .card-image{
-      max-height: 111px;
-      border-radius: 2px solid #979797;
-    }
-  }
-  .review-card-1 {
-   background-color: $white; 
-  }
-  .review-card-2{
-    background-color: rgba($white, 0.70);
-    transition: background-color 0.2s ease-in-out;
-    @include hover-focus{
-      background-color: $white;
-    }
-  }
-  .review-card-3{
-    background-color: rgba($white, 0.50);
-    transition: background-color 0.2s ease-in-out;
-
-    @include hover-focus{
-      background-color: $white;
-    }
-  }
-
- 
-
   .read-more{
     color: map-get($theme-colors, 'success' );
     transition: color 0.3s ease-in-out;
@@ -472,5 +432,42 @@
   overflow: hidden;
   .swiper{
     height: 100%;
+    width: fit-content;
+    margin: auto;
+  }
+}
+
+.swiper-slide{
+  margin: auto;
+  max-width: 730px;
+  border: 1px solid #57595E;
+  color: rgba($black, 0.7);
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: rgba($white, 0.50);
+  transition: background-color 0.2s ease-in-out;
+  @include hover-focus{
+    background-color: $white;
+  }
+  .card-image{
+    width: 90px;
+    height: 90px;
+    border: 2px solid #979797;
+    border-radius: 50%;
+    @include media-breakpoint-up(lg){
+    width: 111px;
+    height: 111px;
+    }
+  }
+}
+.swiper-slide-active {
+  background-color: $white; 
+ }
+
+ .swiper-slide-next, .swiper-slide-prev{
+  background-color: rgba($white, 0.70);
+  transition: background-color 0.2s ease-in-out;
+  @include hover-focus{
+    background-color: $white;
   }
 }

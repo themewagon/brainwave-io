@@ -2,10 +2,10 @@ mixin Review({imgSrc, comment, name}, index)
   .col-12.swiper-slide 
     .d-flex.justify-content-center.gap-2
       .d-flex.flex-column.flex-md-row.gap-2.px-4.py-x1(class=`review-card-${index + 1}`) 
-        div.text-center.text-md-start 
-          img(src=`${CWD}assets/img/feedback/${imgSrc}`, alt="").card-image.rounded-circle
+        div.text-center.text-md-start
+          img(src=`${CWD}assets/img/feedback/${imgSrc}`, alt="").card-image
         .text-center.text-md-start 
-          p.fs-8.text-black.mb-2.lh-lg= comment 
+          p.fs-8.text-black.mb-2.lh-lg.line-clamp-3= comment 
           span.fs-9.lh-xl= name
 
 
@@ -28,14 +28,14 @@ mixin Testimonials
         name: 'Esther Allison'
       },
       {
-        imgSrc: 'reviewer_2.png',
-        comment: '“Simply the best. Better than all the rest. I’d recommend this product to beginners and advanced users who want success.”',
-        name: 'Barry Young'
+        imgSrc: 'kakashi.jpeg',
+        comment: '“Every day, I eat, sleep, and worry about stupid things. My job is to ensure that these kids have as many days as possible where they can be idiots like this.”',
+        name: 'Kakashi Hatake'
       },
       {
-        imgSrc: 'reviewer_3.png',
-        comment: '“Must have book for all, who want to be Product Designer or Interaction Designer.”',
-        name: 'Esther Allison'
+        imgSrc: 'obito.jpeg',
+        comment: '“Life isn’t permanent or predictable. You never know when you will run out of time. The best thing you can do is to be honest with those around you and let them know how you really feel. You never know if you have a tomorrow to come.”',
+        name: 'Obito Uchiha'
       },
     ]
   .testimonal
@@ -49,15 +49,24 @@ mixin Testimonials
         span.text-nowrap experience with our app!
 
       .row.gap-2.mb-4.mb-lg-6
-        .swiper-theme-container.position-relative 
+        .swiper-theme-container
           .swiper(data-swiper!={
               direction: "vertical",
-              spaceBetween: 32,
-              autoHeight: true,
-              autoplay: true,
-              loop: true ,
-              autoplay: false,
-              slidesPerView: 3
+              mousewheel: true,
+              spaceBetween: 20,
+              autoplay: {
+                delay: 3000, 
+                disableOnInteraction: false 
+              },
+              breakpoints:{
+                0:{
+                    slidesPerView: 2,
+                },
+                768: {
+                  slidesPerView: 3
+                }
+              },
+              loop:true,
             })
             .swiper-wrapper 
               each item, index in reviews 

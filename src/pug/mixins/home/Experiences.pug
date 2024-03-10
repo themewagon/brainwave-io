@@ -1,5 +1,5 @@
 mixin Service({icon, title, description})
-  .col-12.col-sm-6.col-lg-4.d-flex
+  .col-12.col-md-6.col-lg-4.d-flex
     .img-holder 
       img(src=`${CWD}assets/img/icons/${icon}`, alt="")
     div 
@@ -57,7 +57,7 @@ mixin Experiences
         span.text-nowrap to solve
         br.d-sm-none 
         span.text-nowrap  your problems.
-      .row.g-2.g-lg-7.pb-8.pb-lg-9.px-1
+      .row.g-2.g-lg-7.pb-8.pb-lg-9.px-lg-1
         each item in serviceItems 
           +Service(item)
     .wave-container.position-absolute.top-0.start-0.z-1
