@@ -24,7 +24,7 @@ mixin Navbar
       .me-auto
         img(src=`${CWD}assets/img/logos/logo.svg`, alt="logo").img-fluid.w-75.d-md-none 
         a(href=`${CWD}`).navbar-brand.me-lg-auto.cursor-pointer.text-white.fs-8.fw-bold.d-none.d-md-block Brainwave.io
-      button.btn.bg-primary.primary-btn.lh-sm.ms-3.ms-xl-6.mt-lg-0.order-sm-1(type="button") Get Started Now
+      a.btn.bg-primary.primary-btn.lh-sm.ms-3.ms-xl-6.mt-lg-0.order-sm-1(href="!#") Get Started Now
       ul.navbar-nav.ms-lg-auto.gap-x1.justify-content-center.justify-content-sm-end.flex-grow-1.flex-row.mt-1.mt-sm-0 
         each navMenu in menu 
             li.nav-item 
