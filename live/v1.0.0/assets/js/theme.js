@@ -379,19 +379,9 @@ var DomNode = /*#__PURE__*/function () {
   }]);
   return DomNode;
 }();
-var accordionInit = function accordionInit() {
-  // const accordionButtons = document.querySelectorAll('[data-accordion-button]');
-  // const targetId = ;
-
-  // accordionButtons.forEach((button) => {
-
-  // })
-};
-
 /* -------------------------------------------------------------------------- */
 /*                                  Count Up                                  */
 /* -------------------------------------------------------------------------- */
-
 var countupInit = function countupInit() {
   if (window.countUp) {
     var countups = document.querySelectorAll('[data-countup]');
@@ -575,4 +565,3 @@ docReady(swiperInit);
 docReady(countupInit);
 docReady(scrollToTopInit);
 docReady(videoControllerInit);
-docReady(accordionInit);

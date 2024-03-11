@@ -18504,6 +18504,7 @@ h5, .h5, h6, .h6 {
 
 .primary-btn {
   font-size: 17px;
+  font-weight: bold;
 }
 .primary-btn:hover, .primary-btn:focus, .primary-btn:active {
   background-color: #ad3636 !important;
@@ -18511,6 +18512,10 @@ h5, .h5, h6, .h6 {
   border-color: transparent;
 }
 
+.secondary-btn {
+  font-size: 17px;
+  font-weight: bold;
+}
 .secondary-btn:hover, .secondary-btn:focus, .secondary-btn:active {
   background-color: #737781 !important;
   color: #fff !important;

@@ -3,6 +3,7 @@
 .primary-btn {
   @extend .btn-lg;
   font-size: 17px;
+  font-weight: bold;
   &:hover,&:focus, &:active{
     background-color: shade-color(map-get($theme-colors, 'primary'), 30%) !important;
     color: $white !important;
@@ -12,6 +13,8 @@
 
 .secondary-btn{
   @extend .btn-lg;
+  font-size: 17px;
+  font-weight: bold;
   &:hover,&:focus, &:active{
     background-color: tint-color($black, 40%) !important;
     color: $white !important;
