@@ -26,8 +26,9 @@ mixin Navbar
   nav.navbar.navbar-expand-md.fixed-top(data-navbar-soft-on-scroll)
     .d-flex.justify-content-bewteen.align-items-center.w-100.flex-wrap
       .me-auto
-        img(src=`${CWD}assets/img/logos/logo.svg`, alt="logo").navbar-brand.img-fluid.w-75.d-md-none 
-        a(href=`${CWD}`).navbar-brand.me-lg-auto.cursor-pointer.text-white.fs-8.fw-bold.d-none.d-md-block Brainwave.io
+        a(href=`${CWD}`)
+          img(src=`${CWD}assets/img/logos/logo.svg`, alt="logo").navbar-brand.img-fluid.w-75.d-md-none 
+        a(href=`${CWD}`).navbar-brand.me-lg-auto.cursor-pointer.text-white.fs-7.fw-bold.d-none.d-md-block Brainwave.io
       button.navbar-toggler.border-0(type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation")
         span.navbar-toggler-icon
       #navbar-content.collapse.navbar-collapse.ms-auto.justify-content-md-end(data-navbar-collapse)
