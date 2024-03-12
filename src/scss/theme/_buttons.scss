@@ -1,9 +1,31 @@
 
 
+.navbar-btn {
+  @extend .btn-lg;
+  font-size: 16px;
+  font-weight: bold;
+  height: 50px;
+  width: 174px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover,&:focus, &:active{
+    background-color: shade-color(map-get($theme-colors, 'primary'), 30%) !important;
+    color: $white !important;
+    border-color: transparent
+  }
+}
 .primary-btn {
   @extend .btn-lg;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: bold;
+  min-width: 195px;
+  height: 59px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   &:hover,&:focus, &:active{
     background-color: shade-color(map-get($theme-colors, 'primary'), 30%) !important;
     color: $white !important;
@@ -13,10 +35,13 @@
 
 .secondary-btn{
   @extend .btn-lg;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: bold;
+  width: 219px;
+  height: 59px;
+  background-color:  #2E2F33;
   &:hover,&:focus, &:active{
-    background-color: tint-color($black, 40%) !important;
+    background-color: #000;
     color: $white !important;
   } 
 }
@@ -53,7 +78,6 @@
   justify-content: center;
   align-items: center;
   background-color: map-get($theme-colors, 'primary' ) !important;
-  opacity: 0.7;
   border-radius: map-get($border-radiuses, 'circle');
   transition: opacity 0.2s ease-in;
   z-index: 1120;
@@ -63,8 +87,7 @@
   }
 
   &:hover{
-    opacity: 1;
-    background-color: map-get($theme-colors, 'primary' ) !important;
+    background-color: shade-color(map-get($theme-colors, 'primary' ), 30%) !important;
   }
 
 }

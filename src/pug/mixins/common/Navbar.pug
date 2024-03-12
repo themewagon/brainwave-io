@@ -2,30 +2,37 @@ mixin Navbar
   - 
     var menu = [
       { 
-        label: 'Demos', 
+        label: 'Home', 
         link: '#home' 
       },
       { 
-        label: 'Pages', 
+        label: 'About us', 
         link: '#about' 
       },
       { 
         label: 'Support', 
-        link: '#products' 
+        link: '#service' 
+      },
+      { 
+        label: 'Pricing', 
+        link: '#price' 
       },
       { 
         label: 'Contact', 
-        link: '#review' 
+        link: '#contact' 
       }
     ]
 
-  nav.navbar.fixed-top(data-navbar-soft-on-scroll)
+  nav.navbar.navbar-expand-md.fixed-top(data-navbar-soft-on-scroll)
     .d-flex.justify-content-bewteen.align-items-center.w-100.flex-wrap
       .me-auto
-        img(src=`${CWD}assets/img/logos/logo.svg`, alt="logo").img-fluid.w-75.d-md-none 
+        img(src=`${CWD}assets/img/logos/logo.svg`, alt="logo").navbar-brand.img-fluid.w-75.d-md-none 
         a(href=`${CWD}`).navbar-brand.me-lg-auto.cursor-pointer.text-white.fs-8.fw-bold.d-none.d-md-block Brainwave.io
-      a.btn.bg-primary.primary-btn.lh-sm.ms-3.ms-xl-6.mt-lg-0.order-sm-1(href="!#") Get Started Now
-      ul.navbar-nav.ms-lg-auto.gap-x1.justify-content-center.justify-content-sm-end.flex-grow-1.flex-row.mt-1.mt-sm-0 
-        each navMenu in menu 
-            li.nav-item 
-                a(href=`${navMenu.link}` title=`${navMenu.label}`).nav-link.nav-bar-item.px-0 #{navMenu.label}
+      button.navbar-toggler.border-0(type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation")
+        span.navbar-toggler-icon
+      #navbar-content.collapse.navbar-collapse.ms-auto.justify-content-md-end(data-navbar-collapse)
+        ul.navbar-nav.ms-lg-auto.gap-md-x1.mt-x1.mt-md-0(data-navbar-nav)
+          each navMenu in menu 
+              li.nav-item 
+                  a(href=`${navMenu.link}` title=`${navMenu.label}`).nav-link.nav-bar-item.px-0 #{navMenu.label}
+        a.btn.bg-primary.navbar-btn.lh-sm.ms-md-3.ms-lg-6.mt-lg-0(href="!#") Get Started Now 

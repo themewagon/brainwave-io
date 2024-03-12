@@ -34,7 +34,7 @@ const videoControllerInit = () => {
   });
 
   playButton.addEventListener('mouseover', () => {
-    overlay.style.opacity = '0.1';
+    overlay.style.opacity = '0.4';
   });
   playButton.addEventListener('mouseout', () => {
     overlay.style.opacity = '0';

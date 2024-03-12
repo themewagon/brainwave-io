@@ -40,12 +40,16 @@
   }
   .hero-image {
     .chat-image{
-      width: 60%;
+      width: 90%;
     }
     .dots{
       top: -5%;
       right: 15%;
       z-index: -10;
+    }@include media-breakpoint-up(md){
+      .chat-image{
+        width: 60%;
+      }
     }
     @include media-breakpoint-up(lg){
       .chat-image{
@@ -66,6 +70,11 @@
     }
   }
   .wave-container{
+    .wave{
+      width: 110% !important;
+      margin-left: -20px;
+      margin-right: -20px;
+    }
     .bg{
       margin-top: -2px;
       background-color: $white;
@@ -94,15 +103,17 @@
       }
     }
   }
-  .team-image{
-    max-width: 475px;
-    max-height: 495px;
+  
+  @include media-breakpoint-up(md){
+    .team-image{
+      max-width: 475px;
+      max-height: 495px;
+    }
+    .collaborate-image{
+      max-width: 441px;
+      max-height: 530px;
+    }
   }
-  .collaborate-image{
-    max-width: 441px;
-    max-height: 530px;
-  }
-
 }
 .counter{
   border-bottom: 1px solid #E7E9ED;
@@ -198,6 +209,7 @@
     max-height: 652px;
     .video{
       border-radius: 20px;
+      object-fit: cover !important;
     }
     .overlay{
       position: absolute;
@@ -345,7 +357,8 @@
   .price-card-1, .price-card-2{
     border: 1px solid #E7E9ED;
     border-radius: 10px;
-    min-width: 350px;
+    max-width: 350px;
+    width: 100%;
     .heading{
       letter-spacing: 1.63px;
     }
@@ -354,9 +367,8 @@
       padding: 22px 9px 19px 10px;
       border-top: 1px solid #E7E9ED;
     }
-    button {
-      min-width: 285px;
-      margin-top: 7px;
+    .price-button {
+      margin-top: 9px;
     }
   }
   .price-card-1{
@@ -365,6 +377,10 @@
   .price-card-2{
     background-color: $white;
     box-shadow: 0px 32px 64px 0px rgba(22, 28, 45, 0.07);
+
+    .price-button{
+      max-width: 285px;
+    }
   }
   .price{ 
 
@@ -410,11 +426,13 @@
   .list-heading{
     margin-bottom: 11px !important;
   }
-  .text-container{
-    max-width: 395px;
-  }
   .accoridion-text{
     color: rgba($black, 0.7) !important;
+  }
+  @include media-breakpoint-up(lg){
+    .text-container{
+      max-width: 395px;
+    }
   }
 }
 .subscription{

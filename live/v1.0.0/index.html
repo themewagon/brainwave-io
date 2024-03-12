@@ -35,32 +35,35 @@
     <main class="main" id="top">
       <div class="bg-white">
         <div class="content">
-          <nav class="navbar fixed-top" data-navbar-soft-on-scroll="data-navbar-soft-on-scroll">
+          <nav class="navbar navbar-expand-md fixed-top" data-navbar-soft-on-scroll="data-navbar-soft-on-scroll">
             <div class="d-flex justify-content-bewteen align-items-center w-100 flex-wrap">
-              <div class="me-auto"><img class="img-fluid w-75 d-md-none" src="assets/img/logos/logo.svg" alt="logo" /><a class="navbar-brand me-lg-auto cursor-pointer text-white fs-8 fw-bold d-none d-md-block" href="">Brainwave.io</a></div><a class="btn bg-primary primary-btn lh-sm ms-3 ms-xl-6 mt-lg-0 order-sm-1" href="!#">Get Started Now</a>
-              <ul class="navbar-nav ms-lg-auto gap-x1 justify-content-center justify-content-sm-end flex-grow-1 flex-row mt-1 mt-sm-0">
-                <li class="nav-item"> <a class="nav-link nav-bar-item px-0" href="#home" title="Demos">Demos</a></li>
-                <li class="nav-item"> <a class="nav-link nav-bar-item px-0" href="#about" title="Pages">Pages</a></li>
-                <li class="nav-item"> <a class="nav-link nav-bar-item px-0" href="#products" title="Support">Support</a></li>
-                <li class="nav-item"> <a class="nav-link nav-bar-item px-0" href="#review" title="Contact">Contact</a></li>
-              </ul>
+              <div class="me-auto"><img class="navbar-brand img-fluid w-75 d-md-none" src="assets/img/logos/logo.svg" alt="logo" /><a class="navbar-brand me-lg-auto cursor-pointer text-white fs-8 fw-bold d-none d-md-block" href="">Brainwave.io</a></div><button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+              <div class="collapse navbar-collapse ms-auto justify-content-md-end" id="navbar-content" data-navbar-collapse="data-navbar-collapse">
+                <ul class="navbar-nav ms-lg-auto gap-md-x1 mt-x1 mt-md-0" data-navbar-nav="data-navbar-nav">
+                  <li class="nav-item"> <a class="nav-link nav-bar-item px-0" href="#home" title="Home">Home</a></li>
+                  <li class="nav-item"> <a class="nav-link nav-bar-item px-0" href="#about" title="About us">About us</a></li>
+                  <li class="nav-item"> <a class="nav-link nav-bar-item px-0" href="#service" title="Support">Support</a></li>
+                  <li class="nav-item"> <a class="nav-link nav-bar-item px-0" href="#price" title="Pricing">Pricing</a></li>
+                  <li class="nav-item"> <a class="nav-link nav-bar-item px-0" href="#contact" title="Contact">Contact</a></li>
+                </ul><a class="btn bg-primary navbar-btn lh-sm ms-md-3 ms-lg-6 mt-lg-0" href="!#">Get Started Now </a>
+              </div>
             </div>
           </nav>
           <div data-bs-target="#navbar-top" data-bs-spy="scroll" tabindex="0">
-            <div class="main-container position-relative z-0">
+            <div class="main-container position-relative z-0" id="home">
               <div class="hero" style="background-image:url('assets/img/illustrations/BG.png')">
                 <div class="container">
                   <div class="row gy-4 gy-md-8 pt-9 pt-lg-0">
                     <div class="col-12 col-lg-6">
-                      <h1 class="fs-2 fs-lg-1 text-white fw-bold mb-2 mb-lg-x1 lh-base mt-4 mt-lg-0 text-center text-lg-start"> Manage your remote team work</h1>
+                      <h1 class="fs-2 fs-lg-1 text-white fw-bold mb-2 mb-lg-x1 lh-base mt-4 mt-lg-0 text-center text-lg-start"> Manage your remote <span class="text-nowrap">team work</span></h1>
                       <p class="fs-8 text-white mb-3 mb-lg-4 lh-lg text-center text-lg-start">With lots of unique blocks, you can easily build a page without coding. Build your next consultancy website within few minutes</p>
-                      <div class="d-flex justify-content-center justify-content-lg-start"><a class="btn bg-primary btn-lg lh-xl primary-btn mb-6 mb-lg-7" href="!#">Explore more</a></div>
+                      <div class="d-flex justify-content-center justify-content-lg-start"><a class="btn bg-primary lh-xl primary-btn mb-x1 mb-md-5 mb-lg-7" href="!#">Explore more</a></div>
                       <p class="mb-2 mb-lg-x1 fs-10 button-text text-uppercase fw-bold lh-base text-center text-lg-start">Download our app</p>
-                      <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-lg-start align-items-center gap-1 action-button"><a class="brainwave-btn border-0 p-0 mb-1 mb-sm-0 store-button cursor-pointer" href="#!"> <img class="img-fluid" src="assets/img/logos/App_Store.png" alt="assets/img/logos/App_Store.png" /></a><a class="brainwave-btn border-0 p-0 mb-1 mb-sm-0 store-button cursor-pointer" href="#!"> <img class="img-fluid" src="assets/img/logos/Play_Store.png" alt="assets/img/logos/Play_Store.png" /></a></div>
+                      <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-lg-start align-items-center gap-sm-1 action-button"><a class="brainwave-btn border-0 p-0 mb-1 mb-sm-0 store-button cursor-pointer" href="#!"> <img class="img-fluid" src="assets/img/logos/App_Store.png" alt="assets/img/logos/App_Store.png" /></a><a class="brainwave-btn border-0 p-0 mb-1 mb-sm-0 store-button cursor-pointer" href="#!"> <img class="img-fluid" src="assets/img/logos/Play_Store.png" alt="assets/img/logos/Play_Store.png" /></a></div>
                     </div>
                     <div class="col-12 col-lg-6 position-lg-relative">
-                      <div class="position-lg-absolute hero-image text-center top-0 end-0">
-                        <div class="position-relative z-1"> <img class="img-fluid chat-image" src="assets/img/Hero/Frame.png" alt="" />
+                      <div class="position-lg-absolute hero-image text-md-center top-0 end-0">
+                        <div class="position-relative z-1"><img class="img-fluid chat-image" src="assets/img/Hero/Frame.png" alt="" />
                           <div class="position-absolute dots d-none d-md-block"> <img class="img-fluid w-50 w-lg-75" src="assets/img/illustrations/Dots.png" alt="" /></div>
                         </div>
                       </div>
@@ -68,7 +71,7 @@
                   </div>
                 </div>
               </div>
-              <div class="wave-container position-absolute bottom-0 start-0 z-1 end-0"><img class="img-fluid w-100 mb-md-n2" src="assets/img/illustrations/Wave.svg" alt="" />
+              <div class="wave-container position-absolute bottom-0 start-0 z-1 end-0"><img class="wave mb-md-n2" src="assets/img/illustrations/Wave.svg" alt="" />
                 <div class="bg"></div>
               </div>
             </div>
@@ -76,25 +79,25 @@
               <div class="row pb-6 pb-lg-7 pb-xl-8 g-3 g-lg-8 px-3">
                 <div class="col-12 col-sm-6 col-lg-4">
                   <h2 class="fs-3 text-black fw-bold lh-sm mb-2 text-center" data-countup='{"endValue":6,"prefix":"0"}'>0</h2>
-                  <h6 class="text-black fs-8 fw-normal lh-lg mb-0 text-center line-clamp-2">Offices are available on different countries</h6>
+                  <h6 class="text-black fs-8 fw-normal lh-lg mb-0 text-center line-clamp-3">Offices are available on <span class="text-nowrap">different countries</span></h6>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-4">
                   <h2 class="fs-3 text-black fw-bold lh-sm mb-2 text-center" data-countup='{"endValue":238}'>0</h2>
-                  <h6 class="text-black fs-8 fw-normal lh-lg mb-0 text-center line-clamp-2">Seats are available right now with dedicated support</h6>
+                  <h6 class="text-black fs-8 fw-normal lh-lg mb-0 text-center line-clamp-3">Seats are available right now with <span class="text-nowrap"> dedicated support</span></h6>
                 </div>
                 <div class="col-12 col-sm-12 col-lg-4">
                   <h2 class="fs-3 text-black fw-bold lh-sm mb-2 text-center" data-countup='{"endValue":1395,"autoIncreasing":true}'>0</h2>
-                  <h5 class="text-black fs-8 fw-normal lh-lg mb-0 text-center line-clamp-2">People are using our co-work spaces right now</h5>
+                  <h5 class="text-black fs-8 fw-normal lh-lg mb-0 text-center line-clamp-3">People are using our co-work spaces <span class="text-nowrap"> right now</span></h5>
                 </div>
               </div>
             </div>
             <div class="container team mb-9 mb-lg-10">
-              <div class="row g-3 align-items-center">
-                <div class="col-12 col-lg-7 text-center text-lg-start"><img class="img-fluid team-image" src="assets/img/Hero/Team.png" alt="" /></div>
-                <div class="col-12 col-lg-5">
+              <div class="row g-3 align-items-center" id="about">
+                <div class="col-12 col-lg-6 col-xl-7 text-center text-lg-start"><img class="img-fluid team-image" src="assets/img/Hero/Team.png" alt="" /></div>
+                <div class="col-12 col-lg-6 col-xl-5">
                   <div class="details">
-                    <h2 class="fs-4 fs-lg-3 fw-bold text-black lh-sm mb-1 text-center text-md-start"> Collaborate with <span class="text-nowrap">team members.</span></h2>
-                    <h6 class="fs-8 team-sub-title mb-5 mb-lg-6 lh-lg text-center text-md-start fw-normal">We share common trends and strategies for improving your rental income</h6>
+                    <h2 class="fs-4 fs-lg-3 fw-bold text-black lh-sm mb-1 text-center text-md-start">Collaborate with <span class="text-nowrap">team members.</span></h2>
+                    <h6 class="fs-8 team-sub-title mb-5 mb-lg-6 lh-lg text-center text-md-start fw-normal">We share common trends and strategies for improving your <span class="text-nowrap">rental income</span></h6>
                     <div class="details-term">
                       <h5 class="fs-8 fw-bold text-black lh-lg mb-xs">Project Based Groups </h5>
                       <p class="fs-9 team-description mb-2 mb-lg-3 lh-xl">With lots of unique blocks, you can easily build a page without coding.</p>
@@ -111,7 +114,7 @@
                 <div class="col-12 col-lg-6">
                   <div class="details">
                     <h2 class="fs-4 fs-lg-3 fw-bold text-black lh-sm mb-1 text-center text-md-start"> Organize remote team fast <span class="text-nowrap">& easily.</span></h2>
-                    <h6 class="fs-8 team-sub-title mb-5 mb-lg-6 lh-lg text-center text-md-start fw-normal">We share common trends and strategies for improving your rental income</h6>
+                    <h6 class="fs-8 team-sub-title mb-5 mb-lg-6 lh-lg text-center text-md-start fw-normal">We share common trends and strategies for improving your <span class="text-nowrap">rental income</span></h6>
                     <div class="details-term">
                       <h5 class="fs-8 fw-bold text-black lh-lg mb-xs">Create Unlimited Teams </h5>
                       <p class="fs-9 team-description mb-2 mb-lg-3 lh-xl">With lots of unique blocks, you can easily build a page without coding.</p>
@@ -123,10 +126,10 @@
               </div>
             </div>
             <div class="container work-process">
-              <h3 class="text-black fs-4 fs-lg-3 fw-bold text-center mb-1 mb-lg-2 lh-sm"> How does it work?</h3>
-              <p class="fs-8 mb-7 mb-lg-8 text-center lh-lg">With lots of unique blocks, you can easily build a page <br class="d-none d-lg-block" />easily without any coding. </p>
+              <h3 class="text-black fs-4 fs-lg-3 fw-bold text-center mb-1 mb-lg-2 lh-sm"> How does <span class="text-nowrap">it work?</span></h3>
+              <p class="fs-8 mb-7 mb-lg-8 text-center lh-lg">With lots of unique blocks, you can easily build a page <br class="d-none d-lg-block" />easily without <span class="text-nowrap">any coding. </span></p>
               <div class="row g-sm-2 g-lg-3 align-items-center">
-                <div class="col-12 col-lg-4 progress-item d-flex flex-row flex-lg-column gap-4 gap-sm-7 gap-md-9 gap-lg-0">
+                <div class="col-12 col-lg-4 progress-item d-flex flex-row flex-lg-column gap-2 gap-sm-x1 gap-md-4 gap-lg-0">
                   <div class="progress-bar mb-4 mb-lg-5 mb-xl-6">
                     <div class="indicator-parent d-flex justify-content-center">
                       <div class="indicator bg-primary"><span class="fs-6 fs-lg-5 fs-xl-4 text-white"> 1</span></div>
@@ -137,7 +140,7 @@
                     <p class="fs-9 text-lg-center lh-xl mb-0">With lots of unique blocks, you can easily build a page without coding.</p>
                   </div>
                 </div>
-                <div class="col-12 col-lg-4 progress-item d-flex flex-row flex-lg-column gap-4 gap-sm-7 gap-md-9 gap-lg-0">
+                <div class="col-12 col-lg-4 progress-item d-flex flex-row flex-lg-column gap-2 gap-sm-x1 gap-md-4 gap-lg-0">
                   <div class="progress-bar-2 mb-4 mb-lg-5 mb-xl-6">
                     <div class="indicator-parent d-flex justify-content-center">
                       <div class="indicator bg-success"><span class="fs-6 fs-lg-5 fs-xl-4 text-white"> 2</span></div>
@@ -148,7 +151,7 @@
                     <p class="fs-9 text-lg-center lh-xl mb-0">With lots of unique blocks, you can easily build a page without coding.</p>
                   </div>
                 </div>
-                <div class="col-12 col-lg-4 progress-item d-flex flex-row flex-lg-column gap-4 gap-sm-7 gap-md-9 gap-lg-0">
+                <div class="col-12 col-lg-4 progress-item d-flex flex-row flex-lg-column gap-2 gap-sm-x1 gap-md-4 gap-lg-0">
                   <div class="progress-bar-3 mb-4 mb-lg-5 mb-xl-6">
                     <div class="indicator-parent d-flex justify-content-center">
                       <div class="indicator bg-info"><span class="fs-6 fs-lg-5 fs-xl-4 text-white"> 3</span></div>
@@ -161,7 +164,7 @@
                 </div>
               </div>
             </div>
-            <div class="experience position-relative">
+            <div class="experience position-relative" id="service">
               <div class="container">
                 <div class="row justify-content-center mb-8 mb-lg-9">
                   <div class="col-12">
@@ -288,18 +291,18 @@
                 </div><a class="fs-9 d-flex justify-content-center align-items-center read-more" href="#!"><span>Read more reviews </span><span class="uil uil-arrow-right icon"></span></a>
               </div>
             </div>
-            <div class="pricing position-relative z-0">
+            <div class="pricing position-relative z-0" id="price">
               <div class="container py-8 py-lg-9">
                 <h3 class="text-black fs-4 fs-lg-3 fw-bold text-center mb-1 mb-lg-2 lh-sm">Pricing made easy</h3>
-                <h6 class="fs-8 description mb-7 mb-lg-8 text-center lh-lg fw-normal">With lots of unique blocks, you can easily build a page <br class="d-none d-sm-block" />easily without any coding. </h6>
-                <div class="d-md-flex justify-content-md-center gap-3">
+                <h6 class="fs-8 description mb-7 mb-lg-8 text-center lh-lg fw-normal">With lots of unique blocks, you can easily build a page <br class="d-none d-sm-block" />easily without <span class="text-nowrap">any coding. </span></h6>
+                <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-3">
                   <div class="p-x1 text-center price-card-1 mb-3 mb-md-0">
                     <p class="fs-10 text-uppercase mb-3 fw-bold text-primary heading"> Starter</p>
                     <p class="text-black mb-x1 price"><span class="dollar">$</span><span class="number">19</span><span class="duration">/ mo</span></p>
                     <p class="fs-8 mb-0 lh-xl fw-light list"> Upto 100 Team Members</p>
                     <p class="fs-8 mb-0 lh-xl fw-light list"> 100 GB Cloud Storage</p>
                     <p class="fs-8 mb-0 lh-xl fw-light list"> Unlimited Meetings</p>
-                    <p class="fs-8 mb-0 lh-xl fw-light list"> Premium Support</p><a class="btn bg-black secondary-btn d-inline-flex justify-content-center lh-xl price-button w-100" href="!#">Get Started Now</a>
+                    <p class="fs-8 mb-0 lh-xl fw-light list"> Premium Support</p><button class="btn secondary-btn d-inline-flex justify-content-center lh-xl price-button">Get Started Now</button>
                   </div>
                   <div class="p-x1 text-center price-card-2">
                     <p class="fs-10 text-uppercase mb-3 fw-bold text-primary heading"> Unlimited</p>
@@ -307,7 +310,7 @@
                     <p class="fs-8 mb-0 lh-xl fw-light list"> Unlimited Team Members</p>
                     <p class="fs-8 mb-0 lh-xl fw-light list"> Unlimited Cloud Storage</p>
                     <p class="fs-8 mb-0 lh-xl fw-light list"> Unlimited Meetings</p>
-                    <p class="fs-8 mb-0 lh-xl fw-light list"> Premium Support</p><a class="btn bg-primary primary-btn d-inline-flex justify-content-center lh-xl price-button w-100" href="!#">Get Started Now</a>
+                    <p class="fs-8 mb-0 lh-xl fw-light list"> Premium Support</p><button class="btn bg-primary primary-btn d-inline-flex justify-content-center lh-xl price-button w-100">Get Started Now</button>
                   </div>
                 </div>
               </div>
@@ -316,7 +319,7 @@
               <div class="container">
                 <div class="row py-9 py-10">
                   <div class="col-12 col-lg-6">
-                    <h2 class="text-white fs-4 fs-lg-3 lh-sm mb-1 text-center text-lg-start fw-bold">We are always here for your backup.</h2>
+                    <h2 class="text-white fs-4 fs-lg-3 lh-sm mb-1 text-center text-lg-start fw-bold">We are always here for <span class="text-nowrap">your backup.</span></h2>
                     <div class="text-container">
                       <h6 class="fs-8 sub-title mb-4 mb-lg-5 mb-xl-6 fw-normal lh-lg mb-6 mb-lg-7 text-center text-lg-start"> We share common trends and strategies for creating & improving your rental income.</h6>
                       <div class="d-flex gap-1 gap-lg-x1 mb-4 mb-lg-5">
@@ -370,34 +373,34 @@
                 </div>
               </div>
             </div>
-            <div class="subscription position-relative z-0">
+            <div class="subscription position-relative z-0" id="contact">
               <div class="container">
                 <div class="row py-8 py-lg-9 justify-content-center">
                   <div class="col-12 d-flex flex-column align-items-center px-2 px-md-7">
                     <h2 class="text-black fs-4 fs-lg-3 fw-bold text-center mb-1 lh-sm">Get latest updates</h2>
-                    <h6 class="fs-8 description mb-5 mb-lg-6 text-center lh-lg fw-normal"> With lots of unique blocks, you can easily build a page <br class="d-none d-sm-block" />without coding. Build your next landing page.</h6>
+                    <h6 class="fs-8 description mb-5 mb-lg-6 text-center lh-lg fw-normal"> With lots of unique blocks, you can easily build a page <br class="d-none d-sm-block" />without coding. Build your next <span class="text-nowrap">landing page.</span></h6>
                     <form class="form mb-x1" method="POST" onsubmit="return false;">
                       <div class="mb-1 w-100"><input class="form-control email-input" id="email" type="email" placeholder="Enter your email" required="required" /></div><button class="btn btn-lg w-100 primary-btn btn-primary" type="submit"> Subscribe</button>
                     </form>
-                    <p class="text-center description fs-9 mb-0"> <span>We’ll never share your details with third parties.</span><br /><span>View our Privacy Policy for more info.</span></p>
+                    <p class="text-center description fs-9 mb-0"> <span>We’ll never share your details with </span><span class="text-nowrap">third parties.</span><br /><span>View our Privacy Policy for more info.</span></p>
                   </div>
                 </div>
               </div>
-              <div class="position-absolute bottom-0 end-0 z-n1"><img src="assets/img/illustrations/Green_dots.svg" alt="" /></div>
+              <div class="position-absolute bottom-0 end-0 z-n1 d-none d-lg-block"><img src="assets/img/illustrations/Green_dots.svg" alt="" /></div>
               <div class="wave-container position-relative bottom-0 start-0 z-1"><img class="img-fluid w-100" src="assets/img/illustrations/Wave_3.svg" alt="" /></div>
             </div>
           </div><button class="btn scroll-to-top" data-scroll-top="data-scroll-top"><span class="uil uil-angle-up text-white"></span></button>
           <footer class="Footer bg-white pt-7 pt-lg-8">
             <div class="container">
-              <div class="row g-2 g-md-6 footer-top">
-                <div class="col-6 col-lg-2 mb-4 mb-lg-0">
+              <div class="row g-2 g-md-6 footer-top justify-content-center">
+                <div class="col-6 col-md-4 col-lg-2 mb-4 mb-lg-0">
                   <h5 class="fs-9 mb-1 heading">Company</h5>
                   <div class="divider"> <a class="links" href="#">About us</a></div>
                   <div class="divider"> <a class="links" href="#about"> Contact us</a></div>
                   <div class="divider"> <a class="links" href="#products">Careers</a></div>
                   <div class="divider"> <a class="links" href="#review">Press</a></div>
                 </div>
-                <div class="col-6 col-lg-2 mb-4 mb-lg-0">
+                <div class="col-6 col-md-4 col-lg-2 mb-4 mb-lg-0">
                   <h5 class="fs-9 mb-1 heading">Product</h5>
                   <div class="divider"> <a class="links" href="#!">Features</a></div>
                   <div class="divider"> <a class="links" href="#!"> Pricing</a></div>
@@ -405,21 +408,23 @@
                   <div class="divider"> <a class="links" href="#!"> Help desk</a></div>
                   <div class="divider"><a class="links" href="#!"> Support</a></div>
                 </div>
-                <div class="col-6 col-lg-4">
+                <div class="col-6 col-md-4">
                   <h5 class="fs-9 mb-1 heading"> Legal</h5>
                   <div class="divider"> <a class="links" href="#!">Privacy</a></div>
                   <div class="divider"> <a class="links" href="#!"> Terms & Conditions</a></div>
                   <div class="divider"> <a class="links" href="#!"> Return Policy</a></div>
                 </div>
-                <div class="col-6 col-lg-4">
-                  <h5 class="fs-9 mb-1 heading"> Download Our App</h5>
-                  <div class="mb-sm-1"> <a class="brainwave-btn border-0 p-0 mb-1 mb-sm-0 store-button cursor-pointer" href="#!"> <img class="img-fluid" src="assets/img/logos/App_Store.png" alt="assets/img/logos/App_Store.png" /></a></div><a class="brainwave-btn border-0 p-0 mb-1 mb-sm-0 store-button cursor-pointer" href="#!"> <img class="img-fluid" src="assets/img/logos/Play_Store.png" alt="assets/img/logos/Play_Store.png" /></a>
+                <div class="col-6 col-md-12 col-lg-4 d-md-flex flex-column align-items-md-center d-lg-block">
+                  <div>
+                    <h5 class="fs-9 mb-1 heading"> Download Our App</h5>
+                    <div class="spacer"> <a class="brainwave-btn border-0 p-0 mb-1 mb-sm-0 store-button cursor-pointer" href="#!"> <img class="img-fluid" src="assets/img/logos/App_Store.png" alt="assets/img/logos/App_Store.png" /></a></div><a class="brainwave-btn border-0 p-0 mb-1 mb-sm-0 store-button cursor-pointer" href="#!"> <img class="img-fluid" src="assets/img/logos/Play_Store.png" alt="assets/img/logos/Play_Store.png" /></a>
+                  </div>
                 </div>
               </div>
               <div class="row">
                 <div class="d-md-flex justify-content-between align-items-center py-3">
-                  <div> <span class="text-black copyright"> © 2024 Copyright, All Right Reserved, Made by Seju_ui_ux with</span><img src="assets/img/icons/Heart.svg" alt="" /></div>
-                  <div class="mt-2 mt-md-0"><a class="icons" href="#!"><span class="uil uil-twitter"> </span></a><a class="icons" href="#!"><span class="uil uil-instagram"></span></a><a class="icons" href="#!"><span class="uil uil-linkedin"></span></a></div>
+                  <div class="text-center text-md-start"> <span class="text-black copyright"> © 2024 Copyright, All Right Reserved, Made by Seju_ui_ux with</span><img src="assets/img/icons/Heart.svg" alt="" /></div>
+                  <div class="mt-2 mt-md-0 text-center text-md-end"><a class="icons" href="#!"><span class="uil uil-twitter"> </span></a><a class="icons" href="#!"><span class="uil uil-instagram"></span></a><a class="icons" href="#!"><span class="uil uil-linkedin"></span></a></div>
                 </div>
               </div>
             </div>

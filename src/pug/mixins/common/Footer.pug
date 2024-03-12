@@ -2,8 +2,8 @@ mixin Footer
 
   footer.Footer.bg-white.pt-7.pt-lg-8 
     .container
-      .row.g-2.g-md-6.footer-top
-        .col-6.col-lg-2.mb-4.mb-lg-0
+      .row.g-2.g-md-6.footer-top.justify-content-center
+        .col-6.col-md-4.col-lg-2.mb-4.mb-lg-0
           h5.fs-9.mb-1.heading Company
           .divider  
             a(href="#").links About us
@@ -14,7 +14,7 @@ mixin Footer
           .divider  
             a(href="#review").links Press
           
-        .col-6.col-lg-2.mb-4.mb-lg-0
+        .col-6.col-md-4.col-lg-2.mb-4.mb-lg-0
           h5.fs-9.mb-1.heading Product
           .divider  
             a(href="#!").links Features
@@ -27,7 +27,7 @@ mixin Footer
           .divider
             a(href="#!").links  Support
 
-        .col-6.col-lg-4
+        .col-6.col-md-4
           h5.fs-9.mb-1.heading  Legal
           .divider  
             a(href="#!").links Privacy
@@ -36,17 +36,18 @@ mixin Footer
           .divider  
             a(href="#!").links  Return Policy
 
-        .col-6.col-lg-4
-            h5.fs-9.mb-1.heading  Download Our App
-            div.mb-sm-1 
-              +Button('assets/img/logos/App_Store.png')
-            +Button('assets/img/logos/Play_Store.png')
+        .col-6.col-md-12.col-lg-4.d-md-flex.flex-column.align-items-md-center.d-lg-block
+            div 
+              h5.fs-9.mb-1.heading  Download Our App
+              .spacer 
+                +Button('assets/img/logos/App_Store.png')
+              +Button('assets/img/logos/Play_Store.png')
       .row 
         .d-md-flex.justify-content-between.align-items-center.py-3 
-          div 
+          .text-center.text-md-start 
             span.text-black.copyright  © 2024 Copyright, All Right Reserved, Made by Seju_ui_ux with
             img(src=`${CWD}assets/img/icons/Heart.svg`, alt="")
-          div.mt-2.mt-md-0
+          .mt-2.mt-md-0.text-center.text-md-end
             a(href='#!').icons
               span.uil.uil-twitter 
             a(href='#!').icons

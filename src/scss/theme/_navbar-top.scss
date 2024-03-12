@@ -4,6 +4,10 @@
 
 
 
+.navbar{
+  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px);
+}
 
 .navbar-nav{
   width: 100%;
@@ -17,12 +21,12 @@
   .nav-bar-item{
     display: inline-block;
     text-align: center;
-    color: $white !important;
+    color: #E3E6ED !important;
     font-size: 15px !important;
     line-height: 26px;
     font-weight: $font-weight-bold !important;
     &:hover{
-      color: map-get($theme-colors, 'success') !important;
+      color:  $white !important;
     }
   }
 }

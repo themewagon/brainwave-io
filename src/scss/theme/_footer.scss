@@ -23,9 +23,15 @@
             text-decoration: none;
         }
     }
+    .spacer{
+        margin-bottom: 0.6rem;
 
-    @include media-breakpoint-up(md){
-        background-position: center;
+        @include media-breakpoint-up(sm){
+            margin-bottom: 0.8rem;
+        }
+        @include media-breakpoint-up(lg){
+            margin-bottom: 16px;
+        }
     }
     .copyright{
         margin-right: 9px;
