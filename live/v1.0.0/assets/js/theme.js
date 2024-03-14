@@ -539,6 +539,7 @@ var videoControllerInit = function videoControllerInit() {
       videoPlayer.pause();
       playIcon.style.display = 'inline';
       pauseIcon.style.display = 'none';
+      buttonVisible();
     }
   });
   playButton.addEventListener('mouseover', function () {

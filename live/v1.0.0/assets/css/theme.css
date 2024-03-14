@@ -18547,8 +18547,8 @@ h5, .h5, h6, .h6 {
 .navbar-btn {
   font-size: 16px;
   font-weight: bold;
-  height: 50px;
-  width: 174px;
+  height: 40px;
+  width: 150px;
   padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -18564,6 +18564,12 @@ h5, .h5, h6, .h6 {
   background-color: #ad3636 !important;
   color: #fff !important;
   border-color: transparent;
+}
+@media (min-width: 576px) {
+  .navbar-btn {
+    height: 50px;
+    width: 174px;
+  }
 }
 
 .primary-btn {
@@ -19409,7 +19415,7 @@ h5, .h5, h6, .h6 {
 .navbar-nav {
   width: 100%;
 }
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   .navbar-nav {
     width: -webkit-fit-content;
     width: -moz-fit-content;
@@ -19424,6 +19430,7 @@ h5, .h5, h6, .h6 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  border-bottom: 1px solid #748194;
 }
 .nav-item .nav-bar-item {
   display: inline-block;
@@ -19435,6 +19442,11 @@ h5, .h5, h6, .h6 {
 }
 .nav-item .nav-bar-item:hover {
   color: #fff !important;
+}
+@media (min-width: 768px) {
+  .nav-item {
+    border: none;
+  }
 }
 
 .active {
@@ -20050,20 +20062,30 @@ h5, .h5, h6, .h6 {
 }
 
 .swiper-theme-container {
-  height: 600px !important;
+  height: 350px !important;
+  width: 600px !important;
   overflow: hidden;
 }
 .swiper-theme-container .swiper {
   height: 100%;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 100%;
   margin: auto;
+}
+@media (min-width: 768px) {
+  .swiper-theme-container {
+    width: 720px !important;
+  }
+}
+@media (min-width: 992px) {
+  .swiper-theme-container {
+    width: 730px !important;
+    height: 600px !important;
+    margin: auto;
+  }
 }
 
 .swiper-slide {
   margin: auto;
-  max-width: 730px;
   border: 1px solid #57595E;
   color: rgba(22, 28, 45, 0.7);
   border-radius: 12px;

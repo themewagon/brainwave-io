@@ -1,10 +1,10 @@
 mixin Review({imgSrc, comment, name}, index)
   .col-12.swiper-slide 
     .d-flex.justify-content-center.gap-2
-      .d-flex.flex-column.flex-md-row.gap-2.px-4.py-x1(class=`review-card-${index + 1}`) 
-        div.text-center.text-md-start
+      .d-flex.flex-column.flex-lg-row.gap-2.px-4.py-x1(class=`review-card-${index + 1}`) 
+        div.text-center.text-lg-start
           img(src=`${CWD}assets/img/feedback/${imgSrc}`, alt="").card-image
-        .text-center.text-md-start 
+        .text-center.text-lg-start 
           p.fs-8.text-black.mb-2.lh-lg.line-clamp-3= comment 
           span.fs-9.lh-xl= name
 
@@ -50,23 +50,31 @@ mixin Testimonials
 
       .row.gap-2.mb-4.mb-lg-6
         .swiper-theme-container
-          .swiper(data-swiper!={
-              direction: "vertical",
-              mousewheel: true,
+          .swiper.position-relative(data-swiper!={
               spaceBetween: 20,
-              autoplay: {
-                delay: 3000, 
-                disableOnInteraction: false 
-              },
+              mousewheel: {
+                  forceToAxis: true,
+                  sensitiviye: 20,
+                  releaseOnEdges: true,
+                },
+                autoplay: {
+                  delay: 3000,
+                  disableOnInteraction: false,
+                },
               breakpoints:{
                 0:{
-                    slidesPerView: 2,
+                    slidesPerView: 1,
+                    direction: 'horizontal',
+                    centeredSlide: true
                 },
                 768: {
-                  slidesPerView: 3
+                  slidesPerView: 2,
+                },
+                992: {
+                  slidesPerView: 3,
+                  direction: "vertical",
                 }
-              },
-              loop:true,
+              }
             })
             .swiper-wrapper 
               each item, index in reviews 

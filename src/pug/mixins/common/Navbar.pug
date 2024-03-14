@@ -29,11 +29,12 @@ mixin Navbar
         a(href=`${CWD}`)
           img(src=`${CWD}assets/img/logos/logo.svg`, alt="logo").navbar-brand.img-fluid.w-75.d-md-none 
         a(href=`${CWD}`).navbar-brand.me-lg-auto.cursor-pointer.text-white.fs-7.fw-bold.d-none.d-md-block Brainwave.io
-      button.navbar-toggler.border-0(type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation")
+      a.btn.bg-primary.navbar-btn.lh-sm.ms-md-3.ms-lg-6.mt-lg-0.order-md-1(href="!#") Get Started Now 
+      button.navbar-toggler.border-0.pe-0(type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation")
         span.navbar-toggler-icon
+      
       #navbar-content.collapse.navbar-collapse.ms-auto.justify-content-md-end(data-navbar-collapse)
-        ul.navbar-nav.ms-lg-auto.gap-md-x1.mt-x1.mt-md-0(data-navbar-nav)
+        ul.navbar-nav.ms-lg-auto.gap-md-x1.mt-x1.mt-md-0.pb-3.pb-md-0(data-navbar-nav)
           each navMenu in menu 
               li.nav-item 
                   a(href=`${navMenu.link}` title=`${navMenu.label}`).nav-link.nav-bar-item.px-0 #{navMenu.label}
-        a.btn.bg-primary.navbar-btn.lh-sm.ms-md-3.ms-lg-6.mt-lg-0(href="!#") Get Started Now 

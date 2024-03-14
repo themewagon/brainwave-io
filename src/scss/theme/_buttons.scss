@@ -4,8 +4,8 @@
   @extend .btn-lg;
   font-size: 16px;
   font-weight: bold;
-  height: 50px;
-  width: 174px;
+  height: 40px;
+  width: 150px;
   padding: 0;
   display: flex;
   justify-content: center;
@@ -14,6 +14,10 @@
     background-color: shade-color(map-get($theme-colors, 'primary'), 30%) !important;
     color: $white !important;
     border-color: transparent
+  }
+  @include media-breakpoint-up(sm){
+    height: 50px;
+    width: 174px;
   }
 }
 .primary-btn {

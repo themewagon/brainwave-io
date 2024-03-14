@@ -32,6 +32,7 @@ const videoControllerInit = () => {
       videoPlayer.pause();
       playIcon.style.display = 'inline';
       pauseIcon.style.display = 'none';
+      buttonVisible();
     }
   });
 

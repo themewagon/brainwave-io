@@ -443,18 +443,27 @@
 }
 
 .swiper-theme-container{
-  height: 600px !important;
+  height: 350px !important;
+  width: 600px !important;
   overflow: hidden;
   .swiper{
     height: 100%;
-    width: fit-content;
+    width: 100%;
+    margin: auto;
+  }
+  @include media-breakpoint-up(md){
+    width: 720px !important;
+  }
+  @include media-breakpoint-up(lg){
+    width: 730px !important;
+    height: 600px !important;
     margin: auto;
   }
 }
 
 .swiper-slide{
+  
   margin: auto;
-  max-width: 730px;
   border: 1px solid #57595E;
   color: rgba($black, 0.7);
   border-radius: 12px;

@@ -19,14 +19,6 @@
     "src": ["dist/umd/popper.min.js", "dist/umd/popper.min.js.map"],
     "dest": "popper"
   },
-  "typed.js": {
-    "src": "lib/typed.js",
-    "dest": "typed.js"
-  },
-  "list.js": {
-    "src": ["dist/list.min.js", "dist/list.min.js.map"],
-    "dest": "list.js"
-  },
   "swiper": {
     "src": ["swiper-bundle.min.js", "swiper-bundle.min.css"],
     "dest": "swiper"
