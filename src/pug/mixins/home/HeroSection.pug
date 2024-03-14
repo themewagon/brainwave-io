@@ -1,7 +1,7 @@
 include Button
 
 mixin HeroSection 
-  #home.main-container.position-relative.z-0
+  #home.main-container.position-relative.z-0.mb-4
     .hero(style=`background-image:url('${CWD}assets/img/illustrations/BG.png')`)
       .container 
         .row.gy-4.gy-md-8.pt-9.pt-lg-0
@@ -12,7 +12,7 @@ mixin HeroSection
             .d-flex.justify-content-center.justify-content-lg-start
               a.btn.bg-primary.lh-xl.primary-btn.mb-x1.mb-md-5.mb-lg-7(href="!#") Explore more
             p.mb-2.mb-lg-x1.fs-10.button-text.text-uppercase.fw-bold.lh-base.text-center.text-lg-start Download our app
-            .d-flex.flex-column.flex-sm-row.justify-content-center.justify-content-lg-start.align-items-center.gap-sm-1.action-button
+            .d-flex.flex-column.flex-sm-row.justify-content-center.justify-content-lg-start.align-items-center.gap-sm-1
               +Button('assets/img/logos/App_Store.png')
               +Button('assets/img/logos/Play_Store.png')
           .col-12.col-lg-6.position-lg-relative
@@ -22,6 +22,6 @@ mixin HeroSection
                 .position-absolute.dots.d-none.d-md-block 
                   img(src=`${CWD}assets/img/illustrations/Dots.png`, alt="").img-fluid.w-50.w-lg-75
 
-    .wave-container.position-absolute.bottom-0.start-0.z-1.end-0
+    .wave-container.position-absolute.bottom-0.start-0.end-0.z-1
       img(src=`${CWD}assets/img/illustrations/Wave.svg`, alt="").wave.mb-md-n2
       .bg

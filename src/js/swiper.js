@@ -23,13 +23,6 @@ const swiperInit = () => {
       newSwiper.update();
     });
   }
-  // const themeContainers = document.querySelectorAll('.swiper-container');
-  // const navbarVerticalToggle = document.querySelector(
-  //   '.navbar-vertical-toggle'
-  // );
-  // themeContainers.forEach((themeContainer) => {
-
-  // });
 };
 
 export default swiperInit;

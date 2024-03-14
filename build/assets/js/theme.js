@@ -507,14 +507,11 @@ var swiperInit = function swiperInit() {
       newSwiper.update();
     });
   }
-  // const themeContainers = document.querySelectorAll('.swiper-container');
-  // const navbarVerticalToggle = document.querySelector(
-  //   '.navbar-vertical-toggle'
-  // );
-  // themeContainers.forEach((themeContainer) => {
-
-  // });
 };
+
+/* -------------------------------------------------------------------------- */
+/*                    Video Controller                                        */
+/* -------------------------------------------------------------------------- */
 
 var videoControllerInit = function videoControllerInit() {
   var videoPlayer = document.querySelector('[data-video-player');
@@ -525,11 +522,8 @@ var videoControllerInit = function videoControllerInit() {
   pauseIcon.style.display = 'none';
   var buttonVisible = function buttonVisible() {
     playButton.style.display = 'inline';
-    // overlay.style.display = 'inline';
   };
-
   var buttonHidden = function buttonHidden() {
-    // overlay.style.display = 'none';
     setTimeout(function () {
       if (!videoPlayer.paused) {
         playButton.style.display = 'none';
@@ -555,9 +549,6 @@ var videoControllerInit = function videoControllerInit() {
   });
   videoPlayer.addEventListener('mouseenter', buttonVisible);
   videoPlayer.addEventListener('mouseleave', buttonHidden);
-  // videoPlayer.addEventListener('touchstart', buttonVisible);
-  // videoPlayer.addEventListener('touchend', buttonHidden);
-
   videoPlayer.addEventListener('ended', function () {
     playIcon.style.display = 'inline';
     pauseIcon.style.display = 'none';

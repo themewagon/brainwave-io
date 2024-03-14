@@ -1,3 +1,7 @@
+/* -------------------------------------------------------------------------- */
+/*                    Video Controller                                        */
+/* -------------------------------------------------------------------------- */
+
 const videoControllerInit = () => {
   const videoPlayer = document.querySelector('[data-video-player');
   const playButton = document.querySelector('[data-play-button');
@@ -9,11 +13,9 @@ const videoControllerInit = () => {
 
   const buttonVisible = () => {
     playButton.style.display = 'inline';
-    // overlay.style.display = 'inline';
   };
 
   const buttonHidden = () => {
-    // overlay.style.display = 'none';
     setTimeout(() => {
       if (!videoPlayer.paused) {
         playButton.style.display = 'none';
@@ -42,9 +44,6 @@ const videoControllerInit = () => {
 
   videoPlayer.addEventListener('mouseenter', buttonVisible);
   videoPlayer.addEventListener('mouseleave', buttonHidden);
-  // videoPlayer.addEventListener('touchstart', buttonVisible);
-  // videoPlayer.addEventListener('touchend', buttonHidden);
-
   videoPlayer.addEventListener('ended', () => {
     playIcon.style.display = 'inline';
     pauseIcon.style.display = 'none';

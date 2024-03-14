@@ -2,6 +2,10 @@
     .footer-top{
         padding-bottom: 70px;
         border-bottom: 1px solid #E7E9ED;
+
+        @include media-breakpoint-up(lg){
+            padding-bottom: 89px;
+        }
     }
     .heading {
         color: rgba($black, 0.7);
