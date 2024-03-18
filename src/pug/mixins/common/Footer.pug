@@ -4,56 +4,57 @@ mixin Footer
     .container
       .row.g-2.g-md-6.footer-top.justify-content-center
         .col-6.col-md-4.col-lg-2.mb-4.mb-lg-0
-          h5.fs-9.mb-1.heading Company
-          .divider  
+          h5.fs-9.mb-2.heading Company
+          .mb-1  
             a(href="#").links About us
-          .divider  
+          .mb-1  
             a(href="#about").links  Contact us
-          .divider  
+          .mb-1  
             a(href="#products").links Careers
-          .divider  
+          .mb-1  
             a(href="#review").links Press
           
         .col-6.col-md-4.col-lg-2.mb-4.mb-lg-0
-          h5.fs-9.mb-1.heading Product
-          .divider  
+          h5.fs-9.mb-2.heading Product
+          .mb-1  
             a(href="#!").links Features
-          .divider  
+          .mb-1  
             a(href="#!").links  Pricing
-          .divider  
+          .mb-1  
             a(href="#!").links  News
-          .divider  
+          .mb-1  
             a(href="#!").links  Help desk
-          .divider
+          .mb-1
             a(href="#!").links  Support
 
         .col-6.col-md-4
-          h5.fs-9.mb-1.heading  Legal
-          .divider  
+          h5.fs-9.mb-2.heading  Legal
+          .mb-1  
             a(href="#!").links Privacy
-          .divider  
+          .mb-1  
             a(href="#!").links  Terms & Conditions
-          .divider  
+          .mb-1  
             a(href="#!").links  Return Policy
 
         .col-6.col-md-12.col-lg-4.d-md-flex.flex-column.align-items-md-center.align-items-lg-start
             div 
-              h5.fs-9.mb-1.heading  Download Our App
+              h5.fs-9.mb-2.heading  Download Our App
               .spacer 
                 +Button('assets/img/logos/App_Store.png')
               +Button('assets/img/logos/Play_Store.png')
       .row 
-        .d-md-flex.justify-content-between.align-items-center.py-3 
+        .d-md-flex.justify-content-between.align-items-center.py-3.px-0
+          .mb-2.mb-md-0.text-center.text-md-end.order-md-1
+              a(href='#!').icons
+                span.uil.uil-twitter 
+              a(href='#!').icons
+                span.uil.uil-instagram
+              a(href='#!').icons
+                span.uil.uil-linkedin 
           .text-center.text-md-start 
-            span.text-black.copyright  © 2024 Copyright, All Right Reserved, Made by Seju_ui_ux with
+            span.text-black.copyright.lh-xl  © 2024 Copyright, All Right Reserved, Made by Seju_ui_ux with
             img(src=`${CWD}assets/img/icons/Heart.svg`, alt="")
-          .mt-2.mt-md-0.text-center.text-md-end
-            a(href='#!').icons
-              span.uil.uil-twitter 
-            a(href='#!').icons
-              span.uil.uil-instagram
-            a(href='#!').icons
-              span.uil.uil-linkedin
+          
 
 
 

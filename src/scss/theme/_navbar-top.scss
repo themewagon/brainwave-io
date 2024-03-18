@@ -18,7 +18,11 @@
 .nav-item{
   display: flex;
   align-items: center;
-  border-bottom: 1px solid $gray-600;
+  border-bottom: 1px solid $white;
+
+  &:last-child{
+    border-bottom: none;
+  }
   .nav-bar-item{
     display: inline-block;
     text-align: center;

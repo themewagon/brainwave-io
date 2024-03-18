@@ -30,20 +30,23 @@ $grid-breakpoints: (
 // scss-docs-end grid-breakpoints
 
 // scss-docs-start spacer-variables-maps
-$spacer: 1rem !default;
+$spacer: 0.5rem !default;
 $spacer-x1: 1.5rem;
 $spacers: (
   0: 0,
-  1: $spacer, //16
-  2: $spacer * 1.25,//20
-  3: $spacer * 2, // 32
-  4: $spacer * 2.25, // 36
-  5: $spacer * 2.5, // 40
-  6: $spacer * 3.125, // 50
-  7: $spacer * 3.75, // 60
-  8: $spacer * 4.5, //72
-  9: $spacer * 6.875, // 110
-  10: $spacer * 8.875, //142
+  1: $spacer, //8
+  2: $spacer * 2,//16
+  3: $spacer * 4, // 32
+  4: $spacer * 5, // 40
+  5: $spacer * 6, // 48
+  6: $spacer * 7, // 56
+  7: $spacer * 8, // 64
+  8: $spacer * 9, //72
+  9: $spacer * 12, // 96
+  10: $spacer * 14, //112
+  11: $spacer * 16, //128
+  12: $spacer * 18, // 144
+  13: $spacer * 19, //152
   x1: $spacer-x1, //24
 ) !default;
 // scss-docs-end spacer-variables-maps
@@ -297,6 +300,7 @@ $accordion-bg: var(--#{$prefix}emphasis-bg) !default;
 $accordion-border-color: rgba(var(--#{$prefix}emphasis-color-rgb), 1) !default;
 $accordion-button-active-color: shade-color($primary, 10%) !default;
 $accordion-button-active-bg: var(--#{$prefix}emphasis-bg) !default;
+// $accordion-border-radius: 10px !default;
 $accordion-button-color: var(--#{$prefix}accordion-btn-color-global) !default;
 $accordion-button-icon: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNS4xIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjQgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTMxMC42IDIzMy40YzEyLjUgMTIuNSAxMi41IDMyLjggMCA0NS4zbC0xOTIgMTkyYy0xMi41IDEyLjUtMzIuOCAxMi41LTQ1LjMgMHMtMTIuNS0zMi44IDAtNDUuM0wyNDIuNyAyNTYgNzMuNCA4Ni42Yy0xMi41LTEyLjUtMTIuNS0zMi44IDAtNDUuM3MzMi44LTEyLjUgNDUuMyAwbDE5MiAxOTJ6Ii8+PC9zdmc+") !default;
 
@@ -446,7 +450,7 @@ $navbar-light-hover-color: #{rgba(var(--#{$prefix}emphasis-color-rgb), .7)} !def
 $navbar-light-active-color: #{rgba(var(--#{$prefix}emphasis-color-rgb), .9)} !default;
 $navbar-light-disabled-color: #{rgba(var(--#{$prefix}emphasis-color-rgb), .3)} !default;
 $navbar-light-toggler-border-color: #{rgba(var(--#{$prefix}emphasis-color-rgb), .1)} !default;
-$navbar-light-icon-color: $success !default;
+$navbar-light-icon-color: $white !default;
 $navbar-light-toggler-icon-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-icon-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M0 6h30M0 14h30M0 22h30'/%3E%3C/svg%3E"),
     '#',
     '%23'

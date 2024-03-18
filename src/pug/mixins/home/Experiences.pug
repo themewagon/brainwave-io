@@ -52,12 +52,13 @@ mixin Experiences
               img.object-fit-contain.w-25(src=`${CWD}assets/img/illustrations/pause-solid.svg`, alt="" data-pause-icon)
             .position-absolute.dots.d-none.d-sm-block
               img(src=`${CWD}assets/img/illustrations/Dots.png`, alt="").img-fluid.w-100
-      h2.fs-4.fs-lg-3.fw-bold.text-center.text-white.heading.lh-sm We made this app
+      h2.fs-4.fs-lg-3.fw-bold.text-center.text-white.heading.lh-sm We made 
+        span.text-nowrap this app
         br 
         span.text-nowrap to solve
         br.d-sm-none 
         span.text-nowrap  your problems.
-      .row.g-2.g-lg-7.pb-8.pb-lg-9.px-lg-1
+      .row.g-2.g-md-3.pb-8.pb-lg-10.px-1
         each item in serviceItems 
           +Service(item)
     .wave-container.position-absolute.top-0.start-0.z-1

@@ -41,7 +41,7 @@ mixin Testimonials
   .testimonal
     .mx-auto.text-center 
       hr.horizontal-rule.m-0.d-inline-block
-    .container.pb-8.pb-lg-9
+    .container.pb-8.pb-lg-10
       h2.fs-6.fs-lg-5.fw-bold.text-center.text-white.heading 
         span.underline  1,749 remote teams
         span.tex-nowrap  have shared their  
@@ -69,6 +69,8 @@ mixin Testimonials
                     loop: true,
                 },
                 768: {
+                  direction: 'horizontal',
+                  centeredSlide: true,
                   slidesPerView: 2,
                   loop: true,
                 },
