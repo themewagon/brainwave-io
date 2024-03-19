@@ -44,16 +44,17 @@ mixin Footer
               +Button('assets/img/logos/Play_Store.png')
       .row 
         .d-md-flex.justify-content-between.align-items-center.py-3.px-0
-          .mb-2.mb-md-0.text-center.text-md-end.order-md-1
+          .text-center.text-md-start 
+            span.text-black.copyright.lh-xl  © 2024 Copyright, All Right Reserved, Made by Seju_ui_ux with
+            img(src=`${CWD}assets/img/icons/Heart.svg`, alt="")
+
+          .mt-2.mt-md-0.text-center.text-md-end
               a(href='#!').icons
                 span.uil.uil-twitter 
               a(href='#!').icons
                 span.uil.uil-instagram
               a(href='#!').icons
                 span.uil.uil-linkedin 
-          .text-center.text-md-start 
-            span.text-black.copyright.lh-xl  © 2024 Copyright, All Right Reserved, Made by Seju_ui_ux with
-            img(src=`${CWD}assets/img/icons/Heart.svg`, alt="")
           
 
 

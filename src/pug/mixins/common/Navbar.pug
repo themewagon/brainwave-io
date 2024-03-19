@@ -34,7 +34,7 @@ mixin Navbar
         span.navbar-toggler-icon
       
       #navbar-content.collapse.navbar-collapse.ms-auto.justify-content-md-end(data-navbar-collapse)
-        ul.navbar-nav.ms-lg-auto.gap-md-2.gap-lg-3.mt-x1.mt-md-0.pb-3.pb-md-0(data-navbar-nav)
+        ul.navbar-nav.ms-lg-auto.gap-md-2.gap-lg-3.pt-x1.pb-1.pt-md-0.pb-md-0(data-navbar-nav)
           each navMenu in menu 
               li.nav-item 
                   a(href=`${navMenu.link}` title=`${navMenu.label}`).nav-link.nav-bar-item.px-0 #{navMenu.label}

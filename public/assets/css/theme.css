@@ -20828,7 +20828,7 @@ h5, .h5, h6, .h6 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 .nav-item:last-child {
   border-bottom: none;
