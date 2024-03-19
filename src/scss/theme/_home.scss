@@ -25,9 +25,7 @@
 }
 
 .main-container{
-  min-height: 960px;
   overflow: hidden;
-  position: relative;
   .hero{
     background-position: center;
     background-size: cover;
@@ -36,7 +34,6 @@
     display: flex;
     z-index: 0;
     align-items: center;
-    margin-bottom: 10px;
     
     .button-text{
       color: #F4F7FA;

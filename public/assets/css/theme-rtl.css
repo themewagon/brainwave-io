@@ -20958,9 +20958,7 @@ h5, .h5, h6, .h6 {
 }
 
 .main-container {
-  min-height: 960px;
   overflow: hidden;
-  position: relative;
 }
 .main-container .hero {
   background-position: center;
@@ -20974,7 +20972,6 @@ h5, .h5, h6, .h6 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 10px;
 }
 .main-container .hero .button-text {
   color: #F4F7FA;
