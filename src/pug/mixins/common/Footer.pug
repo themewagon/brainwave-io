@@ -2,58 +2,58 @@ mixin Footer
 
   footer.Footer.bg-white.pt-7.pt-lg-8 
     .container
-      .row.g-2.g-md-6.footer-top.justify-content-center
+      .row.g-2.g-md-6.footer-top.pb-8.pb-lg-9.justify-content-center
         .col-6.col-md-4.col-lg-2.mb-4.mb-lg-0
-          h5.fs-9.mb-2.heading Company
+          h5.fs-9.mb-2.opacity-70.mb-0.lh-lg.heading Company
           .mb-1  
-            a(href="#").links About us
+            a(href="#about").links.fw-light.fs-9.lh-xl About us
           .mb-1  
-            a(href="#about").links  Contact us
+            a(href="#contact").links.fw-light.fs-9.lh-xl  Contact us
           .mb-1  
-            a(href="#products").links Careers
+            a(href="#!").links.fw-light.fs-9.lh-xl Careers
           .mb-1  
-            a(href="#review").links Press
+            a(href="#!").links.fw-light.fs-9.lh-xl Press
           
         .col-6.col-md-4.col-lg-2.mb-4.mb-lg-0
-          h5.fs-9.mb-2.heading Product
+          h5.fs-9.mb-2.opacity-70.mb-0.lh-lg.heading Product
           .mb-1  
-            a(href="#!").links Features
+            a(href="#!").links.fw-light.fs-9.lh-xl Features
           .mb-1  
-            a(href="#!").links  Pricing
+            a(href="#!").links.fw-light.fs-9.lh-xl  Pricing
           .mb-1  
-            a(href="#!").links  News
+            a(href="#!").links.fw-light.fs-9.lh-xl  News
           .mb-1  
-            a(href="#!").links  Help desk
+            a(href="#!").links.fw-light.fs-9.lh-xl  Help desk
           .mb-1
-            a(href="#!").links  Support
+            a(href="#!").links.fw-light.fs-9.lh-xl  Support
 
         .col-6.col-md-4
-          h5.fs-9.mb-2.heading  Legal
+          h5.fs-9.mb-2.opacity-70.mb-0.lh-lg.heading  Legal
           .mb-1  
-            a(href="#!").links Privacy
+            a(href="#!").links.fw-light.fs-9.lh-xl Privacy
           .mb-1  
-            a(href="#!").links  Terms & Conditions
+            a(href="#!").links.fw-light.fs-9.lh-xl  Terms & Conditions
           .mb-1  
-            a(href="#!").links  Return Policy
+            a(href="#!").links.fw-light.fs-9.lh-xl  Return Policy
 
         .col-6.col-md-12.col-lg-4.d-md-flex.flex-column.align-items-md-center.align-items-lg-start
             div 
-              h5.fs-9.mb-2.heading  Download Our App
-              .spacer 
+              h5.fs-9.mb-2.opacity-70.mb-0.lh-lg.heading  Download Our App
+              .mb-1.mb-lg-2 
                 +Button('assets/img/logos/App_Store.png')
               +Button('assets/img/logos/Play_Store.png')
       .row 
         .d-md-flex.justify-content-between.align-items-center.py-3.px-0
           .text-center.text-md-start 
-            span.text-black.copyright.lh-xl  © 2024 Copyright, All Right Reserved, Made by Seju_ui_ux with
+            span.me-1.lh-xl  © 2024 Copyright, All Right Reserved, Made by Seju_ui_ux with
             img(src=`${CWD}assets/img/icons/Heart.svg`, alt="")
 
           .mt-2.mt-md-0.text-center.text-md-end
-              a(href='#!').icons
+              a(href='#!').icons.fs-8.me-3.me-md-0.ms-md-3.cursor-pointer
                 span.uil.uil-twitter 
-              a(href='#!').icons
+              a(href='#!').icons.fs-8.me-3.me-md-0.ms-md-3.cursor-pointer
                 span.uil.uil-instagram
-              a(href='#!').icons
+              a(href='#!').icons.fs-8.me-3.me-md-0.ms-md-3.cursor-pointer
                 span.uil.uil-linkedin 
           
 

@@ -5,31 +5,31 @@ mixin List({label, description})
 
   .d-flex.gap-2.gap-lg-x1.mb-4.mb-lg-5 
     div
-      .check-parent.fs-9.d-flex.align-items-center.justify-content-center 
+      .check-parent.bg-success.mb-1.fs-9.rounded-circle.d-flex.align-items-center.justify-content-center 
         span.uil.uil-check.text-white
     div 
-      h5.fs-8.fw-bold.lh-lg.list-heading.text-white= label 
-      p.fs-9.lh-xl.description.mb-0= description
+      h5.fs-8.fw-bold.lh-lg.mb-1.text-white= label 
+      p.fs-9.lh-xl.text-white.opacity-70.mb-0= description
 mixin FAQ
   -
     var items = [
       {
         label: 'Noise Free Locations',
-        description: 'With lots of unique blocks, you can easily build a page without coding.',
+        description: 'We ensure noise-free locations for your peace of mind and sound sleep.',
       },
       {
         label: '24/7 Hour Support',
-        description: 'With lots of unique blocks, you can easily build a page without coding.',
+        description: 'Get support from our efficient customer support team, 24/7, all year round.',
       }
     ]
-  section.bg-black.faq 
+  section.faq 
     .container
       .row.py-8.py-md-10.py-lg-12
         .col-12.col-lg-6
           h2.text-white.fs-4.fs-lg-3.lh-sm.mb-2.text-center.text-lg-start.fw-bold We are always here for 
             span.text-nowrap your backup.
           .text-container
-            h6.fs-8.sub-title.mb-4.mb-md-6.mb-lg-7.fw-normal.lh-lg.mb-6.mb-lg-7.text-center.text-lg-start  We share common trends and strategies for creating & improving your 
+            h6.fs-8.text-white.opacity-65.mb-4.mb-md-6.mb-lg-7.fw-normal.lh-lg.mb-6.mb-lg-7.text-center.text-lg-start  We share common trends and strategies for creating & improving your 
               span.text-nowrap rental income.
             each item in items 
               +List(item)

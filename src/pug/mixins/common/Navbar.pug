@@ -15,7 +15,7 @@ mixin Navbar
       },
       { 
         label: 'Pricing', 
-        link: '#price' 
+        link: '#pricing' 
       },
       { 
         label: 'Contact', 
@@ -23,13 +23,12 @@ mixin Navbar
       }
     ]
 
-  nav.navbar.navbar-expand-md.fixed-top(data-navbar-soft-on-scroll)
-    .d-flex.justify-content-bewteen.align-items-center.w-100.flex-wrap
-      .me-auto
-        a(href=`${CWD}`)
-          img(src=`${CWD}assets/img/logos/logo.svg`, alt="logo").navbar-brand.img-fluid.w-75.d-md-none 
-        a(href=`${CWD}`).navbar-brand.cursor-pointer.text-white.fs-7.fw-bold.d-none.d-md-block Brainwave.io
-      a.btn.bg-primary.navbar-btn.ms-md-x1.mt-lg-0.order-md-1(href="!#") Get Started Now 
+  nav#navbar.navbar.navbar-expand-md.fixed-top(data-navbar-soft-on-scroll)
+    .container-fluid
+      a(href=`${CWD}`)
+        img(src=`${CWD}assets/img/logos/logo.svg`, alt="logo").navbar-brand.w-75.d-md-none 
+      a(href=`${CWD}`).navbar-brand.fw-bold.d-none.d-md-block Brainwave.io
+      a.btn.btn-primary.btn-sm.ms-md-x1.mt-lg-0.order-md-1.ms-auto(href="#") Get Started Now 
       button.navbar-toggler.border-0.pe-0(type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation")
         span.navbar-toggler-icon
       
@@ -37,4 +36,4 @@ mixin Navbar
         ul.navbar-nav.gap-md-2.gap-lg-3.pt-x1.pb-1.pt-md-0.pb-md-0(data-navbar-nav)
           each navMenu in menu 
               li.nav-item 
-                  a(href=`${navMenu.link}` title=`${navMenu.label}`).nav-link.nav-bar-item.px-0 #{navMenu.label}
+                  a(href=`${navMenu.link}`).nav-link.lh-xl #{navMenu.label}

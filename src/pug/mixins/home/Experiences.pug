@@ -1,10 +1,10 @@
 mixin Service({icon, title, description})
   .col-12.col-md-6.col-lg-4.d-flex
-    .img-holder 
+    .mt-1.me-2 
       img(src=`${CWD}assets/img/icons/${icon}`, alt="")
     div 
       h5.fs-8.text-white.mb-1.lh-lg.fw-bold= title
-      p.fs-9.lh-xl.mb-0.line-clamp-3= description 
+      p.fs-9.text-white.opacity-65.lh-xl.mb-0.line-clamp-3= description 
 
 mixin Experiences 
   -
@@ -12,47 +12,47 @@ mixin Experiences
       {
         icon: 'roadmap.svg',
         title: 'Unlimited Projects',
-        description: 'With lots of unique blocks, you can easily build a page without coding. Build your next landing page.'
+        description: 'Manage multiple projects at once and for seamless business operation.'
       },
       {
         icon: 'users-wm.svg',
         title: 'Team Management',
-        description: 'With lots of unique blocks, you can easily build a page without coding. Build your next landing page.'
+        description: 'Manage your cross-functional teams better than ever with our easily manageable app.'
       },
       {
         icon: 'share-91.svg',
         title: 'File Sharing',
-        description: 'With lots of unique blocks, you can easily build a page without coding. Build your next landing page.'
+        description: 'Easily share files where necessary and keep them safe with enhanced security and protection.'
       },
       {
         icon: 'video_meeting.svg',
         title: 'Video Meeting',
-        description: 'With lots of unique blocks, you can easily build a page without coding. Build your next landing page.'
+        description: 'Conduct video meetings and keep records for further use with its cloud storage.'
       },
       {
         icon: 'opening-times.svg',
         title: 'Time Tracking',
-        description: 'With lots of unique blocks, you can easily build a page without coding. Build your next landing page.'
+        description: 'Track time to ensure meeting all the deadlines and never lag behind managing multiple projects.'
       },
       {
         icon: 'card-favorite.svg',
         title: 'Payment System',
-        description: 'With lots of unique blocks, you can easily build a page without coding. Build your next landing page.'
+        description: 'With its easy payment system create invoices and get paid all at the same place.'
       }
     ]
   section#service.experience.position-relative 
     .container
       .row.justify-content-center.mb-8.mb-lg-9 
         .col-12
-          .position-relative.image-container.z-2.text-center
+          .position-relative.image-container.z-2.text-center(data-video-player-parent)
             video.w-100.h-100.video(src=`${CWD}assets/video/Tech_video.mp4` poster=`${CWD}assets/img/Hero/experiences.png` type="video/mp4" data-video-player)
-            .overlay(data-overlay) 
-            button.btn.play-button.position-absolute(data-play-button) 
+            .overlay.position-absolute.top-0.bottom-0.start-0.end-0(data-overlay) 
+            button.btn.play-button.position-absolute.justify-content-center.align-items-center.bg-white.rounded-circle(data-play-button) 
               img.object-fit-contain.w-25(src=`${CWD}assets/img/illustrations/play-solid.svg`, alt="" data-play-icon)
               img.object-fit-contain.w-25(src=`${CWD}assets/img/illustrations/pause-solid.svg`, alt="" data-pause-icon)
             .position-absolute.dots.d-none.d-sm-block
               img(src=`${CWD}assets/img/illustrations/Dots.png`, alt="").img-fluid.w-100
-      h2.fs-4.fs-lg-3.fw-bold.text-center.text-white.heading.lh-sm We made 
+      h2.fs-4.fs-lg-3.fw-bold.text-center.text-white.mb-5.mb-lg-9.lh-sm We made 
         span.text-nowrap this app
         br 
         span.text-nowrap to solve

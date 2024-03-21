@@ -5,8 +5,8 @@ mixin Review({imgSrc, comment, name}, index)
         div.text-center.text-lg-start
           img(src=`${CWD}assets/img/feedback/${imgSrc}`, alt="").card-image
         .text-center.text-lg-start 
-          p.fs-8.text-black.mb-2.lh-lg.line-clamp-3= comment 
-          span.fs-9.lh-xl= name
+          p.fs-8.mb-2.lh-lg.line-clamp-3= comment 
+          span.fs-9.opacity-70.lh-xl= name
 
 
 mixin Testimonials
@@ -42,7 +42,7 @@ mixin Testimonials
     .mx-auto.text-center 
       hr.horizontal-rule.m-0.d-inline-block
     .container.pb-8.pb-lg-10
-      h2.fs-6.fs-lg-5.fw-bold.text-center.text-white.heading 
+      h2.fs-6.fs-lg-5.fw-bold.text-center.text-white.heading.pt-7.pb-4.pt-lg-9.pb-lg-6.lh-lg 
         span.underline  1,749 remote teams
         span.tex-nowrap  have shared their  
         br.d-none.d-md-block
@@ -84,6 +84,6 @@ mixin Testimonials
             .swiper-wrapper 
               each item, index in reviews 
                 +Review(item, index)
-      a.fs-9.d-flex.justify-content-center.align-items-center.read-more(href="#!")
+      a.fs-9.d-flex.justify-content-center.align-items-center.read-more.text-success(href="#!")
         span Read more reviews 
         span.uil.uil-arrow-right.icon

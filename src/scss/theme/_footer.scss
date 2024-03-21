@@ -1,55 +1,8 @@
 .Footer {
-    .footer-top{
-        padding-bottom: 70px;
-        border-bottom: 1px solid #E7E9ED;
-
-        @include media-breakpoint-up(lg){
-            padding-bottom: 89px;
-        }
-    }
-    .heading {
-        color: rgba($black, 0.7);
-        margin-bottom: 0;
-        line-height: 26px;
+    .heading, .links {
         letter-spacing: 0.3px;
-    }
-    .links{
-        color: $black;
-        font-weight: 300;
-        font-size: 17px;
-        line-height: 29px;
-        letter-spacing: 0.3px;
-        @include hover-focus {
-            color: map-get($theme-colors, 'primary' );
-            text-decoration: none;
-        }
-    }
-    .spacer{
-        margin-bottom: 0.6rem;
-
-        @include media-breakpoint-up(sm){
-            margin-bottom: 0.8rem;
-        }
-        @include media-breakpoint-up(lg){
-            margin-bottom: 16px;
-        }
-    }
-    .copyright{
-        margin-right: 9px;
     }
     .icons {
-        cursor: pointer;
-        color: $black;
-        font-size: map-get($font-sizes, 8);
-        margin-right: 31px;
         transition: color 0.2s ease-in-out;
-        &:hover, &:active {
-            text-decoration: none;
-            color: map-get($theme-colors, 'primary' );
-        }
-        @include media-breakpoint-up(md){
-            margin-left: 31px;
-            margin-right: 0;
-        }
     }
 }

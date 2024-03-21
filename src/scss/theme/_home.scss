@@ -17,115 +17,65 @@
 .accordion-button::after{
   background-size: auto !important;
 }
-.accordion-button:focus{
-  box-shadow: 0 0 0 0.25rem rgba(104, 213, 133, 0.25) !important;
-}
 .accordion-button:not(.collapsed){
-  box-shadow: none !important;
+  box-shadow: 0 0 0 0.15rem rgba(104, 213, 133, 0.25) !important;
 }
 
 .main-container{
-  overflow: hidden;
   .hero{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: 900px;
+    min-height: 950px;
     display: flex;
     z-index: 0;
     align-items: center;
-    
-    .button-text{
-      color: #F4F7FA;
+  }
+  .chat-image{
+    width: 90%;
+  }
+  .dots{
+    top: -5%;
+    right: 15%;
+    z-index: -10;
+  }@include media-breakpoint-up(md){
+    .chat-image{
+      width: 60%;
     }
   }
-  .hero-image {
+  @include media-breakpoint-up(lg){
     .chat-image{
-      width: 90%;
+      width: 100%;
+    }
+    z-index: 0;  
+    .dots{
+      right: -8%;
+    }
+  }
+  @include media-breakpoint-up(xl){
+    .chat-image{
+      width: 80%;
     }
     .dots{
-      top: -5%;
-      right: 15%;
-      z-index: -10;
-    }@include media-breakpoint-up(md){
-      .chat-image{
-        width: 60%;
-      }
-    }
-    @include media-breakpoint-up(lg){
-      .chat-image{
-        width: 100%;
-      }
-      z-index: 0;  
-      .dots{
-        right: -8%;
-      }
-    }
-    @include media-breakpoint-up(xl){
-      .chat-image{
-        width: 80%;
-      }
-      .dots{
-        right: 0%;
-      }
+      right: 0%;
     }
   }
-  .wave-container{
-    .wave{
-      width: 110% !important;
-      margin-left: -20px;
-      margin-right: -20px;
-    }
-    .bg{
-      margin-top: -2px;
-      background-color: $white;
-      min-height: 5vh;
-      @include media-breakpoint-up(md){
-        min-height: 10vh;
-      }
-
+  .wave{
+    width: 110% !important;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  .bg{
+    margin-top: -2px;
+    background-color: $white;
+    min-height: 5vh;
+    @include media-breakpoint-up(md){
+      min-height: 10vh;
     }
   }
 }
 
-.team {
-  
-  .team-sub-title{
-    color: rgba($black, 0.7);
-  }
-  .mb-xs{
-    margin-bottom: 11px;
-  }
-  .team-description{
-    color: rgba($black, 0.7);
-  }
-  .details{
-    @include media-breakpoint-up(lg){
-      max-width: 480px;
-      .details-term {
-        max-width: 340px;
-      }
-    }
-  }
-  
-  @include media-breakpoint-up(md){
-    .team-image{
-      max-width: 475px;
-      max-height: 495px;
-    }
-    .collaborate-image{
-      max-width: 441px;
-      max-height: 530px;
-    }
-  }
-}
-.counter{
-  border-bottom: 1px solid #E7E9ED;
-}
 .work-process{
-  p {
-    color: rgba($black, 0.7);
-  }
   .progress-item {
     .progress-bar, .progress-bar-2 {
       position: relative;
@@ -196,10 +146,6 @@
 
 .experience{
   background: linear-gradient(to bottom,#313C59, #161C2D );
-  
-  p {
-    color: rgba($white, 0.65);
-  }
   .image-container{
     z-index: 0;
     max-height: 652px;
@@ -208,12 +154,7 @@
       object-fit: cover !important;
     }
     .overlay{
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      background-color: $black;
+      background-color: $gray-1100;
       opacity: 0.1;
       z-index: 100;
       border-radius: 20px;
@@ -228,16 +169,6 @@
       height: 50px;
       z-index: 999;
       padding: 0;
-      border-radius: map-get($border-radiuses, 'circle');
-      background-color: $white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      
-      span{
-        font-size: 15px;
-        color: map-get($theme-colors, 'danger');
-      }
       @include media-breakpoint-up(md){
         width: 80px;
         height: 80px;
@@ -285,35 +216,15 @@
       }
     }
   }
-  .heading {
-    margin-bottom: 50px;
-
-    @include media-breakpoint-up(lg){
-      margin-bottom: 98px;
-    }
-  }
-  .img-holder{
-    margin-top: 7px;
-    margin-right: 18px;
-  }
 }
 
 .testimonal{
-  background:  #161C2D;
+  background: $gray-1100;
+  
   .horizontal-rule{
     width: 161px;
     height: 3px;
     background-color: rgba($white, 0.15);
-  }
-  .heading{
-    padding-top: 60px;
-    padding-bottom: 40px;
-    line-height: 1.4;
-    letter-spacing: -1.2px;
-    @include media-breakpoint-up(lg){
-      padding-top: 92px;
-      padding-bottom: 56px;
-    }
   }
   .underline{
     position: relative;
@@ -332,7 +243,6 @@
   }
 
   .read-more{
-    color: map-get($theme-colors, 'success' );
     transition: color 0.3s ease-in-out;
     gap: 10px;
     line-height: 2;
@@ -348,11 +258,7 @@
 
 .pricing{
   background-color: #F4F7FA;
-  .description{
-    color: rgba($black, 0.7);
-  }
   .price-card-1, .price-card-2{
-    border: 1px solid #E7E9ED;
     border-radius: 10px;
     max-width: 350px;
     width: 100%;
@@ -362,69 +268,29 @@
     .list{
       letter-spacing: 0.3px;
       padding: 22px 9px 19px 10px;
-      border-top: 1px solid #E7E9ED;
     }
-    .price-button {
-      margin-top: 9px;
-    }
-  }
-  .price-card-1{
-    background-color: transparent;
   }
   .price-card-2{
-    background-color: $white;
-    filter: drop-shadow(0 32px 64px rgba(22, 28, 45, 0.07));
-
-    .price-button{
-      max-width: 285px;
-    }
+    box-shadow: 0 32px 64px rgba(22, 28, 45, 0.07);
   }
   .price{ 
-
     .dollar {
-      font-size: map-get($font-sizes, 6);
-      font-weight: $font-weight-bold;
       line-height: 65px;
-      @include media-breakpoint-up(md){
-        font-size: map-get($font-sizes, 7);
-      }
-    }
-    .number {
-      font-size: map-get($font-sizes, 2);
-      font-weight: $font-weight-bold;
-      line-height: $line-height-base;
-      @include media-breakpoint-up(md){
-        font-size: map-get($font-sizes, 1);
-      }
     }
     .duration{
-      font-size: map-get($font-sizes, 9 );
-      line-height: $line-height-xl;
       font-family: "Rubik", sans-serif !important;
     }
   }
-
   @include media-breakpoint-up(md){
     min-width: 350px;
   }
 }
 
 .faq{
+  background-color: $gray-1100;
   .check-parent{
-    background-color: map-get($theme-colors, 'success' );
     height: 30px;
     width: 30px;
-    border-radius: map-get($border-radiuses, 'circle' );
-    margin-top: 8px;
-  }
-  .sub-title, .description{
-    color: rgba($white, 0.65)
-  }
-  .list-heading{
-    margin-bottom: 11px !important;
-  }
-  .accoridion-text{
-    color: rgba($black, 0.7) !important;
   }
   @include media-breakpoint-up(lg){
     .text-container{
@@ -434,12 +300,6 @@
 }
 .subscription{
   background-color: #F4F7FA;
-  
-  .description{
-    font-size: 15px;
-    line-height: 1.7;
-    color: rgba($black, 0.7);
-  }
 }
 
 .swiper-theme-container{
@@ -465,7 +325,7 @@
   
   margin: auto;
   border: 1px solid #57595E;
-  color: rgba($black, 0.7);
+  color: $gray-1100;
   border-radius: 12px;
   overflow: hidden;
   background-color: rgba($white, 0.50);

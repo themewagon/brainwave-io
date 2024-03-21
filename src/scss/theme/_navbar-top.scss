@@ -16,29 +16,11 @@
   }
 }
 .nav-item{
-  display: flex;
-  align-items: center;
   border-bottom: 1px solid rgba($white, 0.5);
-
   &:last-child{
     border-bottom: none;
-  }
-  .nav-bar-item{
-    display: inline-block;
-    text-align: center;
-    color: #E3E6ED !important;
-    font-size: 15px !important;
-    line-height: 26px;
-    font-weight: $font-weight-bold !important;
-    &:hover{
-      color:  $white !important;
-    }
   }
   @include media-breakpoint-up(md){
     border: none;
   }
-}
-.active {
-  color: map-get($theme-colors, 'success') !important;
-  font-weight: $font-weight-bold !important;
 }

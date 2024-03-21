@@ -1,25 +1,6 @@
 
 
-.navbar-btn {
-  @extend .btn-lg;
-  font-size: 16px;
-  font-weight: bold;
-  height: 40px;
-  width: 150px;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  &:hover,&:focus, &:active{
-    background-color: shade-color(map-get($theme-colors, 'primary'), 30%) !important;
-    color: $white !important;
-    border-color: transparent
-  }
-  @include media-breakpoint-up(sm){
-    height: 50px;
-    width: 174px;
-  }
-}
+
 .primary-btn {
   @extend .btn-lg;
   font-size: 16px;
@@ -37,18 +18,7 @@
   }
 }
 
-.secondary-btn{
-  @extend .btn-lg;
-  font-size: 16px;
-  font-weight: bold;
-  width: 219px;
-  height: 59px;
-  background-color:  #2E2F33;
-  &:hover,&:focus, &:active{
-    background-color: #000;
-    color: $white !important;
-  } 
-}
+
 
 .btn {
   --#{$prefix}btn-border-width: var(--#{$prefix}border-width);

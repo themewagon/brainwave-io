@@ -514,6 +514,7 @@ var swiperInit = function swiperInit() {
 /* -------------------------------------------------------------------------- */
 
 var videoControllerInit = function videoControllerInit() {
+  var parent = document.querySelector('[data-video-player-parent]');
   var videoPlayer = document.querySelector('[data-video-player');
   var playButton = document.querySelector('[data-play-button');
   var playIcon = document.querySelector('[data-play-icon');
@@ -521,14 +522,14 @@ var videoControllerInit = function videoControllerInit() {
   var overlay = document.querySelector('[data-overlay]');
   pauseIcon.style.display = 'none';
   var buttonVisible = function buttonVisible() {
-    playButton.style.display = 'inline';
+    playButton.style.display = 'flex';
+    overlay.style.opacity = '0.4';
   };
   var buttonHidden = function buttonHidden() {
-    setTimeout(function () {
-      if (!videoPlayer.paused) {
-        playButton.style.display = 'none';
-      }
-    }, 2000);
+    overlay.style.opacity = '0';
+    if (!videoPlayer.paused) {
+      playButton.style.display = 'none';
+    }
   };
   playButton.addEventListener('click', function () {
     if (videoPlayer.paused) {
@@ -539,17 +540,10 @@ var videoControllerInit = function videoControllerInit() {
       videoPlayer.pause();
       playIcon.style.display = 'inline';
       pauseIcon.style.display = 'none';
-      buttonVisible();
     }
   });
-  playButton.addEventListener('mouseover', function () {
-    overlay.style.opacity = '0.4';
-  });
-  playButton.addEventListener('mouseout', function () {
-    overlay.style.opacity = '0';
-  });
-  videoPlayer.addEventListener('mouseenter', buttonVisible);
-  videoPlayer.addEventListener('mouseleave', buttonHidden);
+  parent.addEventListener('mouseover', buttonVisible);
+  parent.addEventListener('mouseout', buttonHidden);
   videoPlayer.addEventListener('ended', function () {
     playIcon.style.display = 'inline';
     pauseIcon.style.display = 'none';
