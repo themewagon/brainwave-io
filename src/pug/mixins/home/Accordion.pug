@@ -2,19 +2,19 @@ mixin AccordionItem({heading, body}, index)
 
   .accordion-item 
     h2.accordion-header(id=`heading${index+1}`)
-      button.accordion-button.fs-8.lh-lg.fw-bold(type='button' class=`${index!== 0 ? 'collapsed': ''}` data-bs-toggle="collapse" data-bs-target=`#collapse${index+1}` aria-expand=`${index=== 0 ? true: false}` aria-controls=`collapse${index+1}` data-accordion-button)=  heading 
+      button.accordion-button.fs-8.lh-lg.fw-bold.pt-x1.pb-2(type='button' class=`${index!== 0 ? 'collapsed': ''}` data-bs-toggle="collapse" data-bs-target=`#collapse${index+1}` aria-expand=`${index=== 0 ? true: false}` aria-controls=`collapse${index+1}` data-accordion-button)=  heading 
 
     .accordion-collapse.collapse(id=`collapse${index+1}` class=`${index === 0 ? 'show': ''}` data-bs-parent="#accordion")
-      .accordion-body.fs-9.lh-xl.accoridion-text.opacity-70=  body 
+      .accordion-body.fs-9.lh-xl.accoridion-text.opacity-70.pt-0.pb-x1=  body 
 mixin Accordion 
   -
     var items = [
       {
-        heading: 'How to setup Shade Pro?',
+        heading: 'How to setup BrainwaveIO?',
         body: 'Enjoy the easy setup process with little to no coding knowledge with us!'
       },
       {
-        heading: 'Can I use Shade Pro for my clients?',
+        heading: 'Can I use BrainwaveIO for my clients?',
         body: 'Yes, you can. Enjoy special rates for your first client!'
       },
       {
@@ -24,9 +24,13 @@ mixin Accordion
       {
         heading: 'How can I access to old version?',
         body: 'Go to your cloud storage and provide the password. You’ll find it there..'
+      },
+      {
+        heading: 'How can I get your support?',
+        body: 'To reach our support team, simply send an email to support@brainwaveio.com. Our team will promptly address your inquiry and provide assistance as needed.'
       }
     ]
   
-  #accordion.accordion.mt-lg-3
+  #accordion.accordion.mt-lg-4.ps-3.pe-x1.bg-white
     each item, index in items 
       +AccordionItem(item, index)

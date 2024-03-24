@@ -152,3 +152,30 @@
 .navbar-top + .content{
   min-height: calc(100vh - $top-nav-height);
 }
+
+
+/* -------------------------------------------------------------------------- */
+/*                                   Accordion                                */
+/* -------------------------------------------------------------------------- */
+.accordion{
+  border-top: 5px solid   var(--#{$prefix}success);
+  border-radius: 10px ;
+}
+
+.accordion-button:not(.collapsed){
+  box-shadow: none;
+}
+
+.accordion-item {
+  border: none;
+  border-bottom: 1px solid var(--#{$prefix}gray-500);
+
+  &:last-of-type {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    .accordion-button.collapsed{
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+  }
+}

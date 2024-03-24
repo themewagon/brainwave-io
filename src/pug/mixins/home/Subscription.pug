@@ -7,16 +7,17 @@ mixin Subscription
           h6.fs-8.opacity-70.mb-5.mb-lg-6.text-center.lh-lg.fw-normal  Subscribe to our monthly newsletter to stay connected with 
             | everything 
             span.text-nowrap you need!
-          form.form.mb-x1(method="POST" onsubmit="return false;")
+          form.form(method="POST" onsubmit="return false;")
             .mb-2.w-100
               input#email.form-control.email-input(type="email" placeholder="Enter your email" required)
             .d-grid
-              button.btn.btn-lg.btn-primary.lh-xl(type='submit')  Subscribe
-          p.text-center.fs-9.lh-lg.opacity-70.mb-0 
-            span We’ll never share your details with 
-            span.text-nowrap third parties.
-            br
-            span View our Privacy Policy for more info.
+              button.btn.btn-lg.btn-primary.lh-xl.mb-x1(type='submit')  Subscribe
+            p.text-center.fs-9.lh-lg.opacity-70.mb-0 
+              span We’ll never share your details with 
+              span.text-nowrap third parties. 
+              span.text-nowrap View our Privacy Policy 
+              br.d-sm-none
+              span.text-nowrap for more info.
     .position-absolute.bottom-0.end-0.z-n1.d-none.d-lg-block
       img(src=`${CWD}assets/img/illustrations/Green_dots.svg`, alt="")
     .wave-container.position-relative.bottom-0.start-0.z-1

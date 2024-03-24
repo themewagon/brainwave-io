@@ -5517,24 +5517,24 @@ textarea.form-control-lg {
 
 .accordion {
   --brainwaveio-accordion-color: var(--brainwaveio-body-color);
-  --brainwaveio-accordion-bg: var(--brainwaveio-emphasis-bg);
+  --brainwaveio-accordion-bg: #fff;
   --brainwaveio-accordion-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
   --brainwaveio-accordion-border-color: rgba(var(--brainwaveio-emphasis-color-rgb), 1);
   --brainwaveio-accordion-border-width: var(--brainwaveio-border-width);
   --brainwaveio-accordion-border-radius: var(--brainwaveio-border-radius);
   --brainwaveio-accordion-inner-border-radius: calc(var(--brainwaveio-border-radius) - (var(--brainwaveio-border-width)));
-  --brainwaveio-accordion-btn-padding-x: 2.1rem;
+  --brainwaveio-accordion-btn-padding-x: 0;
   --brainwaveio-accordion-btn-padding-y: 1.25rem;
   --brainwaveio-accordion-btn-color: #161C2D;
   --brainwaveio-accordion-btn-bg: var(--brainwaveio-accordion-bg);
-  --brainwaveio-accordion-btn-icon: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNS4xIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjQgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTMxMC42IDIzMy40YzEyLjUgMTIuNSAxMi41IDMyLjggMCA0NS4zbC0xOTIgMTkyYy0xMi41IDEyLjUtMzIuOCAxMi41LTQ1LjMgMHMtMTIuNS0zMi44IDAtNDUuM0wyNDIuNyAyNTYgNzMuNCA4Ni42Yy0xMi41LTEyLjUtMTIuNS0zMi44IDAtNDUuM3MzMi44LTEyLjUgNDUuMyAwbDE5MiAxOTJ6Ii8+PC9zdmc+");
+  --brainwaveio-accordion-btn-icon: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgdmlld0JveD0iMCAwIDE1MCAxNTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik00Ni44NzUgMTguNzVMMTAzLjEyNSA3NUw0Ni44NzUgMTMxLjI1IiBzdHJva2U9IiMxNjFDMkQiIHN0cm9rZS13aWR0aD0iMTguNzUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K");
   --brainwaveio-accordion-btn-icon-width: 1.25rem;
-  --brainwaveio-accordion-btn-icon-transform: rotate(-90deg);
+  --brainwaveio-accordion-btn-icon-transform: rotate(90deg);
   --brainwaveio-accordion-btn-icon-transition: transform 0.3s ease-in-out;
-  --brainwaveio-accordion-btn-active-icon: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNS4xIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjQgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTMxMC42IDIzMy40YzEyLjUgMTIuNSAxMi41IDMyLjggMCA0NS4zbC0xOTIgMTkyYy0xMi41IDEyLjUtMzIuOCAxMi41LTQ1LjMgMHMtMTIuNS0zMi44IDAtNDUuM0wyNDIuNyAyNTYgNzMuNCA4Ni42Yy0xMi41LTEyLjUtMTIuNS0zMi44IDAtNDUuM3MzMi44LTEyLjUgNDUuMyAwbDE5MiAxOTJ6Ii8+PC9zdmc+");
+  --brainwaveio-accordion-btn-active-icon: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgdmlld0JveD0iMCAwIDE1MCAxNTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik00Ni44NzUgMTguNzVMMTAzLjEyNSA3NUw0Ni44NzUgMTMxLjI1IiBzdHJva2U9IiMxNjFDMkQiIHN0cm9rZS13aWR0aD0iMTguNzUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K");
   --brainwaveio-accordion-btn-focus-border-color: var(--brainwaveio-input-focus-border-color-global);
-  --brainwaveio-accordion-btn-focus-box-shadow: 0 0 0 0.15rem rgba(104, 213, 133, 0.25);
-  --brainwaveio-accordion-body-padding-x: 2.1rem;
+  --brainwaveio-accordion-btn-focus-box-shadow: none;
+  --brainwaveio-accordion-body-padding-x: 0;
   --brainwaveio-accordion-body-padding-y: 1.25rem;
   --brainwaveio-accordion-active-color: #161C2D;
   --brainwaveio-accordion-active-bg: var(--brainwaveio-emphasis-bg);
@@ -20178,6 +20178,32 @@ h5, .h5, h6, .h6 {
 }
 
 /* -------------------------------------------------------------------------- */
+/*                                   Accordion                                */
+/* -------------------------------------------------------------------------- */
+.accordion {
+  border-top: 5px solid var(--brainwaveio-success);
+  border-radius: 10px;
+}
+
+.accordion-button:not(.collapsed) {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.accordion-item {
+  border: none;
+  border-bottom: 1px solid var(--brainwaveio-gray-500);
+}
+.accordion-item:last-of-type {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.accordion-item:last-of-type .accordion-button.collapsed {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* -------------------------------------------------------------------------- */
 /*                                    Text                                    */
 /* -------------------------------------------------------------------------- */
 .text-smallcaps {
@@ -20905,32 +20931,6 @@ h5, .h5, h6, .h6 {
   font-size: 1.25rem;
 }
 
-.accordion {
-  border-top: 5px solid #68D585 !important;
-  border-radius: 10px !important;
-}
-
-.accordion-item {
-  border-color: #E7E9ED !important;
-}
-.accordion-item:last-of-type {
-  border-bottom-left-radius: 10px !important;
-  border-bottom-right-radius: 10px !important;
-}
-.accordion-item:last-of-type .accordion-button.collapsed {
-  border-bottom-left-radius: 10px !important;
-  border-bottom-right-radius: 10px !important;
-}
-
-.accordion-button::after {
-  background-size: auto !important;
-}
-
-.accordion-button:not(.collapsed) {
-  -webkit-box-shadow: 0 0 0 0.15rem rgba(104, 213, 133, 0.25) !important;
-  box-shadow: 0 0 0 0.15rem rgba(104, 213, 133, 0.25) !important;
-}
-
 .main-container .hero {
   background-position: center;
   background-size: cover;
@@ -21031,7 +21031,7 @@ h5, .h5, h6, .h6 {
 }
 @media (min-width: 576px) {
   .work-process .progress-item .progress-bar .indicator-parent::before, .work-process .progress-item .progress-bar-2 .indicator-parent::before {
-    bottom: -70%;
+    bottom: -80%;
   }
 }
 @media (min-width: 992px) {
@@ -21082,6 +21082,11 @@ h5, .h5, h6, .h6 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+@media (min-width: 992px) {
+  .work-process .info-text {
+    min-height: 135px;
+  }
 }
 
 .experience {

@@ -294,20 +294,19 @@ $card-title-color: $headings-color !default;
 // scss-docs-start accordion-variables
 // $accordion-icon-width: 'auto' !default;
 $accordion-padding-y: 1.25rem !default;
-$accordion-padding-x: 2.1rem!default;
+$accordion-padding-x: 0!default;
 $accordion-icon-active-color: $body-color !default;
-$accordion-bg: var(--#{$prefix}emphasis-bg) !default;
+$accordion-bg: $white !default;
 $accordion-border-color: rgba(var(--#{$prefix}emphasis-color-rgb), 1) !default;
 $accordion-button-active-color: $body-color !default;
 $accordion-button-active-bg: var(--#{$prefix}emphasis-bg) !default;
 // $accordion-border-radius: 10px !default;
 $accordion-button-color: $body-color !default;
-$accordion-button-icon: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNS4xIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjQgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTMxMC42IDIzMy40YzEyLjUgMTIuNSAxMi41IDMyLjggMCA0NS4zbC0xOTIgMTkyYy0xMi41IDEyLjUtMzIuOCAxMi41LTQ1LjMgMHMtMTIuNS0zMi44IDAtNDUuM0wyNDIuNyAyNTYgNzMuNCA4Ni42Yy0xMi41LTEyLjUtMTIuNS0zMi44IDAtNDUuM3MzMi44LTEyLjUgNDUuMyAwbDE5MiAxOTJ6Ii8+PC9zdmc+") !default;
-
+$accordion-button-icon: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgdmlld0JveD0iMCAwIDE1MCAxNTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik00Ni44NzUgMTguNzVMMTAzLjEyNSA3NUw0Ni44NzUgMTMxLjI1IiBzdHJva2U9IiMxNjFDMkQiIHN0cm9rZS13aWR0aD0iMTguNzUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K") !default;
 $accordion-button-active-icon:  $accordion-button-icon;
-$accordion-icon-transform: rotate(-90deg) !default;
+$accordion-icon-transform: rotate(90deg) !default;
 $accordion-icon-transition: transform 0.3s ease-in-out !default;
-$accordion-button-focus-box-shadow: 0 0 0 0.15rem rgba($success, 0.25);
+$accordion-button-focus-box-shadow:   none !default;
 
 // scss-docs-end accordion-variables
 

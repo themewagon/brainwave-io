@@ -1,26 +1,4 @@
 
-.accordion{
-  border-top: 5px solid map-get($theme-colors, 'success' ) !important;
-  border-radius: 10px !important;
-}
-.accordion-item{
-  border-color: #E7E9ED !important;
-  &:last-of-type {
-    border-bottom-left-radius: 10px !important;
-    border-bottom-right-radius: 10px !important;
-    .accordion-button.collapsed{
-      border-bottom-left-radius: 10px !important;
-      border-bottom-right-radius: 10px !important;
-    }
-  }
-}
-.accordion-button::after{
-  background-size: auto !important;
-}
-.accordion-button:not(.collapsed){
-  box-shadow: 0 0 0 0.15rem rgba(104, 213, 133, 0.25) !important;
-}
-
 .main-container{
   .hero{
     background-position: center;
@@ -104,7 +82,7 @@
           bottom: -50%;
           z-index: -1;
           @include media-breakpoint-up(sm){
-            bottom: -70%;
+            bottom: -80%;
           }
         }
         @include media-breakpoint-up(lg) {
@@ -140,6 +118,12 @@
           align-items: center;
         }
       }
+    }
+  }
+
+  @include media-breakpoint-up(lg){
+    .info-text{
+      min-height: 135px;
     }
   }
 }
