@@ -1,60 +1,60 @@
 mixin Footer 
 
-  footer.Footer.bg-white.pt-7.pt-lg-8 
+  footer.pt-7.pt-lg-8 
     .container
-      .row.g-2.g-md-3.footer-top.border-bottom.pb-8.pb-lg-9.justify-content-center
-        .col-6.col-md-3.mb-4.mb-lg-0
-          h5.fs-9.mb-2.opacity-70.mb-0.lh-lg.heading Company
-          .mb-1  
-            a(href="#about").links.fw-light.fs-9.lh-xl About us
-          .mb-1  
-            a(href="#contact").links.fw-light.fs-9.lh-xl  Contact us
-          .mb-1  
-            a(href="#!").links.fw-light.fs-9.lh-xl Careers
-          .mb-1  
-            a(href="#!").links.fw-light.fs-9.lh-xl Press
+      .row.gy-4.g-md-3.border-bottom.pb-8.pb-lg-9.justify-content-center
+        .col-6.col-md-3
+          p.mb-2.fw.lh-lg.ls-1 Company
+          ul.list-unstyled.text-1100
+            li.mb-1  
+              a(href="#about").ls-1.fw-light.lh-xl About us
+            li.mb-1  
+              a(href="#contact").ls-1.fw-light.lh-xl  Contact us
+            li.mb-1  
+              a(href="#!").ls-1.fw-light.lh-xl Careers
+            li.mb-1  
+              a(href="#!").ls-1.fw-light.lh-xl Press
           
-        .col-6.col-md-3.mb-4.mb-lg-0
-          h5.fs-9.mb-2.opacity-70.mb-0.lh-lg.heading Product
-          .mb-1  
-            a(href="#!").links.fw-light.fs-9.lh-xl Features
-          .mb-1  
-            a(href="#!").links.fw-light.fs-9.lh-xl  Pricing
-          .mb-1  
-            a(href="#!").links.fw-light.fs-9.lh-xl  News
-          .mb-1  
-            a(href="#!").links.fw-light.fs-9.lh-xl  Help desk
-          .mb-1
-            a(href="#!").links.fw-light.fs-9.lh-xl  Support
+        .col-6.col-md-3
+          p.mb-2.lh-lg Product
+          ul.list-unstyled.text-1100 
+            li.mb-1  
+              a(href="#!").ls-1.fw-light.lh-xl Features
+            li.mb-1  
+              a(href="#!").ls-1.fw-light.lh-xl  Pricing
+            li.mb-1  
+              a(href="#!").ls-1.fw-light.lh-xl  News
+            li.mb-1  
+              a(href="#!").ls-1.fw-light.lh-xl  Help desk
+            li.mb-1
+              a(href="#!").ls-1.fw-light.lh-xl  Support
 
         .col-6.col-md-3
-          h5.fs-9.mb-2.opacity-70.mb-0.lh-lg.heading  Legal
-          .mb-1  
-            a(href="#!").links.fw-light.fs-9.lh-xl Privacy
-          .mb-1  
-            a(href="#!").links.fw-light.fs-9.lh-xl  Terms & Conditions
-          .mb-1  
-            a(href="#!").links.fw-light.fs-9.lh-xl  Return Policy
+          p.mb-2.lh-lg  Legal
+          ul.list-unstyled.text-1100
+            li.mb-1  
+              a(href="#!").ls-1.fw-light.lh-xl Privacy
+            li.mb-1  
+              a(href="#!").ls-1.fw-light.lh-xl  Terms & Conditions
+            li.mb-1  
+              a(href="#!").ls-1.fw-light.lh-xl  Return Policy
 
         .col-6.col-md-3.d-md-flex.flex-column.align-items-md-end.pe-md-0
             div 
-              h5.fs-9.mb-2.opacity-70.mb-0.lh-lg.heading  Download Our App
+              p.mb-2.lh-lg  Download Our App
               .mb-1.mb-lg-2 
                 +Button('assets/img/logos/App_Store.png')
               +Button('assets/img/logos/Play_Store.png')
-      .row 
-        .d-md-flex.justify-content-between.align-items-center.py-3.px-0
-          .text-center.text-md-start 
-            span.me-1.lh-xl  © 2024 Copyright, All Right Reserved, Made by Seju_ui_ux with
-            img(src=`${CWD}assets/img/icons/Heart.svg`, alt="")
-
-          .mt-2.mt-md-0.text-center.text-md-end
-              a(href='#!').icons.fs-8.me-3.me-md-0.ms-md-3.cursor-pointer
-                span.uil.uil-twitter 
-              a(href='#!').icons.fs-8.me-3.me-md-0.ms-md-3.cursor-pointer
-                span.uil.uil-instagram
-              a(href='#!').icons.fs-8.me-3.me-md-0.ms-md-3.cursor-pointer
-                span.uil.uil-linkedin 
+      .row.gy-2.py-3.justify-content-center.justify-content-md-between
+        .col-auto.ps-0
+            p.text-center.text-md-start.lh-xl.text-1100  © 2024 Copyright, All Right Reserved, Made by Seju_ui_ux with ❤️
+        .col-auto.pe-0
+            a(href='#!').icons.fs-8.me-3.me-md-0.ms-md-3.cursor-pointer
+              span.uil.uil-twitter 
+            a(href='#!').icons.fs-8.me-3.me-md-0.ms-md-3.cursor-pointer
+              span.uil.uil-instagram
+            a(href='#!').icons.fs-8.me-3.me-md-0.ms-md-3.cursor-pointer
+              span.uil.uil-linkedin 
           
 
 

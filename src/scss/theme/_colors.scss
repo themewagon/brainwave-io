@@ -2,7 +2,7 @@
 $white: #fff !default;
 $gray-100: #f9fafd !default;
 $gray-200: #edf2f9 !default;
-$gray-300: #f2f2f2 !default;
+$gray-300: #F4F7FA !default;
 $gray-400: #E3E6ED !default;
 $gray-500: #E7E9ED !default;
 $gray-600: #748194 !default;
@@ -110,7 +110,7 @@ $light-bg-subtle: tint-color($light, 70%) !default;
 $dark-bg-subtle: shade-color($dark, 30%) !default;
 // scss-docs-end theme-bg-subtle-variables
 
-$body-color: $gray-1100 !default;
+$body-color: $gray-800 !default;
 $body-bg: $white !default;
 
 $body-secondary-color: $gray-1100 !default;

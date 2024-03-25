@@ -5,11 +5,11 @@ mixin List({label, description})
 
   .d-flex.gap-2.gap-lg-x1.mb-4.mb-lg-5 
     div
-      .check-parent.bg-success.mb-1.fs-9.rounded-circle.d-flex.align-items-center.justify-content-center 
+      .check-icon.bg-success.mb-1.rounded-circle.d-flex.align-items-center.justify-content-center 
         span.uil.uil-check.text-white
     div 
       h5.fs-8.fw-bold.lh-lg.mb-1.text-white= label 
-      p.fs-9.lh-xl.text-white.opacity-70.mb-0= description
+      p.lh-xl.text-white.text-opacity-70.mb-0= description
 mixin FAQ
   -
     var items = [
@@ -22,17 +22,18 @@ mixin FAQ
         description: 'Get support from our efficient customer support team, 24/7, all year round.',
       }
     ]
-  section.faq 
+  section.bg-1100 
     .container
-      .row.py-8.py-md-10.py-lg-12
-        .col-12.col-lg-6
-          h2.text-white.fs-4.fs-lg-3.lh-sm.mb-2.text-center.text-lg-start.fw-bold We are always here for 
-            span.text-nowrap your backup.
-          .text-container
-            h6.fs-8.text-white.opacity-65.mb-4.mb-md-6.mb-lg-7.fw-normal.lh-lg.mb-6.mb-lg-7.text-center.text-lg-start  We share common trends and strategies for creating & improving your 
-              span.text-nowrap rental income.
-            each item in items 
-              +List(item)
+      .row.py-8.py-md-10.py-lg-11
+        .col-lg-6
+          .row.justify-content-center.justify-content-lg-start
+            .col-md-8.col-lg-12.col-xl-11
+              h2.text-white.fs-4.fs-lg-3.lh-sm.mb-2.text-center.text-lg-start.fw-bold We are always here for your backup.
+              p.fs-8.text-white.text-opacity-65.mb-4.mb-md-6.mb-lg-7.lh-lg.mb-6.mb-lg-7.text-center.text-lg-start  We share common trends and strategies for creating & improving your text-nowrap rental income.
+          .row 
+            .col-lg-10
+              each item in items 
+                +List(item)
         
-        .col-12.col-lg-6
+        .col-lg-6
             +Accordion

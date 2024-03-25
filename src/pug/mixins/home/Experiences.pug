@@ -1,10 +1,9 @@
 mixin Service({icon, title, description})
-  .col-12.col-md-6.col-lg-4.d-flex
-    .mt-1.me-2 
-      img(src=`${CWD}assets/img/icons/${icon}`, alt="")
+  .col-12.col-md-6.col-lg-4.d-flex.align-items-start.gap-2
+    img(src=`${CWD}assets/img/icons/${icon}`, alt="")
     div 
-      h5.fs-8.text-white.mb-1.lh-lg.fw-bold= title
-      p.fs-9.text-white.opacity-65.lh-xl.mb-0.line-clamp-3= description 
+      h5.fs-8.text-white.lh-lg.fw-bold= title
+      p.text-white.text-opacity-50.lh-xl.mb-0= description 
 
 mixin Experiences 
   -
@@ -40,26 +39,22 @@ mixin Experiences
         description: 'With its easy payment system create invoices and get paid all at the same place.'
       }
     ]
-  section#service.experience.position-relative 
+  section#service.experience.position-relative.overflow-hidden 
     .container
-      .row.justify-content-center.mb-8.mb-lg-9 
-        .col-12
-          .position-relative.image-container.z-2.text-center(data-video-player-parent)
-            video.w-100.h-100.video(src=`${CWD}assets/video/Tech_video.mp4` poster=`${CWD}assets/img/Hero/experiences.png` type="video/mp4" data-video-player)
-            .overlay.position-absolute.top-0.bottom-0.start-0.end-0(data-overlay) 
-            button.btn.play-button.position-absolute.justify-content-center.align-items-center.bg-white.rounded-circle(data-play-button) 
-              img.object-fit-contain.w-25(src=`${CWD}assets/img/illustrations/play-solid.svg`, alt="" data-play-icon)
-              img.object-fit-contain.w-25(src=`${CWD}assets/img/illustrations/pause-solid.svg`, alt="" data-pause-icon)
-            .position-absolute.dots.d-none.d-sm-block
-              img(src=`${CWD}assets/img/illustrations/Dots.png`, alt="").img-fluid.w-100
-      h2.fs-4.fs-lg-3.fw-bold.text-center.text-white.mb-5.mb-lg-9.lh-sm We made 
-        span.text-nowrap this app 
-        span.text-nowrap to solve
-        br.d-md-none 
-        span.text-nowrap  your problems.
-      .row.g-2.g-md-3.pb-8.pb-lg-10.px-1
+      .position-relative.z-1.text-center.mb-8.mb-lg-9(data-video-player-parent)
+        video.w-100.h-100.rounded-4(src=`${CWD}assets/video/Tech_video.mp4` poster=`${CWD}assets/img/Hero/experiences.png` type="video/mp4" data-video-player)
+        .overlay.position-absolute.top-0.bottom-0.start-0.end-0.rounded-4.bg-1100.object-cover(data-overlay) 
+        button.btn.play-button.position-absolute.justify-content-center.align-items-center.bg-white.rounded-circle(data-play-button) 
+          img.object-fit-contain.w-25(src=`${CWD}assets/img/illustrations/play-solid.svg`, alt="" data-play-icon)
+          img.object-fit-contain.w-25(src=`${CWD}assets/img/illustrations/pause-solid.svg`, alt="" data-pause-icon)
+        .position-absolute.dots.d-none.d-sm-block
+          img(src=`${CWD}assets/img/illustrations/Dots.png`, alt="").img-fluid.w-100
+      .row.justify-content-center 
+        .col-md-8.col-lg-7
+          h2.fs-4.fs-lg-3.fw-bold.text-center.text-white.mb-5.mb-lg-9.lh-sm We made this app to solve your problems.
+      .row.gy-4.g-md-3.pb-8.pb-lg-10.px-1
         each item in serviceItems 
           +Service(item)
-    .wave-container.position-absolute.top-0.start-0.z-1
-      .bg.mt-n1.mt-lg-0 
-      .wave(style=`background-image: url('${CWD}assets/img/illustrations/Wave_2.svg')`)
+    .position-absolute.top-0.start-0
+      .bg-white.py-3.py-md-9.py-xl-10 
+      img(src=`${CWD}assets/img/illustrations/Wave_2.svg`, alt="")

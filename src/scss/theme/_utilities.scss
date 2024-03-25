@@ -8,11 +8,12 @@ $utilities: map_merge(
     "color": (
       property: color,
       class: text,
+      local-vars: (
+        "text-opacity": 1
+      ),
       values: map-merge(
-        $theme-colors,
+        $utilities-text-colors,
         (
-          "white": $white,
-          "black": $black,
           "body": $body-color,
           "white-50": rgba($white, .5),
           "black-50": rgba($black, .5),
@@ -20,6 +21,18 @@ $utilities: map_merge(
         )
       )
     ),
+    "text-opacity": (
+        css-var: true,
+        class: text-opacity,
+        values: (
+          25: .25,
+          50: .5,
+          65: .65,
+          70: .70,
+          75: .75,
+          100: 1
+        )
+      ),
     "opacity": (
       property: opacity,
       responsive: true,
@@ -81,6 +94,15 @@ $utilities: map_merge(
           lg: $line-height-lg,
           xl: $line-height-xl
         )
+    ),
+    "letter-spacing":(
+      property: letter-spacing,
+      class: ls,
+      responsive: true,
+      values: (
+        1: 0.3px,
+        2: 1.63px
+      )
     ),
     "position": (
       property: position,

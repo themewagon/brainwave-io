@@ -2,45 +2,6 @@
 |   Form
 -----------------------------------------------*/
 
-.search {
-  padding: 10px 20px 10px 74px;
-  color:rgba(18,72,56,0.50);
-  border: 1px solid rgba(18, 72, 56, 0.70);
-  border-radius: 40px;
-  outline: none !important;
-  box-shadow: none;
-  &:focus{
-    border: 1px solid map-get($theme-colors,'success');
-    color: map-get($theme-colors,'success');
-    box-shadow: inset 0 1px 2px rgba(18, 72, 56,.25),0 0 0 .25rem rgba(18, 72, 56, .3);
-  }
-}
-.search::placeholder{
-  color:rgba(18,72,0,0.50);
-}
-
-.search-icon{
-  position: absolute;
-  top: 50%;
-  left: 25px;
-  transform: translateY(-50%);
-  width: fit-content;
-
-  span {
-    font-size: 24px;
-    color: map-get($theme-colors, 'success');
-    opacity: 60%;
-  }
-}
-
-.form{
-  max-width: 350px;
-  width: 100%;
-
-  @include media-breakpoint-up(lg){
-    max-width: 369px;
-  }
-}
 
 .email-input {
   padding: 15px 22px !important;

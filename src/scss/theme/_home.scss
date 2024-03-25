@@ -1,6 +1,6 @@
 
-.main-container{
-  .hero{
+.hero-section{
+  .hero-background{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -43,35 +43,14 @@
     margin-left: -20px;
     margin-right: -20px;
   }
-  .bg{
-    margin-top: -2px;
-    background-color: $white;
-    min-height: 5vh;
-    @include media-breakpoint-up(md){
-      min-height: 10vh;
-    }
-  }
 }
 
-.work-process{
-  .progress-item {
-    .progress-bar, .progress-bar-2 {
+.timeline {
+    .timeline-step-1, .timeline-step-2 {
       position: relative;
       z-index: 0;
       overflow: visible;
-      .indicator-parent {
-        display: inline-flex;
-        height: 100%;
-        
-        transition: all 0.3s ease-in-out;
-        .indicator {
-          width: 73px;
-          height: 73px;
-          border-radius: map-get($border-radiuses, 'circle' );
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
+      .timeline-item {
         &::before{
           content: '';
           position: absolute;
@@ -102,190 +81,74 @@
         }
       }
     }
-    .progress-bar-3 {
-      position: relative;
-      z-index: 0;
-      .indicator-parent {
-        display: inline-flex;
-        height: 100%;
-        align-items: center;
-        .indicator {
-          width: 73px;
-          height: 73px;
-          border-radius: map-get($border-radiuses, 'circle' );
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
+    .timeline-icon {
+      width: 73px;
+      height: 73px;
+    }
+    @include media-breakpoint-up(lg){
+      .timeline-content{
+        min-height: 135px;
       }
     }
   }
-
-  @include media-breakpoint-up(lg){
-    .info-text{
-      min-height: 135px;
-    }
-  }
-}
 
 .experience{
   background: linear-gradient(to bottom,#313C59, #161C2D );
-  .image-container{
-    z-index: 0;
-    max-height: 652px;
-    .video{
-      border-radius: 20px;
-      object-fit: cover !important;
-    }
-    .overlay{
-      background-color: $gray-1100;
-      opacity: 0.1;
-      z-index: 100;
-      border-radius: 20px;
-      transition: opacity 0.5s ease-in-out;
-      filter: drop-shadow(0 22px 64px #161C2D3B);
-    }
-    .play-button {
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 50px;
-      height: 50px;
-      z-index: 999;
-      padding: 0;
-      @include media-breakpoint-up(md){
-        width: 80px;
-        height: 80px;
-      }
-    }
-    .dots{
-        left: -5%;
-        bottom: -5%;
-        z-index: -1;
+  .overlay{
+    opacity: 0.1;
+    z-index: 100;
+    transition: opacity 0.5s ease-in-out;
+  }
+  .play-button {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    z-index: 999;
+    padding: 0;
+    @include media-breakpoint-up(md){
+      width: 80px;
+      height: 80px;
     }
   }
-  .wave-container{
-    min-height: 30vh;
-    width: 100%;
-    
-    
-    @include media-breakpoint-up(lg){
-      min-height: 50vh;
-    }
-    .bg{
-      min-height: 5vh;
-      background: $white;
-      @include media-breakpoint-up(md){
-        min-height: 15vh;
-      }
-      @include media-breakpoint-up(lg){
-        min-height: 20vh;
-      }
-      @include media-breakpoint-up(xl){
-        min-height: 25vh;
-      }
-
-    }
-    .wave{
-      min-height: 10vh;
-      background-position: right;
-      background-size: cover;
-      background-repeat: no-repeat;
-      @include media-breakpoint-up(md){
-        background-position: center;
-        min-height: 5vh;
-      }
-      @include media-breakpoint-up(lg){
-        min-height: 10vh;
-      }
-    }
+  .dots{
+      left: -5%;
+      bottom: -5%;
+      z-index: -1;
   }
 }
 
-.testimonal{
-  background: $gray-1100;
-  
-  .horizontal-rule{
-    width: 161px;
-    height: 3px;
-    background-color: rgba($white, 0.15);
-  }
-  .underline{
-    position: relative;
-    z-index: 0;
-  }
-  .underline::after{
-    content: '';
-    position: absolute;
-    width: 103%;
-    height: 4px;
-    right: 0;
-    left: -5px;
-    bottom: 20%;
-    background-color: map-get($theme-colors, 'success' );
-    z-index: -1;
-  }
-
-  .read-more{
-    transition: color 0.3s ease-in-out;
-    gap: 10px;
-    line-height: 2;
-    &:hover, &:active {
-      color: shade-color(map-get($theme-colors , 'success' ), 20%);
-      text-decoration: none;
-    }
-    .icon{
-      margin-top: 3px;
-    }
-  }
+.horizontal-rule{
+  width: 161px;
+  height: 3px;
+  background-color: rgba($white, 0.15);
+}
+.underline{
+  position: relative;
+  z-index: 0;
+}
+.underline::after{
+  content: '';
+  position: absolute;
+  width: 103%;
+  height: 4px;
+  right: 0;
+  left: -5px;
+  bottom: 20%;
+  background-color: map-get($theme-colors, 'success' );
+  z-index: -1;
 }
 
-.pricing{
-  background-color: #F4F7FA;
-  .price-card-1, .price-card-2{
-    border-radius: 10px;
-    max-width: 350px;
-    width: 100%;
-    .heading{
-      letter-spacing: 1.63px;
-    }
-    .list{
-      letter-spacing: 0.3px;
-      padding: 22px 9px 19px 10px;
-    }
-  }
-  .price-card-2{
-    box-shadow: 0 32px 64px rgba(22, 28, 45, 0.07);
-  }
-  .price{ 
-    .dollar {
-      line-height: 65px;
-    }
-    .duration{
-      font-family: "Rubik", sans-serif !important;
-    }
-  }
-  @include media-breakpoint-up(md){
-    min-width: 350px;
-  }
+.pricing-card{
+  width: 100%;
+  max-width: 350px;
 }
 
-.faq{
-  background-color: $gray-1100;
-  .check-parent{
-    height: 30px;
-    width: 30px;
-  }
-  @include media-breakpoint-up(lg){
-    .text-container{
-      max-width: 395px;
-    }
-  }
+.check-icon{
+  height: 30px;
+  width: 30px;
 }
-.subscription{
-  background-color: #F4F7FA;
-}
-
 .swiper-theme-container{
   height: 350px !important;
   width: 600px !important;
@@ -310,7 +173,7 @@
   margin: auto;
   border: 1px solid #57595E;
   color: $gray-1100;
-  border-radius: 12px;
+  border-radius: map-get($border-radiuses, 3 );
   overflow: hidden;
   background-color: rgba($white, 0.50);
   transition: background-color 0.2s ease-in-out;
@@ -321,7 +184,6 @@
     width: 90px;
     height: 90px;
     border: 2px solid #979797;
-    border-radius: 50%;
     @include media-breakpoint-up(lg){
     width: 111px;
     height: 111px;

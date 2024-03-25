@@ -159,7 +159,7 @@
 /* -------------------------------------------------------------------------- */
 .accordion{
   border-top: 5px solid   var(--#{$prefix}success);
-  border-radius: 10px ;
+  border-radius: var(--#{$prefix}border-radius) ;
 }
 
 .accordion-button:not(.collapsed){
@@ -171,11 +171,11 @@
   border-bottom: 1px solid var(--#{$prefix}gray-500);
 
   &:last-of-type {
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: var(--#{$prefix}border-radius) ;
+    border-bottom-right-radius: var(--#{$prefix}border-radius) ;
     .accordion-button.collapsed{
-      border-bottom-left-radius: 10px;
-      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: var(--#{$prefix}border-radius) ;
+      border-bottom-right-radius: var(--#{$prefix}border-radius) ;
     }
   }
 }

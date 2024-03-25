@@ -3,10 +3,10 @@ mixin Review({imgSrc, comment, name}, index)
     .d-flex.justify-content-center.gap-2
       .d-flex.flex-column.flex-lg-row.gap-2.px-4.py-x1(class=`review-card-${index + 1}`) 
         div.text-center.text-lg-start
-          img(src=`${CWD}assets/img/feedback/${imgSrc}`, alt="").card-image
+          img(src=`${CWD}assets/img/feedback/${imgSrc}`, alt="").card-image.rounded-circle
         .text-center.text-lg-start 
-          p.fs-8.mb-2.lh-lg.line-clamp-3= comment 
-          span.fs-9.opacity-70.lh-xl= name
+          p.fs-8.mb-2.lh-lg.line-clamp-3.text-1100= comment 
+          p.text-800.lh-xl.mb-0= name
 
 
 mixin Testimonials
@@ -38,17 +38,15 @@ mixin Testimonials
         name: 'Obito Uchiha'
       },
     ]
-  .testimonal
+  section.bg-1100
     .mx-auto.text-center 
       hr.horizontal-rule.m-0.d-inline-block
     .container.pb-8.pb-lg-10
-      h2.fs-6.fs-lg-5.fw-bold.text-center.text-white.heading.pt-7.pb-4.pt-lg-9.pb-lg-6.lh-lg 
-        span.underline  1,749 remote teams
-        span.tex-nowrap  have shared their 
-        br.d-none.d-md-block  
-        span.text-nowrap experience with 
-        br.d-md-none
-        span.text-nowrap our app!
+      .row.justify-content-center 
+        .col-md-8.col-lg-7
+          h2.fs-6.fs-lg-5.fw-bold.text-white.text-center.pt-7.pb-4.pt-lg-9.pb-lg-6.lh-lg 
+            span.underline  1,749 remote teams
+            span.tex-nowrap  have shared their experience with our app!
 
       .row.gap-2.mb-4.mb-lg-6
         .swiper-theme-container
@@ -86,6 +84,6 @@ mixin Testimonials
             .swiper-wrapper 
               each item, index in reviews 
                 +Review(item, index)
-      a.fs-9.d-flex.justify-content-center.align-items-center.read-more.text-success(href="#!")
+      a.py-1.d-flex.justify-content-center.align-items-center.link-success(href="#!")
         span Read more reviews 
         span.uil.uil-arrow-right.icon

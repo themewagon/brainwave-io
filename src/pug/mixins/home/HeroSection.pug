@@ -1,27 +1,26 @@
 include Button
 
 mixin HeroSection 
-  section#home.main-container.overflow-hidden.position-relative.z-0.mb-4.mb-lg-0
-    .hero(style=`background-image:url('${CWD}assets/img/illustrations/BG.png')`)
+  section#home.hero-section.overflow-hidden.position-relative.z-0.mb-4.mb-lg-0
+    .hero-background(style=`background-image:url('${CWD}assets/img/illustrations/BG.png')`)
       .container 
         .row.gy-4.gy-md-8.pt-9.pt-lg-0
-          .col-12.col-lg-6.text-center.text-lg-start
+          .col-lg-6.text-center.text-lg-start
             h1.fs-2.fs-lg-1.text-white.fw-bold.mb-2.mb-lg-x1.lh-base.mt-3.mt-lg-0  Manage your remote 
               span.text-nowrap team work
             p.fs-8.text-white.mb-3.mb-lg-4.lh-lg With lots of unique blocks, you can easily build a page without coding. Build your next consultancy website within few minutes
             .d-flex.justify-content-center.justify-content-lg-start
               a.btn.btn-primary.btn-lg.lh-xl.mb-4.mb-md-5.mb-lg-7(href="#!") Explore more
-            p.mb-x1.fs-10.button-text.text-uppercase.fw-bold.lh-base(style="color: #F4F7FA;") Download our app
-            .d-flex.flex-column.flex-sm-row.justify-content-center.justify-content-lg-start.align-items-center.gap-sm-2
+            p.mb-x1.fs-10.button-text.text-uppercase.fw-bold.lh-base.text-300 Download our app
+            .d-flex.flex-wrap.justify-content-center.justify-content-lg-start.gap-2.position-relative.z-2
               +Button('assets/img/logos/App_Store.png')
               +Button('assets/img/logos/Play_Store.png')
-          .col-12.col-lg-6.position-lg-relative
-            .position-lg-absolute.text-md-center.top-0.end-0
-              .position-relative.z-1
+          .col-lg-6.position-lg-relative
+              .position-lg-absolute.z-1.text-center
                 img(src=`${CWD}assets/img/Hero/Frame.png`, alt="").img-fluid.chat-image
                 .position-absolute.dots.d-none.d-md-block 
                   img(src=`${CWD}assets/img/illustrations/Dots.png`, alt="").img-fluid.w-50.w-lg-75
 
     .position-absolute.bottom-0.start-0.end-0.z-1
       img(src=`${CWD}assets/img/illustrations/Wave.svg`, alt="").wave.mb-md-n2
-      .bg
+      .bg-white.py-2.py-md-6

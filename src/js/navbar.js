@@ -9,7 +9,7 @@ const navbarInit = () => {
     const windowHeight = window.innerHeight;
     const handleAlpha = () => {
       const scrollTop = window.scrollY;
-      let alpha = (scrollTop / windowHeight) * 6;
+      let alpha = (scrollTop / windowHeight) * 2;
       alpha >= 1 && (alpha = 1);
       navbar.style.backgroundColor = `rgba(49, 60, 89, ${alpha})`;
     };

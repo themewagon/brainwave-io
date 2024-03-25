@@ -1,34 +1,38 @@
 mixin Pricing 
-  section#pricing.pricing.position-relative.z-0
-    .container.py-8.py-lg-10 
-      h3.fs-4.fs-lg-3.fw-bold.text-center.mb-2.mb-lg-x1.lh-sm Pricing made easy
-      h6.fs-8.opacity-70.mb-7.mb-lg-8.text-center.lh-lg.fw-normal Show your pricing to your customers once they’re here with easily 
-        span.text-nowrap modifiable pricing cards. 
+  section#pricing.pricing.bg-300
+    .container.py-8.py-lg-10
+      .row.justify-content-center
+        .col-md-8.col-lg-7 
+          h3.fs-4.fs-lg-3.fw-bold.text-center.mb-2.mb-lg-x1.lh-sm Pricing made easy
+          p.fs-8.mb-7.mb-lg-8.text-center.lh-lg.fw-normal Show your pricing to your customers once they’re here with easily modifiable pricing cards. 
       .d-flex.flex-column.flex-md-row.justify-content-center.align-items-center.gap-3 
-        .p-x1.text-center.price-card-1.bg-transparent.border.mb-3.mb-md-0
-          p.fs-10.text-uppercase.mb-3.fw-bold.text-primary.heading  Starter
-          p.mb-x1.price
-            span.dollar.fs-6.fs-md-7.fw-bold $
-            span.number.fs-2.fs-md-1.fw-bold 19
-            span.duration.fs-9.lh-xl / mo
-          p.fs-8.mb-0.lh-xl.fw-light.list.border-top  Upto 100 Team Members
-          p.fs-8.mb-0.lh-xl.fw-light.list.border-top  100 GB Cloud Storage
-          p.fs-8.mb-0.lh-xl.fw-light.list.border-top  Unlimited Meetings
-          p.fs-8.mb-0.lh-xl.fw-light.list.border-top  Premium Support
-          .d-grid.mt-1 
-            button.btn.btn-secondary.btn-lg.lh-xl Get Started Now
-        .p-x1.text-center.price-card-2.bg-white.border 
-          p.fs-10.text-uppercase.mb-3.fw-bold.text-primary.heading  Unlimited
-          p.mb-x1.price
-            span.dollar.fs-6.fs-md-7.fw-bold $
-            span.number.fs-2.fs-md-1.fw-bold 99
-            span.duration.fs-9.lh-xl / mo
-          p.fs-8.mb-0.lh-xl.fw-light.list.border-top  Unlimited Team Members
-          p.fs-8.mb-0.lh-xl.fw-light.list.border-top  Unlimited Cloud Storage
-          p.fs-8.mb-0.lh-xl.fw-light.list.border-top  Unlimited Meetings
-          p.fs-8.mb-0.lh-xl.fw-light.list.border-top  Premium Support
-          .d-grid.mt-1
-            button.btn.btn-primary.btn-lg.lh-xl Get Started Now
+        .p-x1.text-center.price-card-1.bg-transparent.border.mb-3.mb-md-0.rounded-2.pricing-card
+          p.fs-10.text-uppercase.mb-3.fw-bold.text-primary.ls-2  Starter
+          h2.mb-3
+            span.fs-6.fs-md-7.fw-bold $
+            span.fs-2.fs-md-1.fw-bold 19
+            span.fs-9.lh-xl.font-sans-serif / mo
+
+          ul.list-unstyled.fs-8.lh-xl.fw-light.text-1100.ls-1
+            li.py-x1.px-1.border-top  Upto 100 Team Members 
+            li.py-x1.px-1.border-top  100 GB Cloud Storage 
+            li.py-x1.px-1.border-top  Unlimited Meetings 
+            li.py-x1.px-1.border-top  Premium Support 
+            li.mt-1.d-grid 
+              button.btn.btn-secondary.btn-lg.lh-xl Get Started Now
+        .p-x1.text-center.bg-white.border.shadow-sm.rounded-2.pricing-card 
+          p.fs-10.text-uppercase.mb-3.fw-bold.text-primary.ls-2  Unlimited
+          h2.mb-3
+            span.fs-6.fs-md-7.fw-bold $
+            span.fs-2.fs-md-1.fw-bold 99
+            span.fs-9.lh-xl.font-sans-serif / mo
+          ul.list-unstyled.fs-8.lh-xl.fw-light.text-1100.ls-1
+            li.py-x1.px-1.border-top  Unlimited Team Members 
+            li.py-x1.px-1.border-top  Unlimited Cloud Storage 
+            li.py-x1.px-1.border-top  Unlimited Meetings 
+            li.py-x1.px-1.border-top  Premium Support 
+            li.mt-1.d-grid 
+              button.btn.btn-primary.btn-lg.lh-xl Get Started Now
     
 
 

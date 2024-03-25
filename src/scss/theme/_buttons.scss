@@ -1,23 +1,6 @@
 
 
 
-.primary-btn {
-  @extend .btn-lg;
-  font-size: 16px;
-  font-weight: bold;
-  min-width: 195px;
-  height: 59px;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  &:hover,&:focus, &:active{
-    background-color: shade-color(map-get($theme-colors, 'primary'), 30%) !important;
-    color: $white !important;
-    border-color: transparent
-  }
-}
-
 
 
 .btn {
@@ -47,12 +30,6 @@
   padding: 0;
   height: 40px;
   width: 40px;
-  display: flex;
-  cursor: pointer;
-  justify-content: center;
-  align-items: center;
-  background-color: map-get($theme-colors, 'primary' ) !important;
-  border-radius: map-get($border-radiuses, 'circle');
   transition: opacity 0.2s ease-in;
   z-index: 1120;
   
