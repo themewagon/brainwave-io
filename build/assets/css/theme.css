@@ -20946,23 +20946,23 @@ h5, .h5, h6, .h6 {
 }
 .email-input::-webkit-input-placeholder {
   color: rgba(0, 0, 0, 0.7);
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 .email-input::-moz-placeholder {
   color: rgba(0, 0, 0, 0.7);
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 .email-input:-ms-input-placeholder {
   color: rgba(0, 0, 0, 0.7);
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 .email-input::-ms-input-placeholder {
   color: rgba(0, 0, 0, 0.7);
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 .email-input::placeholder {
   color: rgba(0, 0, 0, 0.7);
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 .hero-section .hero-background {
