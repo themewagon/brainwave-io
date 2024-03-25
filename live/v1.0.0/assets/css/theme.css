@@ -21010,7 +21010,8 @@ h5, .h5, h6, .h6 {
     right: 0%;
   }
 }
-.hero-section .wave {
+
+.wave {
   width: 110% !important;
   margin-left: -20px;
   margin-right: -20px;
