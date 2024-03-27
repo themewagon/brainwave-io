@@ -1,0 +1,46 @@
+/* -------------------------------------------------------------------------- */
+/*                                 Video player                               */
+/* -------------------------------------------------------------------------- */
+
+.video-player-paused {
+  .overlay{
+    opacity: 0.1;
+    z-index: 100;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .pause-icon{
+    display: none;
+  }
+  .play-icon {
+    display: inline;
+  }
+
+  &:hover{
+    .overlay{
+      opacity: 0.4;
+    }
+  }
+}
+.video-player-play {
+  .overlay {
+    opacity: 0;
+  }
+  .play-button {
+    display: none;
+  }
+  .play-icon{
+    display: none;
+  }
+  .pause-icon {
+    display: inline;
+  }
+  &:hover{
+    .overlay {
+      opacity: 0.4;
+    }
+    .play-button{
+      display: flex;
+    }
+  }
+}

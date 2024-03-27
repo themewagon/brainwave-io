@@ -165,14 +165,6 @@ var settings = {
     borderColor: 'rgba(255, 255, 255, 0.8)'
   }
 };
-
-/* -------------------------- Chart Initialization -------------------------- */
-
-var newChart = function newChart(chart, config) {
-  var ctx = chart.getContext('2d');
-  return new window.Chart(ctx, config);
-};
-
 /* ---------------------------------- Store --------------------------------- */
 
 var getItemFromStore = function getItemFromStore(key, defaultValue) {
@@ -249,7 +241,6 @@ var utils = {
   getBreakpoint: getBreakpoint,
   setCookie: setCookie,
   getCookie: getCookie,
-  newChart: newChart,
   settings: settings,
   getItemFromStore: getItemFromStore,
   setItemToStore: setItemToStore,

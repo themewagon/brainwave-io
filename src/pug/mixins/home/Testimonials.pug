@@ -3,7 +3,7 @@ mixin Review({imgSrc, comment, name}, index)
     .d-flex.justify-content-center.gap-2
       .d-flex.flex-column.flex-lg-row.gap-2.px-4.py-x1(class=`review-card-${index + 1}`) 
         div.text-center.text-lg-start
-          img(src=`${CWD}assets/img/feedback/${imgSrc}`, alt="").card-image.rounded-circle
+          img(src=`${CWD}assets/img/feedback/${imgSrc}`, alt="").card-image.rounded-circle.object-fit-cover
         .text-center.text-lg-start 
           p.fs-8.mb-2.lh-lg.line-clamp-3.text-1100= comment 
           p.text-800.lh-xl.mb-0= name
@@ -13,27 +13,27 @@ mixin Testimonials
   -
     var reviews = [
       {
-        imgSrc: 'reviewer_1.png',
+        imgSrc: 'reviewer_1.webp',
         comment: '“OMG! I cannot believe that I have got a brand new landing page after getting Omega. It was super easy to edit and publish.”',
         name: 'Isaac Olson'
       },
       {
-        imgSrc: 'reviewer_2.png',
+        imgSrc: 'reviewer_2.webp',
         comment: '“Simply the best. Better than all the rest. I’d recommend this product to beginners and advanced users who want success.”',
         name: 'Barry Young'
       },
       {
-        imgSrc: 'reviewer_3.png',
+        imgSrc: 'reviewer_3.webp',
         comment: '“Must have book for all, who want to be Product Designer or Interaction Designer.”',
         name: 'Esther Allison'
       },
       {
-        imgSrc: 'kakashi.jpeg',
+        imgSrc: 'kakashi.webp',
         comment: '“Every day, I eat, sleep, and worry about stupid things. My job is to ensure that these kids have as many days as possible where they can be idiots like this.”',
         name: 'Kakashi Hatake'
       },
       {
-        imgSrc: 'obito.jpeg',
+        imgSrc: 'obito.webp',
         comment: '“Life isn’t permanent or predictable. You never know when you will run out of time. The best thing you can do is to be honest with those around you and let them know how you really feel. You never know if you have a tomorrow to come.”',
         name: 'Obito Uchiha'
       },
@@ -85,6 +85,7 @@ mixin Testimonials
                 .swiper-wrapper 
                   each item, index in reviews 
                     +Review(item, index)   
-        a.py-1.d-flex.justify-content-center.align-items-center.link-success(href="#!")
-          span Read more reviews 
-          span.uil.uil-arrow-right.icon
+        .text-center
+          a.py-1.link-success(href="#!")
+            span Read more reviews 
+            span.uil.uil-arrow-right.icon

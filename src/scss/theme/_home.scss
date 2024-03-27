@@ -1,7 +1,7 @@
 
 .hero-section{
   .hero-background{
-    background-image:url('../img/illustrations/BG.png');
+    background-image:url('../img/illustrations/BG.webp');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -74,7 +74,7 @@
             border-left: none;
             height: fit-content;
             border-bottom: 3px dashed #D5D7DD;
-            border-image: url('../img/illustrations/border.png') 20 round;
+            border-image: url('../img/illustrations/border.webp') 20 round;
             left: 50%;
             bottom: 50%;
             z-index: -1;
@@ -95,28 +95,24 @@
 
 .experience{
   background: linear-gradient(to bottom,#313C59, #161C2D );
-  .overlay{
-    opacity: 0.1;
-    z-index: 100;
-    transition: opacity 0.5s ease-in-out;
-  }
-  .play-button {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 50px;
-    height: 50px;
-    z-index: 999;
-    padding: 0;
-    @include media-breakpoint-up(md){
-      width: 5rem;
-      height: 5rem;
-    }
-  }
+  
   .dots{
       left: -5%;
       bottom: -5%;
       z-index: -1;
+  }
+}
+.play-button {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  z-index: 999;
+  padding: 0;
+  @include media-breakpoint-up(md){
+    width: 5rem;
+    height: 5rem;
   }
 }
 

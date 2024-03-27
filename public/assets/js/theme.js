@@ -177,14 +177,6 @@ var settings = {
     borderColor: 'rgba(255, 255, 255, 0.8)'
   }
 };
-
-/* -------------------------- Chart Initialization -------------------------- */
-
-var newChart = function newChart(chart, config) {
-  var ctx = chart.getContext('2d');
-  return new window.Chart(ctx, config);
-};
-
 /* ---------------------------------- Store --------------------------------- */
 
 var getItemFromStore = function getItemFromStore(key, defaultValue) {
@@ -261,7 +253,6 @@ var utils = {
   getBreakpoint: getBreakpoint,
   setCookie: setCookie,
   getCookie: getCookie,
-  newChart: newChart,
   settings: settings,
   getItemFromStore: getItemFromStore,
   setItemToStore: setItemToStore,
@@ -412,28 +403,6 @@ var countupInit = function countupInit() {
   }
 };
 
-/* -------------------------------------------------------------------------- */
-/*                               from-validation                              */
-/* -------------------------------------------------------------------------- */
-
-var formValidationInit = function formValidationInit() {
-  // Example starter JavaScript for disabling form submissions if there are invalid fields
-
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  var forms = document.querySelectorAll('.needs-validation');
-
-  // Loop over them and prevent submission
-  Array.prototype.slice.call(forms).forEach(function (form) {
-    form.addEventListener('submit', function (event) {
-      if (!form.checkValidity()) {
-        event.preventDefault();
-        event.stopPropagation();
-      }
-      form.classList.add('was-validated');
-    }, false);
-  });
-};
-
 /*-----------------------------------------------
 |  Navbar
 -----------------------------------------------*/
@@ -492,19 +461,17 @@ var scrollToTopInit = function scrollToTopInit() {
 -----------------------------------------------*/
 
 var swiperInit = function swiperInit() {
-  var navbarVerticalToggle = document.querySelector('.navbar-vertical-toggle');
-  var swiper = document.querySelector('[data-swiper]');
-  var options = utils.getData(swiper, 'swiper');
-  var swiperNav = document.querySelector('.slider-nav');
-  var newSwiper = new window.Swiper(swiper, _objectSpread(_objectSpread({}, options), {}, {
-    navigation: {
-      nextEl: swiperNav === null || swiperNav === void 0 ? void 0 : swiperNav.querySelector('.next-button'),
-      prevEl: swiperNav === null || swiperNav === void 0 ? void 0 : swiperNav.querySelector('.prev-button')
-    }
-  }));
-  if (navbarVerticalToggle) {
-    navbarVerticalToggle.addEventListener('navbar.vertical.toggle', function () {
-      newSwiper.update();
+  if (window.Swiper) {
+    var swipers = document.querySelectorAll('[data-swiper]');
+    swipers.forEach(function (swiper) {
+      var options = utils.getData(swiper, 'swiper');
+      var newSwiper = new window.Swiper(swiper, _objectSpread({}, options));
+      var navbarVerticalToggle = document.querySelector('.navbar-vertical-toggle');
+      if (navbarVerticalToggle) {
+        navbarVerticalToggle.addEventListener('navbar.vertical.toggle', function () {
+          newSwiper.update();
+        });
+      }
     });
   }
 };
@@ -514,41 +481,31 @@ var swiperInit = function swiperInit() {
 /* -------------------------------------------------------------------------- */
 
 var videoControllerInit = function videoControllerInit() {
-  var parent = document.querySelector('[data-video-player-parent]');
-  var videoPlayer = document.querySelector('[data-video-player');
-  var playButton = document.querySelector('[data-play-button');
-  var playIcon = document.querySelector('[data-play-icon');
-  var pauseIcon = document.querySelector('[data-pause-icon');
-  var overlay = document.querySelector('[data-overlay]');
-  pauseIcon.style.display = 'none';
-  var buttonVisible = function buttonVisible() {
-    playButton.style.display = 'flex';
-    overlay.style.opacity = '0.4';
-  };
-  var buttonHidden = function buttonHidden() {
-    overlay.style.opacity = '0';
-    if (!videoPlayer.paused) {
-      playButton.style.display = 'none';
-    }
-  };
-  playButton.addEventListener('click', function () {
-    if (videoPlayer.paused) {
-      videoPlayer.play();
-      playIcon.style.display = 'none';
-      pauseIcon.style.display = 'inline';
-    } else {
-      videoPlayer.pause();
-      playIcon.style.display = 'inline';
-      pauseIcon.style.display = 'none';
-    }
-  });
-  parent.addEventListener('mouseover', buttonVisible);
-  parent.addEventListener('mouseout', buttonHidden);
-  videoPlayer.addEventListener('ended', function () {
-    playIcon.style.display = 'inline';
-    pauseIcon.style.display = 'none';
-    playButton.style.display = 'block';
-  });
+  var videoContainer = document.querySelectorAll('[data-video-player-container]');
+  if (videoContainer) {
+    videoContainer.forEach(function (parent) {
+      var videoPlayer = parent.querySelector('[data-video-player');
+      var playButton = parent.querySelector('[data-play-button]');
+      var videoPlayedState = function videoPlayedState() {
+        parent.classList.toggle('video-player-paused');
+        parent.classList.toggle('video-player-play');
+      };
+      var videoPuasedState = function videoPuasedState() {
+        parent.classList.toggle('video-player-play');
+        parent.classList.toggle('video-player-paused');
+      };
+      playButton.addEventListener('click', function () {
+        if (videoPlayer.paused) {
+          videoPlayer.play();
+          videoPuasedState();
+        } else {
+          videoPlayer.pause();
+          videoPlayedState();
+        }
+      });
+      videoPlayer.addEventListener('ended', videoPuasedState);
+    });
+  }
 };
 
 /* -------------------------------------------------------------------------- */
@@ -556,7 +513,6 @@ var videoControllerInit = function videoControllerInit() {
 /* -------------------------------------------------------------------------- */
 docReady(detectorInit);
 docReady(navbarInit);
-docReady(formValidationInit);
 docReady(swiperInit);
 docReady(countupInit);
 docReady(scrollToTopInit);

@@ -3,7 +3,7 @@ const sharpResponsive = require('gulp-sharp-responsive');
 
 gulp.task('image', async () => {
   gulp
-    .src('public/assets/img/sections/**/*.{jpg,png}')
+    .src('public/assets/img/**/*.{jpg,png,jpeg}')
     .pipe(
       sharpResponsive({
         formats: [

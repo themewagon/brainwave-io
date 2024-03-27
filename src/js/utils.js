@@ -178,14 +178,6 @@ const settings = {
     borderColor: 'rgba(255, 255, 255, 0.8)'
   }
 };
-
-/* -------------------------- Chart Initialization -------------------------- */
-
-const newChart = (chart, config) => {
-  const ctx = chart.getContext('2d');
-  return new window.Chart(ctx, config);
-};
-
 /* ---------------------------------- Store --------------------------------- */
 
 const getItemFromStore = (key, defaultValue, store = localStorage) => {
@@ -265,7 +257,6 @@ const utils = {
   getBreakpoint,
   setCookie,
   getCookie,
-  newChart,
   settings,
   getItemFromStore,
   setItemToStore,
