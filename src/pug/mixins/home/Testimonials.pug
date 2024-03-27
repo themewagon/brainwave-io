@@ -45,45 +45,47 @@ mixin Testimonials
       .row.justify-content-center 
         .col-md-8.col-lg-7
           h2.fs-6.fs-lg-5.fw-bold.text-white.text-center.pt-7.pb-4.pt-lg-9.pb-lg-6.lh-lg 
-            span.underline  1,749 remote teams
-            span.tex-nowrap  have shared their experience with our app!
+            span.underline  1,749 remote teams 
+            | have shared their experience with our app!
 
-      .row.gap-2.mb-4.mb-lg-6
-        .swiper-theme-container
-          .swiper.position-relative(data-swiper!={
-              spaceBetween: 20,
-              mousewheel: {
-                  forceToAxis: true,
-                  sensitiviye: 20,
-                  releaseOnEdges: true,
-                },
-                autoplay: {
-                  delay: 3000,
-                  disableOnInteraction: false,
-                },
-              breakpoints:{
-                0:{
-                    slidesPerView: 1,
-                    direction: 'horizontal',
-                    centeredSlide: true,
-                    loop: true,
-                },
-                768: {
-                  direction: 'horizontal',
-                  centeredSlide: true,
-                  slidesPerView: 2,
-                  loop: true,
-                },
-                992: {
-                  slidesPerView: 3,
-                  direction: "vertical",
-                  loop: false,
-                }
-              }
-            })
-            .swiper-wrapper 
-              each item, index in reviews 
-                +Review(item, index)
-      a.py-1.d-flex.justify-content-center.align-items-center.link-success(href="#!")
-        span Read more reviews 
-        span.uil.uil-arrow-right.icon
+        .col-12.mb-4.mb-lg-6
+          .row.g-2
+            .swiper-theme-container
+              .swiper.position-relative(data-swiper!={
+                  spaceBetween: 20,
+                  mousewheel: {
+                      forceToAxis: true,
+                      sensitiviye: 20,
+                      releaseOnEdges: true,
+                    },
+                    autoplay: {
+                      delay: 3000,
+                      disableOnInteraction: false,
+                    },
+                  breakpoints:{
+                    0:{
+                        slidesPerView: 1,
+                        direction: 'horizontal',
+                        centeredSlide: true,
+                        loop: true,
+                    },
+                    768: {
+                      direction: 'horizontal',
+                      centeredSlide: true,
+                      slidesPerView: 2,
+                      loop: true,
+                    },
+                    992: {
+                      slidesPerView: 3,
+                      direction: "vertical",
+                      loop: false,
+                    }
+                  }
+                })
+                .swiper-wrapper 
+                  each item, index in reviews 
+                    +Review(item, index)
+        .col-12         
+          a.py-1.d-flex.justify-content-center.align-items-center.link-success(href="#!")
+            span Read more reviews 
+            span.uil.uil-arrow-right.icon

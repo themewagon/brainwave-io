@@ -41,20 +41,22 @@ mixin Experiences
     ]
   section#service.experience.position-relative.overflow-hidden 
     .container
-      .position-relative.z-1.text-center.mb-8.mb-lg-9(data-video-player-parent)
-        video.w-100.h-100.rounded-4(src=`${CWD}assets/video/Tech_video.mp4` poster=`${CWD}assets/img/Hero/experiences.png` type="video/mp4" data-video-player)
-        .overlay.position-absolute.top-0.bottom-0.start-0.end-0.rounded-4.bg-1100.object-cover(data-overlay) 
-        button.btn.play-button.position-absolute.justify-content-center.align-items-center.bg-white.rounded-circle(data-play-button) 
-          img.object-fit-contain.w-25(src=`${CWD}assets/img/illustrations/play-solid.svg`, alt="" data-play-icon)
-          img.object-fit-contain.w-25(src=`${CWD}assets/img/illustrations/pause-solid.svg`, alt="" data-pause-icon)
-        .position-absolute.dots.d-none.d-sm-block
-          img(src=`${CWD}assets/img/illustrations/Dots.png`, alt="").img-fluid.w-100
       .row.justify-content-center 
+        .col-12
+          .position-relative.z-1.text-center.mb-8.mb-lg-9(data-video-player-parent)
+            video.w-100.h-100.rounded-4(src=`${CWD}assets/video/Tech_video.mp4` poster=`${CWD}assets/img/Hero/experiences.png` type="video/mp4" data-video-player)
+            .overlay.position-absolute.top-0.bottom-0.start-0.end-0.rounded-4.bg-1100.object-cover(data-overlay) 
+            button.btn.play-button.position-absolute.justify-content-center.align-items-center.bg-white.rounded-circle(data-play-button) 
+              img.object-fit-contain.w-25(src=`${CWD}assets/img/illustrations/play-solid.svg`, alt="" data-play-icon)
+              img.object-fit-contain.w-25(src=`${CWD}assets/img/illustrations/pause-solid.svg`, alt="" data-pause-icon)
+            .position-absolute.dots.d-none.d-sm-block
+              img(src=`${CWD}assets/img/illustrations/Dots.png`, alt="").img-fluid.w-100
         .col-md-8.col-lg-7
           h2.fs-4.fs-lg-3.fw-bold.text-center.text-white.mb-5.mb-lg-9.lh-sm We made this app to solve your problems.
-      .row.gy-4.g-md-3.pb-8.pb-lg-10.px-1
-        each item in serviceItems 
-          +Service(item)
+        .col-12
+          .row.gy-4.g-md-3.pb-8.pb-lg-10.px-1
+            each item in serviceItems 
+              +Service(item)
     .position-absolute.top-0.start-0.end-0
       .bg-white.py-3.py-md-9.py-xl-10 
       img(src=`${CWD}assets/img/illustrations/Wave_2.svg`, alt="").wave

@@ -4,7 +4,7 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: 950px;
+    min-height: 60rem;
     display: flex;
     z-index: 0;
     align-items: center;
@@ -41,8 +41,8 @@
 }
 .wave{
   width: 110% !important;
-  margin-left: -20px;
-  margin-right: -20px;
+  margin-left: -1.25rem;
+  margin-right: -1.25rem;
 }
 
 .timeline {
@@ -82,12 +82,12 @@
       }
     }
     .timeline-icon {
-      width: 73px;
-      height: 73px;
+      width: 4.563rem;
+      height: 4.563rem;
     }
     @include media-breakpoint-up(lg){
       .timeline-content{
-        min-height: 135px;
+        min-height: 8.438rem;
       }
     }
   }
@@ -108,8 +108,8 @@
     z-index: 999;
     padding: 0;
     @include media-breakpoint-up(md){
-      width: 80px;
-      height: 80px;
+      width: 5rem;
+      height: 5rem;
     }
   }
   .dots{
@@ -120,7 +120,7 @@
 }
 
 .horizontal-rule{
-  width: 161px;
+  width: 10.06rem;
   height: 3px;
   background-color: rgba($white, 0.15);
 }
@@ -131,7 +131,7 @@
 .underline::after{
   content: '';
   position: absolute;
-  width: 103%;
+  width: 100%;
   height: 4px;
   right: 0;
   left: -5px;
@@ -142,16 +142,16 @@
 
 .pricing-card{
   width: 100%;
-  max-width: 350px;
+  max-width: 21.875rem;
 }
 
 .check-icon{
-  height: 30px;
-  width: 30px;
+  height: 1.875rem;
+  width: 1.875rem;
 }
 .swiper-theme-container{
-  height: 350px !important;
-  width: 600px !important;
+  height: 21.875rem !important;
+  width: 37.5rem !important;
   overflow: hidden;
   .swiper{
     height: 100%;
@@ -159,11 +159,11 @@
     margin: auto;
   }
   @include media-breakpoint-up(md){
-    width: 720px !important;
+    width: 45.65rem !important;
   }
   @include media-breakpoint-up(lg){
-    width: 730px !important;
-    height: 600px !important;
+    width: 45.65rem !important;
+    height: 37.5rem !important;
     margin: auto;
   }
 }
@@ -181,12 +181,12 @@
     background-color: $white;
   }
   .card-image{
-    width: 90px;
-    height: 90px;
+    width: 5.6rem;
+    height: 5.6rem;
     border: 2px solid #979797;
     @include media-breakpoint-up(lg){
-    width: 111px;
-    height: 111px;
+    width: 6.938rem;
+    height: 6.938rem;
     }
   }
 }

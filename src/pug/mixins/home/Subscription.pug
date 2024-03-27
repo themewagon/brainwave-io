@@ -2,18 +2,18 @@ mixin Subscription
   section#contact.bg-300.position-relative.z-0
     .container.py-8.py-lg-9
       .row.justify-content-center
-        .col-md-8.col-lg-7.px-2.px-md-3 
-          h2.fs-4.fs-lg-3.fw-bold.text-center.mb-2.lh-sm Get latest updates
-          p.fs-8.mb-5.mb-lg-6.text-center.lh-lg.fw-normal  Subscribe to our monthly newsletter to stay connected with everything you need!
-      .row.justify-content-center
-        .col-10.col-md-7.col-lg-5
-          form(method="POST" onsubmit="return false;")
-            .mb-2.w-100
-              input#email.form-control.email-input(type="email" placeholder="Enter your email" required)
-            .d-grid
-              button.btn.btn-lg.btn-primary.lh-xl.mb-x1(type='submit')  Subscribe
-      .row.justify-content-center 
-        .col-9.col-md-6.col-lg-5
+        .col-md-8.col-lg-8
+          .row.justify-content-center 
+            .col-12.col-lg-10
+              h2.fs-4.fs-lg-3.fw-bold.text-center.mb-2.lh-sm Get latest updates
+              p.fs-8.mb-5.mb-lg-6.text-center.lh-lg.fw-normal  Subscribe to our monthly newsletter to stay connected with everything you need!
+            .col-10.col-lg-7
+              form(method="POST" onsubmit="return false;")
+                .mb-2.w-100
+                  input#email.form-control.email-input(type="email" placeholder="Enter your email" required)
+                .d-grid
+                  button.btn.btn-lg.btn-primary.lh-xl.mb-x1(type='submit')  Subscribe 
+            .col-10.col-lg-7
               p.text-center.lh-lg.mb-0 We’ll never share your details with third parties. View our Privacy Policy for more info.
     .position-absolute.bottom-0.end-0.z-n1.d-none.d-lg-block
       img(src=`${CWD}assets/img/illustrations/Green_dots.svg`, alt="")
