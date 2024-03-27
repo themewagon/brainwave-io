@@ -5,29 +5,29 @@
 const videoControllerInit = () => {
   const videoContainer = document.querySelectorAll('[data-video-player-container]');
   if (videoContainer) {
-    videoContainer.forEach(parent => {
-      const videoPlayer = parent.querySelector('[data-video-player');
-      const playButton = parent.querySelector('[data-play-button]');
+    videoContainer.forEach(container => {
+      const videoPlayer = container.querySelector('[data-video-player');
+      const playButton = container.querySelector('[data-play-button]');
 
-      const videoPlayedState = () => {
-        parent.classList.toggle('video-player-paused');
-        parent.classList.toggle('video-player-play');
+      const videoPlayed = () => {
+        container.classList.toggle('video-player-paused');
+        container.classList.toggle('video-player-play');
       };
 
-      const videoPuasedState = () => {
-        parent.classList.toggle('video-player-play');
-        parent.classList.toggle('video-player-paused');
+      const videoPaused = () => {
+        container.classList.toggle('video-player-play');
+        container.classList.toggle('video-player-paused');
       };
       playButton.addEventListener('click', () => {
         if (videoPlayer.paused) {
           videoPlayer.play();
-          videoPuasedState();
+          videoPaused();
         } else {
           videoPlayer.pause();
-          videoPlayedState();
+          videoPlayed();
         }
       });
-      videoPlayer.addEventListener('ended', videoPuasedState);
+      videoPlayer.addEventListener('ended', videoPaused);
     });
   }
 };
