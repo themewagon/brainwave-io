@@ -46,7 +46,7 @@ mixin Experiences
           .position-relative.z-1.text-center.mb-8.mb-lg-9.video-player-paused(data-video-player-container)
             video.w-100.h-100.rounded-4(src=`${CWD}assets/video/Tech_video.mp4` poster=`${CWD}assets/img/Hero/experiences.webp` type="video/mp4" data-video-player)
             .overlay.position-absolute.top-0.bottom-0.start-0.end-0.rounded-4.bg-1100.object-cover(data-overlay) 
-            button.btn.play-button.position-absolute.justify-content-center.align-items-center.bg-white.rounded-circle(data-play-button) 
+            button.btn.play-button.position-absolute.justify-content-center.align-items-center.bg-white.rounded-circle.cursor-pointer(data-play-button) 
               img.play-icon.w-25(src=`${CWD}assets/img/illustrations/play-solid.svg`, alt="" data-play-icon)
               img.pause-icon.w-25(src=`${CWD}assets/img/illustrations/pause-solid.svg`, alt="" data-pause-icon)
             .position-absolute.dots.d-none.d-sm-block
