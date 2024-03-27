@@ -84,8 +84,7 @@ mixin Testimonials
                 })
                 .swiper-wrapper 
                   each item, index in reviews 
-                    +Review(item, index)
-        .col-12         
-          a.py-1.d-flex.justify-content-center.align-items-center.link-success(href="#!")
-            span Read more reviews 
-            span.uil.uil-arrow-right.icon
+                    +Review(item, index)   
+        a.py-1.d-flex.justify-content-center.align-items-center.link-success(href="#!")
+          span Read more reviews 
+          span.uil.uil-arrow-right.icon

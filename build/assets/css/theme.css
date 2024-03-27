@@ -20966,6 +20966,7 @@ h5, .h5, h6, .h6 {
 }
 
 .hero-section .hero-background {
+  background-image: url("../img/illustrations/BG.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -21051,8 +21052,8 @@ h5, .h5, h6, .h6 {
     height: -moz-fit-content;
     height: fit-content;
     border-bottom: 3px dashed #D5D7DD;
-    -o-border-image: url("/assets/img/illustrations/border.png") 20 round;
-    border-image: url("/assets/img/illustrations/border.png") 20 round;
+    -o-border-image: url("../img/illustrations/border.png") 20 round;
+    border-image: url("../img/illustrations/border.png") 20 round;
     left: 50%;
     bottom: 50%;
     z-index: -1;
