@@ -483,27 +483,27 @@ var swiperInit = function swiperInit() {
 var videoControllerInit = function videoControllerInit() {
   var videoContainer = document.querySelectorAll('[data-video-player-container]');
   if (videoContainer) {
-    videoContainer.forEach(function (parent) {
-      var videoPlayer = parent.querySelector('[data-video-player');
-      var playButton = parent.querySelector('[data-play-button]');
-      var videoPlayedState = function videoPlayedState() {
-        parent.classList.toggle('video-player-paused');
-        parent.classList.toggle('video-player-play');
+    videoContainer.forEach(function (container) {
+      var videoPlayer = container.querySelector('[data-video-player');
+      var playButton = container.querySelector('[data-play-button]');
+      var videoPlayed = function videoPlayed() {
+        container.classList.toggle('video-player-paused');
+        container.classList.toggle('video-player-play');
       };
-      var videoPuasedState = function videoPuasedState() {
-        parent.classList.toggle('video-player-play');
-        parent.classList.toggle('video-player-paused');
+      var videoPaused = function videoPaused() {
+        container.classList.toggle('video-player-play');
+        container.classList.toggle('video-player-paused');
       };
       playButton.addEventListener('click', function () {
         if (videoPlayer.paused) {
           videoPlayer.play();
-          videoPuasedState();
+          videoPaused();
         } else {
           videoPlayer.pause();
-          videoPlayedState();
+          videoPlayed();
         }
       });
-      videoPlayer.addEventListener('ended', videoPuasedState);
+      videoPlayer.addEventListener('ended', videoPaused);
     });
   }
 };
